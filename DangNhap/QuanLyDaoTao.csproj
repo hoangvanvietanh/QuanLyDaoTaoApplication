@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D9B6E2F-460A-4F83-ACA1-473107EF9AB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DangNhap</RootNamespace>
+    <AssemblyName>DangNhap</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDaoTao.Designer.cs">
+      <DependentUpon>frmDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDTGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDTGiangVien.Designer.cs">
+      <DependentUpon>frmDTGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDTSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDTSinhVien.Designer.cs">
+      <DependentUpon>frmDTSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSinhVien.Designer.cs">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTTGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTTGiangVien.Designer.cs">
+      <DependentUpon>frmTTGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoiCoSoDuLieu.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KetNoiCoSoDuLieu.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiangVien.Designer.cs">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDaoTaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDaoTaoDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDaoTao.resx">
+      <DependentUpon>frmDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDTGiangVien.resx">
+      <DependentUpon>frmDTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDTSinhVien.resx">
+      <DependentUpon>frmDTSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSinhVien.resx">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTTGiangVien.resx">
+      <DependentUpon>frmTTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\FluentDesignForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\FluentDesignForm1.Designer.cs">
+      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmGiangVien.resx">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="KetNoiCoSoDuLieu.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>KetNoiCoSoDuLieu.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KetNoiCoSoDuLieu.dbml.layout">
+      <DependentUpon>KetNoiCoSoDuLieu.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QLDaoTaoDataSet.xsc">
+      <DependentUpon>QLDaoTaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDaoTaoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDaoTaoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDaoTaoDataSet.xss">
+      <DependentUpon>QLDaoTaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\19d8a051527db023e96c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_40_Close_Switch_Off_Power_Switcher_Button_2142692.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_close_1282956.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Professor_131512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Professor_131512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_130-man-student-2_3099383.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_classeducationschoolstudystudentsteacherleacture_4332319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Closed_Book_Icon_1741323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_system_job_seeker_employee_unemployee_work_2620499.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_20_Graduation_2064495.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_school-01_1989001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_resolutions-04_897245.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_146-man-mechanic-2_3099399.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Exit_132037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %281%29.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %282%29.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %283%29.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman %281%29.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_40_Close_Switch_Off_Power_Switcher_Button_2142692.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_basics-22_296812.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_General_Office_35_3592854.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Sed-25_2236321.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Streamlineicons-Streamline-Ux-Free-User-male-add.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14991365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addGiangVien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-woman-with-bund-profile.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-modern-user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
