@@ -16,8 +16,6 @@ namespace DangNhap
     public partial class frmTTGiangVien : DevExpress.XtraEditors.XtraForm
     {
         String strFilePath = "";
-        int ImageID = 0;
-        Image DefaultImage;
         Byte[] ImageByArray;
         SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
         public frmTTGiangVien()
@@ -42,27 +40,27 @@ namespace DangNhap
             if (con.State == ConnectionState.Closed)
                 con.Open();
             SqlCommand sqlCmd = new SqlCommand("GV_Insert", con) { CommandType = CommandType.StoredProcedure };
-            sqlCmd.Parameters.Add("@maGV", txtMaGV.Text);
-            sqlCmd.Parameters.Add("@hoTen", txtHoTen.Text);
-            sqlCmd.Parameters.Add("@gioiTinh", txtGioiTinh.Text);
-            sqlCmd.Parameters.Add("@diaChi", txtDiaChi.Text);
-            sqlCmd.Parameters.Add("@SDT", txtSoDT.Text);
-            sqlCmd.Parameters.Add("@ngaySinh", txtNgaySinh.Text);
-            sqlCmd.Parameters.Add("@noiSinh", txtNoiSinh.Text);
-            sqlCmd.Parameters.Add("@trinhDo", txtTrinhDo.Text);
-            sqlCmd.Parameters.Add("@thamNien", txtThamNien.Text);
-            sqlCmd.Parameters.Add("@quyen", 2);
+            sqlCmd.Parameters.AddWithValue("@maGV", txtMaGV.Text);
+            sqlCmd.Parameters.AddWithValue("@hoTen", txtHoTen.Text);
+            sqlCmd.Parameters.AddWithValue("@gioiTinh", txtGioiTinh.Text);
+            sqlCmd.Parameters.AddWithValue("@diaChi", txtDiaChi.Text);
+            sqlCmd.Parameters.AddWithValue("@SDT", txtSoDT.Text);
+            sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
+            sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
+            sqlCmd.Parameters.AddWithValue("@trinhDo", txtTrinhDo.Text);
+            sqlCmd.Parameters.AddWithValue("@thamNien", txtThamNien.Text);
+            sqlCmd.Parameters.AddWithValue("@quyen", 2);
             if (txtKhoa.Text.Equals("Công Nghệ Thông Tin"))
             {
-                sqlCmd.Parameters.Add("@maKhoa", "CNTT");
+                sqlCmd.Parameters.AddWithValue("@maKhoa", "CNTT");
             }
             else
             {
-                sqlCmd.Parameters.Add("@maKhoa", "MMT");
+                sqlCmd.Parameters.AddWithValue("@maKhoa", "MMT");
             }
             
-            sqlCmd.Parameters.Add("@hinh", ImageByArray);
-            sqlCmd.Parameters.Add("@email", txtEmail.Text);
+            sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);
+            sqlCmd.Parameters.AddWithValue("@email", txtEmail.Text);
             sqlCmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("OK");

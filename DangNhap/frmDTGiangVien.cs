@@ -15,9 +15,6 @@ namespace DangNhap
 {
     public partial class frmDTGiangVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        String strFilePath = "";
-        int ImageID = 0;
-        Image DefaultImage;
         Byte[] ImageByArray;
         SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
         public frmDTGiangVien()
@@ -45,18 +42,18 @@ namespace DangNhap
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            /*OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 strFilePath = ofd.FileName;
                 picGiangVien.Image = new Bitmap(strFilePath);
-            }
+            }*/
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (strFilePath == "")
+            /*if (strFilePath == "")
             {
                 if (ImageByArray.Length != 0)
                     ImageByArray = new byte[] { };
@@ -90,7 +87,7 @@ namespace DangNhap
             this.Close();
             frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
             frmDTGiangVien.WindowState = FormWindowState.Maximized;
-            frmDTGiangVien.Show();
+            frmDTGiangVien.Show();*/
         }
 
         private void gridVGiangVien_RowCellClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)

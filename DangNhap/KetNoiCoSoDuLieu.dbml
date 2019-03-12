@@ -135,4 +135,24 @@
     <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.findGiangVien" Method="findGiangVien">
+    <Parameter Name="maGV" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="findGiangVienResult">
+      <Column Name="maGV" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="ngaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noiSinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="trinhDo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="thamNien" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="quyen" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="maKhoa" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="hinh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="maKhoa1" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
