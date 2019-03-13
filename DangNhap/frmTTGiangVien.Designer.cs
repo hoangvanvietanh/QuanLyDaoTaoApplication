@@ -28,24 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions25 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions26 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions27 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions28 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions29 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions30 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSoDT = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.picGiangVien = new System.Windows.Forms.PictureBox();
-            this.txtKhoa = new System.Windows.Forms.CheckedListBox();
             this.txtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtThamNien = new System.Windows.Forms.TextBox();
-            this.txtTrinhDo = new System.Windows.Forms.TextBox();
             this.txtNoiSinh = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -60,16 +54,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.picGiangVien = new System.Windows.Forms.PictureBox();
+            this.cbTrinhDo = new System.Windows.Forms.ComboBox();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
+            this.radNam = new System.Windows.Forms.RadioButton();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.groupGT = new System.Windows.Forms.GroupBox();
+            this.txtMThamNien = new System.Windows.Forms.MaskedTextBox();
+            this.txtMSoDT = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).BeginInit();
+            this.groupGT.SuspendLayout();
             this.SuspendLayout();
             // 
             // windowsUIButtonPanelCloseButton
             // 
             this.windowsUIButtonPanelCloseButton.ButtonInterval = 0;
-            windowsUIButtonImageOptions1.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions25.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
             this.windowsUIButtonPanelCloseButton.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions25, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanelCloseButton.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanelCloseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.windowsUIButtonPanelCloseButton.ForeColor = System.Drawing.Color.SkyBlue;
@@ -87,16 +90,16 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtSoDT);
+            this.panel1.Controls.Add(this.txtMSoDT);
+            this.panel1.Controls.Add(this.txtMThamNien);
+            this.panel1.Controls.Add(this.groupGT);
+            this.panel1.Controls.Add(this.cbKhoa);
+            this.panel1.Controls.Add(this.cbTrinhDo);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.txtGioiTinh);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.picGiangVien);
-            this.panel1.Controls.Add(this.txtKhoa);
             this.panel1.Controls.Add(this.txtNgaySinh);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtThamNien);
-            this.panel1.Controls.Add(this.txtTrinhDo);
             this.panel1.Controls.Add(this.txtNoiSinh);
             this.panel1.Controls.Add(this.txtDiaChi);
             this.panel1.Controls.Add(this.txtHoTen);
@@ -116,58 +119,23 @@
             this.panel1.Size = new System.Drawing.Size(647, 386);
             this.panel1.TabIndex = 6;
             // 
-            // txtSoDT
-            // 
-            this.txtSoDT.Location = new System.Drawing.Point(398, 335);
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(189, 21);
-            this.txtSoDT.TabIndex = 8;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(341, 338);
+            this.label11.Location = new System.Drawing.Point(18, 292);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 7;
             this.label11.Text = "Số ĐT";
             // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(81, 295);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(206, 21);
-            this.txtGioiTinh.TabIndex = 6;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 298);
+            this.label10.Location = new System.Drawing.Point(18, 328);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 5;
             this.label10.Text = "Giới tính";
-            // 
-            // picGiangVien
-            // 
-            this.picGiangVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picGiangVien.Location = new System.Drawing.Point(356, 90);
-            this.picGiangVien.Name = "picGiangVien";
-            this.picGiangVien.Size = new System.Drawing.Size(231, 212);
-            this.picGiangVien.TabIndex = 4;
-            this.picGiangVien.TabStop = false;
-            this.picGiangVien.Click += new System.EventHandler(this.picGiangVien_Click);
-            // 
-            // txtKhoa
-            // 
-            this.txtKhoa.FormattingEnabled = true;
-            this.txtKhoa.Items.AddRange(new object[] {
-            "Công Nghệ Thông Tin",
-            "Mạng Máy Tính"});
-            this.txtKhoa.Location = new System.Drawing.Point(81, 322);
-            this.txtKhoa.Name = "txtKhoa";
-            this.txtKhoa.Size = new System.Drawing.Size(197, 36);
-            this.txtKhoa.TabIndex = 3;
             // 
             // txtNgaySinh
             // 
@@ -182,20 +150,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(206, 21);
             this.txtEmail.TabIndex = 1;
-            // 
-            // txtThamNien
-            // 
-            this.txtThamNien.Location = new System.Drawing.Point(81, 234);
-            this.txtThamNien.Name = "txtThamNien";
-            this.txtThamNien.Size = new System.Drawing.Size(206, 21);
-            this.txtThamNien.TabIndex = 1;
-            // 
-            // txtTrinhDo
-            // 
-            this.txtTrinhDo.Location = new System.Drawing.Point(81, 207);
-            this.txtTrinhDo.Name = "txtTrinhDo";
-            this.txtTrinhDo.Size = new System.Drawing.Size(206, 21);
-            this.txtTrinhDo.TabIndex = 1;
             // 
             // txtNoiSinh
             // 
@@ -222,13 +176,13 @@
             // 
             this.txtMaGV.Location = new System.Drawing.Point(81, 67);
             this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(206, 21);
+            this.txtMaGV.Size = new System.Drawing.Size(110, 21);
             this.txtMaGV.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 331);
+            this.label9.Location = new System.Drawing.Point(23, 359);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 0;
@@ -323,17 +277,17 @@
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.SkyBlue;
-            windowsUIButtonImageOptions2.ImageUri.Uri = "Save;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions3.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions4.ImageUri.Uri = "SaveAndNew;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions5.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions6.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions26.ImageUri.Uri = "Save;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions27.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions28.ImageUri.Uri = "SaveAndNew;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions29.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions30.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu và tắt", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu và mới", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Tải lại", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Đóng", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu", true, windowsUIButtonImageOptions26, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu và tắt", true, windowsUIButtonImageOptions27, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Lưu và mới", true, windowsUIButtonImageOptions28, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Tải lại", true, windowsUIButtonImageOptions29, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Đóng", true, windowsUIButtonImageOptions30, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
@@ -348,6 +302,91 @@
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.windowsUIButtonPanelMain_Click);
+            // 
+            // picGiangVien
+            // 
+            this.picGiangVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picGiangVien.Location = new System.Drawing.Point(360, 93);
+            this.picGiangVien.Name = "picGiangVien";
+            this.picGiangVien.Size = new System.Drawing.Size(231, 212);
+            this.picGiangVien.TabIndex = 4;
+            this.picGiangVien.TabStop = false;
+            this.picGiangVien.Click += new System.EventHandler(this.picGiangVien_Click);
+            // 
+            // cbTrinhDo
+            // 
+            this.cbTrinhDo.FormattingEnabled = true;
+            this.cbTrinhDo.Items.AddRange(new object[] {
+            "Trung Cấp",
+            "Cao Đẳng",
+            "Cử Nhân",
+            "Thạc Sỹ",
+            "Tiến Sỹ",
+            "Phó Giáo Sư",
+            "Giáo Sư"});
+            this.cbTrinhDo.Location = new System.Drawing.Point(81, 207);
+            this.cbTrinhDo.Name = "cbTrinhDo";
+            this.cbTrinhDo.Size = new System.Drawing.Size(206, 21);
+            this.cbTrinhDo.TabIndex = 9;
+            this.cbTrinhDo.Text = "                 -- Chọn Trình Độ --";
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(81, 356);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(206, 21);
+            this.cbKhoa.TabIndex = 10;
+            this.cbKhoa.Text = "                     --Chọn Khoa--";
+            // 
+            // radNam
+            // 
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(6, 12);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(46, 17);
+            this.radNam.TabIndex = 12;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
+            // 
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(58, 12);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(39, 17);
+            this.radNu.TabIndex = 12;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // groupGT
+            // 
+            this.groupGT.Controls.Add(this.radNu);
+            this.groupGT.Controls.Add(this.radNam);
+            this.groupGT.Location = new System.Drawing.Point(81, 316);
+            this.groupGT.Name = "groupGT";
+            this.groupGT.Size = new System.Drawing.Size(110, 34);
+            this.groupGT.TabIndex = 13;
+            this.groupGT.TabStop = false;
+            // 
+            // txtMThamNien
+            // 
+            this.txtMThamNien.Location = new System.Drawing.Point(81, 234);
+            this.txtMThamNien.Mask = "00";
+            this.txtMThamNien.Name = "txtMThamNien";
+            this.txtMThamNien.Size = new System.Drawing.Size(20, 21);
+            this.txtMThamNien.TabIndex = 14;
+            this.txtMThamNien.ValidatingType = typeof(int);
+            // 
+            // txtMSoDT
+            // 
+            this.txtMSoDT.Location = new System.Drawing.Point(81, 289);
+            this.txtMSoDT.Mask = "(9999) 000-000";
+            this.txtMSoDT.Name = "txtMSoDT";
+            this.txtMSoDT.Size = new System.Drawing.Size(159, 21);
+            this.txtMSoDT.TabIndex = 15;
             // 
             // frmTTGiangVien
             // 
@@ -364,6 +403,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).EndInit();
+            this.groupGT.ResumeLayout(false);
+            this.groupGT.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -373,11 +414,8 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelCloseButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picGiangVien;
-        private System.Windows.Forms.CheckedListBox txtKhoa;
         private System.Windows.Forms.DateTimePicker txtNgaySinh;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtThamNien;
-        private System.Windows.Forms.TextBox txtTrinhDo;
         private System.Windows.Forms.TextBox txtNoiSinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtHoTen;
@@ -392,9 +430,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
-        private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtSoDT;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox txtMThamNien;
+        private System.Windows.Forms.GroupBox groupGT;
+        private System.Windows.Forms.RadioButton radNu;
+        private System.Windows.Forms.RadioButton radNam;
+        private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.ComboBox cbTrinhDo;
+        private System.Windows.Forms.MaskedTextBox txtMSoDT;
     }
 }

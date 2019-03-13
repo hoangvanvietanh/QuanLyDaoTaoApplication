@@ -65,6 +65,7 @@
             this.colmaKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.giangVien_SelectAllTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter();
+            this.Load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -108,6 +109,7 @@
             this.btnXoaGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.delete_modern_user;
             this.btnXoaGV.LargeWidth = 80;
             this.btnXoaGV.Name = "btnXoaGV";
+            this.btnXoaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaGV_ItemClick);
             // 
             // btnSuaGV
             // 
@@ -189,6 +191,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Load);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnShow);
             this.panel1.Controls.Add(this.panel3);
@@ -481,6 +484,16 @@
             // 
             this.giangVien_SelectAllTableAdapter.ClearBeforeFill = true;
             // 
+            // Load
+            // 
+            this.Load.Location = new System.Drawing.Point(67, 285);
+            this.Load.Name = "Load";
+            this.Load.Size = new System.Drawing.Size(75, 23);
+            this.Load.TabIndex = 4;
+            this.Load.Text = "Load";
+            this.Load.UseVisualStyleBackColor = true;
+            this.Load.Click += new System.EventHandler(this.Load_Click);
+            // 
             // frmDTGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,5 +563,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colmaKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn coltenKhoa;
         private QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter giangVien_SelectAllTableAdapter;
+        private System.Windows.Forms.Button Load;
     }
 }

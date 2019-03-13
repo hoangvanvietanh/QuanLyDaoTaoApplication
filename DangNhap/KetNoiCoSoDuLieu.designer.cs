@@ -196,6 +196,41 @@ namespace DangNhap
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGV);
 			return ((ISingleResult<findGiangVienResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.xoaGiangVien")]
+		public int xoaGiangVien([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(10)")] string maGV)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGV);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.themTaiKhoan")]
+		public int themTaiKhoan([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(15)")] string tenTK, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string matKhau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> quyen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenTK, matKhau, quyen);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dangNhap")]
+		public ISingleResult<dangNhapResult> dangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(15)")] string tenTK, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string matKhau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> quyen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenTK, matKhau, quyen);
+			return ((ISingleResult<dangNhapResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.timKhoa")]
+		public ISingleResult<timKhoaResult> timKhoa([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(10)")] string maKhoa)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKhoa);
+			return ((ISingleResult<timKhoaResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectAllKhoa")]
+		public ISingleResult<selectAllKhoaResult> selectAllKhoa()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<selectAllKhoaResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BuoiHoc")]
@@ -2883,6 +2918,156 @@ namespace DangNhap
 				if ((this._maKhoa1 != value))
 				{
 					this._maKhoa1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKhoa", DbType="NVarChar(50)")]
+		public string tenKhoa
+		{
+			get
+			{
+				return this._tenKhoa;
+			}
+			set
+			{
+				if ((this._tenKhoa != value))
+				{
+					this._tenKhoa = value;
+				}
+			}
+		}
+	}
+	
+	public partial class dangNhapResult
+	{
+		
+		private string _tenTK;
+		
+		private string _matKhau;
+		
+		private System.Nullable<byte> _quyen;
+		
+		public dangNhapResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenTK", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string tenTK
+		{
+			get
+			{
+				return this._tenTK;
+			}
+			set
+			{
+				if ((this._tenTK != value))
+				{
+					this._tenTK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matKhau", DbType="VarChar(20)")]
+		public string matKhau
+		{
+			get
+			{
+				return this._matKhau;
+			}
+			set
+			{
+				if ((this._matKhau != value))
+				{
+					this._matKhau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quyen", DbType="TinyInt")]
+		public System.Nullable<byte> quyen
+		{
+			get
+			{
+				return this._quyen;
+			}
+			set
+			{
+				if ((this._quyen != value))
+				{
+					this._quyen = value;
+				}
+			}
+		}
+	}
+	
+	public partial class timKhoaResult
+	{
+		
+		private string _maKhoa;
+		
+		private string _tenKhoa;
+		
+		public timKhoaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKhoa", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string maKhoa
+		{
+			get
+			{
+				return this._maKhoa;
+			}
+			set
+			{
+				if ((this._maKhoa != value))
+				{
+					this._maKhoa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKhoa", DbType="NVarChar(50)")]
+		public string tenKhoa
+		{
+			get
+			{
+				return this._tenKhoa;
+			}
+			set
+			{
+				if ((this._tenKhoa != value))
+				{
+					this._tenKhoa = value;
+				}
+			}
+		}
+	}
+	
+	public partial class selectAllKhoaResult
+	{
+		
+		private string _maKhoa;
+		
+		private string _tenKhoa;
+		
+		public selectAllKhoaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKhoa", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string maKhoa
+		{
+			get
+			{
+				return this._maKhoa;
+			}
+			set
+			{
+				if ((this._maKhoa != value))
+				{
+					this._maKhoa = value;
 				}
 			}
 		}

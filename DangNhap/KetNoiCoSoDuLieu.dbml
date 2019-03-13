@@ -155,4 +155,37 @@
       <Column Name="tenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.xoaGiangVien" Method="xoaGiangVien">
+    <Parameter Name="maGV" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.themTaiKhoan" Method="themTaiKhoan">
+    <Parameter Name="tenTK" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="matKhau" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="quyen" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.dangNhap" Method="dangNhap">
+    <Parameter Name="tenTK" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="matKhau" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="quyen" Type="System.Byte" DbType="TinyInt" />
+    <ElementType Name="dangNhapResult">
+      <Column Name="tenTK" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="matKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="quyen" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.timKhoa" Method="timKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="timKhoaResult">
+      <Column Name="maKhoa" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.selectAllKhoa" Method="selectAllKhoa">
+    <ElementType Name="selectAllKhoaResult">
+      <Column Name="maKhoa" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

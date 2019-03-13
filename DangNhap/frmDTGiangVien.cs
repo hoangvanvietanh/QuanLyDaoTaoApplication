@@ -29,14 +29,32 @@ namespace DangNhap
 
         private void btnThemGV_ItemClick(object sender, ItemClickEventArgs e)
         {
+            this.Close();
             frmTTGiangVien frmTTGiangVien = new frmTTGiangVien();
+            frmTTGiangVien.menu("Them");
             frmTTGiangVien.Show();
-            
         }
 
         private void btnSuaGV_ItemClick(object sender, ItemClickEventArgs e)
         {
+            
+            String maGV = gridVGiangVien.Columns.View.GetFocusedRowCellValue("maGV").ToString();
+            String diaChi = gridVGiangVien.Columns.View.GetFocusedRowCellValue("diaChi").ToString();
+            String soDT = gridVGiangVien.Columns.View.GetFocusedRowCellValue("SDT").ToString();
+            String gioiTinh = gridVGiangVien.Columns.View.GetFocusedRowCellValue("gioiTinh").ToString();
+            String hoTen = gridVGiangVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
+            String trinhDo = gridVGiangVien.Columns.View.GetFocusedRowCellValue("trinhDo").ToString();
+            String thamNien = gridVGiangVien.Columns.View.GetFocusedRowCellValue("thamNien").ToString();
+            String khoa = gridVGiangVien.Columns.View.GetFocusedRowCellValue("tenKhoa").ToString();
+            String noiSinh = gridVGiangVien.Columns.View.GetFocusedRowCellValue("noiSinh").ToString();
+            String email = gridVGiangVien.Columns.View.GetFocusedRowCellValue("email").ToString();
+            String ngaySinh = gridVGiangVien.Columns.View.GetFocusedRowCellValue("ngaySinh").ToString();
+            byte[] ImageArray = (byte[])gridVGiangVien.Columns.View.GetFocusedRowCellValue("hinh");
+            //this.Close();
+
             frmTTGiangVien frmTTGiangVien = new frmTTGiangVien();
+            frmTTGiangVien.TTGiangVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
+            frmTTGiangVien.menu("Sua");
             frmTTGiangVien.Show();
         }
 
@@ -110,6 +128,38 @@ namespace DangNhap
         {
             frmDaoTao frmDaoTao = new frmDaoTao();
             frmDaoTao.Show();
+        }
+
+        private void btnXoaGV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            String maGV = gridVGiangVien.Columns.View.GetFocusedRowCellValue("maGV").ToString();
+            SqlCommand sqlCmd = new SqlCommand("xoaGiangVien", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maGV", maGV);
+            sqlCmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Xóa thành công ^^");
+            this.Close();
+            frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
+            frmDTGiangVien.WindowState = FormWindowState.Maximized;
+            frmDTGiangVien.Show();
+        }
+        public void loadGrid()
+        {
+            giangVien_SelectAllTableAdapter.Fill(qlDaoTaoDataSet.GiangVien_SelectAll);
+        }
+        private void Load_Click(object sender, EventArgs e)
+        {
+
+            giangVien_SelectAllTableAdapter.Fill(qlDaoTaoDataSet.GiangVien_SelectAll);
+            //gridVGiangVien.UpdateCurrentRow();
+            //gridVGiangVien.EndDataUpdate();
         }
     }
 }
