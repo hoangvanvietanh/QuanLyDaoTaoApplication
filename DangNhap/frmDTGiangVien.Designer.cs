@@ -1,4 +1,6 @@
-﻿namespace DangNhap
+﻿using QuanLyDaoTao;
+
+namespace DangNhap
 {
     partial class frmDTGiangVien
     {
@@ -36,20 +38,9 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.laHoTen = new System.Windows.Forms.Label();
             this.picGiangVien = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.gridCGiangVien = new DevExpress.XtraGrid.GridControl();
-            this.qlDaoTaoDataSet = new DangNhap.QLDaoTaoDataSet();
+            this.qlDaoTaoDataSet = new QuanLyDaoTao.QLDaoTaoDataSet();
             this.gridVGiangVien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colmaGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhoTen = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,17 +55,37 @@
             this.colhinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmaKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.giangVien_SelectAllTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter();
-            this.Load = new System.Windows.Forms.Button();
+            this.giangVien_SelectAllTableAdapter = new QuanLyDaoTao.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.aceSapXep = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceTatCa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceKhoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceTrinhDo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceGioiTinh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceThamNien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.laEmail = new System.Windows.Forms.LinkLabel();
+            this.laSoDT = new System.Windows.Forms.Label();
+            this.laKhoa = new System.Windows.Forms.Label();
+            this.laTrinhDo = new System.Windows.Forms.Label();
+            this.laHoTen = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCGiangVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVGiangVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -90,14 +101,14 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(867, 154);
+            this.ribbon.Size = new System.Drawing.Size(868, 154);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnThemGV
             // 
             this.btnThemGV.Caption = "Thêm GV";
             this.btnThemGV.Id = 1;
-            this.btnThemGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.businessman;
+            this.btnThemGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.businessman;
             this.btnThemGV.LargeWidth = 80;
             this.btnThemGV.Name = "btnThemGV";
             this.btnThemGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemGV_ItemClick);
@@ -106,7 +117,7 @@
             // 
             this.btnXoaGV.Caption = "Xóa GV";
             this.btnXoaGV.Id = 2;
-            this.btnXoaGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.delete_modern_user;
+            this.btnXoaGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.delete_modern_user;
             this.btnXoaGV.LargeWidth = 80;
             this.btnXoaGV.Name = "btnXoaGV";
             this.btnXoaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaGV_ItemClick);
@@ -115,7 +126,7 @@
             // 
             this.btnSuaGV.Caption = "Sửa GV";
             this.btnSuaGV.Id = 3;
-            this.btnSuaGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.edit_woman_with_bund_profile;
+            this.btnSuaGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.edit_woman_with_bund_profile;
             this.btnSuaGV.LargeWidth = 80;
             this.btnSuaGV.Name = "btnSuaGV";
             this.btnSuaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaGV_ItemClick);
@@ -143,122 +154,19 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 481);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 511);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(867, 22);
-            // 
-            // accordionControl1
-            // 
-            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 154);
-            this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.accordionControl1.Size = new System.Drawing.Size(152, 327);
-            this.accordionControl1.TabIndex = 2;
-            this.accordionControl1.Text = "accordionControl1";
-            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement2,
-            this.accordionControlElement3,
-            this.accordionControlElement4});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Tìm kiếm";
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "Giới tính";
-            // 
-            // accordionControlElement3
-            // 
-            this.accordionControlElement3.Name = "accordionControlElement3";
-            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "Trình độ";
-            // 
-            // accordionControlElement4
-            // 
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "Khoa";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Load);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnShow);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.picGiangVien);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(657, 154);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 327);
-            this.panel1.TabIndex = 3;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(128, 255);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnShow
-            // 
-            this.btnShow.Location = new System.Drawing.Point(26, 255);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(75, 23);
-            this.btnShow.TabIndex = 2;
-            this.btnShow.Text = "Show";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.laHoTen);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 211);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(210, 29);
-            this.panel3.TabIndex = 1;
-            // 
-            // laHoTen
-            // 
-            this.laHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laHoTen.Font = new System.Drawing.Font("Tahoma", 10.25F, System.Drawing.FontStyle.Bold);
-            this.laHoTen.Location = new System.Drawing.Point(0, 0);
-            this.laHoTen.Name = "laHoTen";
-            this.laHoTen.Size = new System.Drawing.Size(210, 29);
-            this.laHoTen.TabIndex = 0;
-            this.laHoTen.Text = "Họ tên";
-            this.laHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(868, 22);
             // 
             // picGiangVien
             // 
-            this.picGiangVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picGiangVien.Location = new System.Drawing.Point(0, 0);
+            this.picGiangVien.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picGiangVien.Location = new System.Drawing.Point(10, 0);
             this.picGiangVien.Name = "picGiangVien";
-            this.picGiangVien.Size = new System.Drawing.Size(210, 211);
+            this.picGiangVien.Size = new System.Drawing.Size(184, 186);
             this.picGiangVien.TabIndex = 0;
             this.picGiangVien.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.gridCGiangVien);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(152, 154);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 327);
-            this.panel2.TabIndex = 4;
             // 
             // gridCGiangVien
             // 
@@ -269,7 +177,7 @@
             this.gridCGiangVien.MainView = this.gridVGiangVien;
             this.gridCGiangVien.MenuManager = this.ribbon;
             this.gridCGiangVien.Name = "gridCGiangVien";
-            this.gridCGiangVien.Size = new System.Drawing.Size(505, 327);
+            this.gridCGiangVien.Size = new System.Drawing.Size(288, 341);
             this.gridCGiangVien.TabIndex = 0;
             this.gridCGiangVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridVGiangVien});
@@ -296,13 +204,10 @@
             this.colmaKhoa,
             this.coltenKhoa});
             this.gridVGiangVien.GridControl = this.gridCGiangVien;
-            this.gridVGiangVien.GroupCount = 1;
             this.gridVGiangVien.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, " - Tổng: {0:n0}")});
             this.gridVGiangVien.Name = "gridVGiangVien";
             this.gridVGiangVien.OptionsFind.AlwaysVisible = true;
-            this.gridVGiangVien.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.coltenKhoa, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridVGiangVien.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridVGiangVien_RowCellClick_1);
             // 
             // colmaGV
@@ -318,7 +223,7 @@
             this.colmaGV.OptionsColumn.AllowFocus = false;
             this.colmaGV.Visible = true;
             this.colmaGV.VisibleIndex = 0;
-            this.colmaGV.Width = 57;
+            this.colmaGV.Width = 101;
             // 
             // colhoTen
             // 
@@ -333,7 +238,7 @@
             this.colhoTen.OptionsColumn.AllowFocus = false;
             this.colhoTen.Visible = true;
             this.colhoTen.VisibleIndex = 1;
-            this.colhoTen.Width = 124;
+            this.colhoTen.Width = 203;
             // 
             // colgioiTinh
             // 
@@ -348,7 +253,7 @@
             this.colgioiTinh.OptionsColumn.AllowFocus = false;
             this.colgioiTinh.Visible = true;
             this.colgioiTinh.VisibleIndex = 2;
-            this.colgioiTinh.Width = 67;
+            this.colgioiTinh.Width = 84;
             // 
             // coldiaChi
             // 
@@ -363,7 +268,7 @@
             this.coldiaChi.OptionsColumn.AllowFocus = false;
             this.coldiaChi.Visible = true;
             this.coldiaChi.VisibleIndex = 3;
-            this.coldiaChi.Width = 201;
+            this.coldiaChi.Width = 334;
             // 
             // colSDT
             // 
@@ -376,9 +281,7 @@
             this.colSDT.Name = "colSDT";
             this.colSDT.OptionsColumn.AllowEdit = false;
             this.colSDT.OptionsColumn.AllowFocus = false;
-            this.colSDT.Visible = true;
-            this.colSDT.VisibleIndex = 4;
-            this.colSDT.Width = 69;
+            this.colSDT.Width = 34;
             // 
             // colngaySinh
             // 
@@ -392,8 +295,8 @@
             this.colngaySinh.OptionsColumn.AllowEdit = false;
             this.colngaySinh.OptionsColumn.AllowFocus = false;
             this.colngaySinh.Visible = true;
-            this.colngaySinh.VisibleIndex = 5;
-            this.colngaySinh.Width = 68;
+            this.colngaySinh.VisibleIndex = 4;
+            this.colngaySinh.Width = 176;
             // 
             // colnoiSinh
             // 
@@ -407,7 +310,8 @@
             this.colnoiSinh.OptionsColumn.AllowEdit = false;
             this.colnoiSinh.OptionsColumn.AllowFocus = false;
             this.colnoiSinh.Visible = true;
-            this.colnoiSinh.VisibleIndex = 6;
+            this.colnoiSinh.VisibleIndex = 5;
+            this.colnoiSinh.Width = 130;
             // 
             // coltrinhDo
             // 
@@ -420,9 +324,7 @@
             this.coltrinhDo.Name = "coltrinhDo";
             this.coltrinhDo.OptionsColumn.AllowEdit = false;
             this.coltrinhDo.OptionsColumn.AllowFocus = false;
-            this.coltrinhDo.Visible = true;
-            this.coltrinhDo.VisibleIndex = 7;
-            this.coltrinhDo.Width = 54;
+            this.coltrinhDo.Width = 53;
             // 
             // colthamNien
             // 
@@ -438,8 +340,8 @@
             this.colthamNien.OptionsColumn.AllowEdit = false;
             this.colthamNien.OptionsColumn.AllowFocus = false;
             this.colthamNien.Visible = true;
-            this.colthamNien.VisibleIndex = 8;
-            this.colthamNien.Width = 86;
+            this.colthamNien.VisibleIndex = 6;
+            this.colthamNien.Width = 107;
             // 
             // colemail
             // 
@@ -452,8 +354,6 @@
             this.colemail.Name = "colemail";
             this.colemail.OptionsColumn.AllowEdit = false;
             this.colemail.OptionsColumn.AllowFocus = false;
-            this.colemail.Visible = true;
-            this.colemail.VisibleIndex = 9;
             this.colemail.Width = 260;
             // 
             // colhinh
@@ -477,31 +377,215 @@
             this.coltenKhoa.Name = "coltenKhoa";
             this.coltenKhoa.OptionsColumn.AllowEdit = false;
             this.coltenKhoa.OptionsColumn.AllowFocus = false;
-            this.coltenKhoa.Visible = true;
-            this.coltenKhoa.VisibleIndex = 10;
             // 
             // giangVien_SelectAllTableAdapter
             // 
             this.giangVien_SelectAllTableAdapter.ClearBeforeFill = true;
             // 
-            // Load
+            // panel1
             // 
-            this.Load.Location = new System.Drawing.Point(67, 285);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(75, 23);
-            this.Load.TabIndex = 4;
-            this.Load.Text = "Load";
-            this.Load.UseVisualStyleBackColor = true;
-            this.Load.Click += new System.EventHandler(this.Load_Click);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 154);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(868, 16);
+            this.panel1.TabIndex = 7;
+            // 
+            // accordionControl1
+            // 
+            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceSapXep});
+            this.accordionControl1.Location = new System.Drawing.Point(0, 170);
+            this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
+            this.accordionControl1.Size = new System.Drawing.Size(106, 341);
+            this.accordionControl1.TabIndex = 8;
+            this.accordionControl1.Text = "accordionControl1";
+            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+            // 
+            // aceSapXep
+            // 
+            this.aceSapXep.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.aceTatCa,
+            this.aceKhoa,
+            this.aceTrinhDo,
+            this.aceGioiTinh,
+            this.aceThamNien});
+            this.aceSapXep.Expanded = true;
+            this.aceSapXep.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.aceSapXep.Name = "aceSapXep";
+            this.aceSapXep.Text = "Sắp xếp";
+            // 
+            // aceTatCa
+            // 
+            this.aceTatCa.Name = "aceTatCa";
+            this.aceTatCa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceTatCa.Text = "Tất cả";
+            this.aceTatCa.Click += new System.EventHandler(this.aceTatCa_Click);
+            // 
+            // aceKhoa
+            // 
+            this.aceKhoa.Name = "aceKhoa";
+            this.aceKhoa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceKhoa.Text = "Khoa";
+            this.aceKhoa.Click += new System.EventHandler(this.aceKhoa_Click);
+            // 
+            // aceTrinhDo
+            // 
+            this.aceTrinhDo.Name = "aceTrinhDo";
+            this.aceTrinhDo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceTrinhDo.Text = "Trình độ";
+            this.aceTrinhDo.Click += new System.EventHandler(this.aceTrinhDo_Click);
+            // 
+            // aceGioiTinh
+            // 
+            this.aceGioiTinh.Name = "aceGioiTinh";
+            this.aceGioiTinh.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceGioiTinh.Text = "Giới tính";
+            this.aceGioiTinh.Click += new System.EventHandler(this.aceGioiTinh_Click);
+            // 
+            // aceThamNien
+            // 
+            this.aceThamNien.Name = "aceThamNien";
+            this.aceThamNien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceThamNien.Text = "Thâm niên";
+            this.aceThamNien.Click += new System.EventHandler(this.aceThamNien_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.separatorControl1);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(404, 170);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(464, 341);
+            this.panel2.TabIndex = 9;
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.separatorControl1.Location = new System.Drawing.Point(0, 186);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(464, 24);
+            this.separatorControl1.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.laEmail);
+            this.panel5.Controls.Add(this.laSoDT);
+            this.panel5.Controls.Add(this.laKhoa);
+            this.panel5.Controls.Add(this.laTrinhDo);
+            this.panel5.Controls.Add(this.laHoTen);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.picGiangVien);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(464, 186);
+            this.panel5.TabIndex = 1;
+            // 
+            // laEmail
+            // 
+            this.laEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laEmail.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laEmail.Location = new System.Drawing.Point(209, 153);
+            this.laEmail.Name = "laEmail";
+            this.laEmail.Size = new System.Drawing.Size(255, 33);
+            this.laEmail.TabIndex = 6;
+            this.laEmail.TabStop = true;
+            this.laEmail.Text = "Email";
+            // 
+            // laSoDT
+            // 
+            this.laSoDT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.laSoDT.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laSoDT.Location = new System.Drawing.Point(209, 121);
+            this.laSoDT.Name = "laSoDT";
+            this.laSoDT.Size = new System.Drawing.Size(255, 32);
+            this.laSoDT.TabIndex = 5;
+            this.laSoDT.Text = "Số điện thoại";
+            this.laSoDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // laKhoa
+            // 
+            this.laKhoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.laKhoa.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laKhoa.Location = new System.Drawing.Point(209, 90);
+            this.laKhoa.Name = "laKhoa";
+            this.laKhoa.Size = new System.Drawing.Size(255, 31);
+            this.laKhoa.TabIndex = 4;
+            this.laKhoa.Text = "Khoa";
+            // 
+            // laTrinhDo
+            // 
+            this.laTrinhDo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.laTrinhDo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laTrinhDo.Location = new System.Drawing.Point(209, 48);
+            this.laTrinhDo.Name = "laTrinhDo";
+            this.laTrinhDo.Size = new System.Drawing.Size(255, 42);
+            this.laTrinhDo.TabIndex = 3;
+            this.laTrinhDo.Text = "Trình độ";
+            this.laTrinhDo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // laHoTen
+            // 
+            this.laHoTen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.laHoTen.Font = new System.Drawing.Font("Times New Roman", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laHoTen.Location = new System.Drawing.Point(209, 0);
+            this.laHoTen.Name = "laHoTen";
+            this.laHoTen.Size = new System.Drawing.Size(255, 48);
+            this.laHoTen.TabIndex = 2;
+            this.laHoTen.Text = "Họ tên";
+            this.laHoTen.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(194, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(15, 186);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 186);
+            this.panel6.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(394, 170);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 341);
+            this.panel3.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.gridCGiangVien);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(106, 170);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(288, 341);
+            this.panel4.TabIndex = 11;
             // 
             // frmDTGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 503);
+            this.ClientSize = new System.Drawing.Size(868, 533);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.accordionControl1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Name = "frmDTGiangVien";
@@ -511,14 +595,15 @@
             this.Text = "Đào tạo - Giảng Viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDTGiangVien_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCGiangVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVGiangVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,22 +615,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label laHoTen;
         private System.Windows.Forms.PictureBox picGiangVien;
         private DevExpress.XtraBars.BarButtonItem btnThemGV;
         private DevExpress.XtraBars.BarButtonItem btnXoaGV;
         private DevExpress.XtraBars.BarButtonItem btnSuaGV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private System.Windows.Forms.Button btnShow;
-        private System.Windows.Forms.Button btnSave;
         private DevExpress.XtraGrid.GridControl gridCGiangVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridVGiangVien;
         private QLDaoTaoDataSet qlDaoTaoDataSet;
@@ -562,7 +636,26 @@
         private DevExpress.XtraGrid.Columns.GridColumn colhinh;
         private DevExpress.XtraGrid.Columns.GridColumn colmaKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn coltenKhoa;
-        private QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter giangVien_SelectAllTableAdapter;
-        private System.Windows.Forms.Button Load;
+        private QuanLyDaoTao.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter giangVien_SelectAllTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceSapXep;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel laEmail;
+        private System.Windows.Forms.Label laSoDT;
+        private System.Windows.Forms.Label laTrinhDo;
+        private System.Windows.Forms.Label laHoTen;
+        private System.Windows.Forms.Panel panel7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceTatCa;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceKhoa;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceTrinhDo;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceGioiTinh;
+        private System.Windows.Forms.Label laKhoa;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceThamNien;
     }
 }

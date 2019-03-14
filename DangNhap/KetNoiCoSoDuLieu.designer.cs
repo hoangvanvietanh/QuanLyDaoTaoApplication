@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DangNhap
+namespace QuanLyDaoTao
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -66,7 +66,7 @@ namespace DangNhap
     #endregion
 		
 		public KetNoiCoSoDuLieuDataContext() : 
-				base(global::DangNhap.Properties.Settings.Default.QuanLyDaoTaoConnectionString, mappingSource)
+				base(global::QuanLyDaoTao.Properties.Settings.Default.QuanLyDaoTaoConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

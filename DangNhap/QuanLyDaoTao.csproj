@@ -8,8 +8,8 @@
     <ProjectGuid>{5D9B6E2F-460A-4F83-ACA1-473107EF9AB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DangNhap</RootNamespace>
-    <AssemblyName>DangNhap</AssemblyName>
+    <RootNamespace>QuanLyDaoTao</RootNamespace>
+    <AssemblyName>QuanLyDaoTao</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

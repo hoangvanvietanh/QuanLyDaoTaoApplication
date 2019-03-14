@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DangNhap.Properties {
+namespace QuanLyDaoTao.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

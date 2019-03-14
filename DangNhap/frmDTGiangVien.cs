@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.IO;
 using System.Data.SqlClient;
+using DevExpress.Data;
 
 namespace DangNhap
 {
@@ -111,6 +112,10 @@ namespace DangNhap
         private void gridVGiangVien_RowCellClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             laHoTen.Text = gridVGiangVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
+            laSoDT.Text = gridVGiangVien.Columns.View.GetFocusedRowCellValue("SDT").ToString();
+            laTrinhDo.Text = gridVGiangVien.Columns.View.GetFocusedRowCellValue("trinhDo").ToString();
+            laEmail.Text = gridVGiangVien.Columns.View.GetFocusedRowCellValue("email").ToString();
+            laKhoa.Text = gridVGiangVien.Columns.View.GetFocusedRowCellValue("tenKhoa").ToString();
             byte[] ImageArray = (byte[])gridVGiangVien.Columns.View.GetFocusedRowCellValue("hinh");
             if (ImageArray.Length == 0)
             {
@@ -132,23 +137,34 @@ namespace DangNhap
 
         private void btnXoaGV_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
+            String hoTen= gridVGiangVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
             String maGV = gridVGiangVien.Columns.View.GetFocusedRowCellValue("maGV").ToString();
-            SqlCommand sqlCmd = new SqlCommand("xoaGiangVien", con)
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa \n Giảng viên: " + hoTen +"\n Mã số: "+maGV, "Cảnh báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                CommandType = CommandType.StoredProcedure
-            };
-            sqlCmd.Parameters.AddWithValue("@maGV", maGV);
-            sqlCmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Xóa thành công ^^");
-            this.Close();
-            frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
-            frmDTGiangVien.WindowState = FormWindowState.Maximized;
-            frmDTGiangVien.Show();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand sqlCmd = new SqlCommand("xoaGiangVien", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maGV", maGV);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Xóa thành công ^^");
+                this.Close();
+                frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
+                frmDTGiangVien.WindowState = FormWindowState.Maximized;
+                frmDTGiangVien.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
+            
         }
         public void loadGrid()
         {
@@ -161,5 +177,47 @@ namespace DangNhap
             //gridVGiangVien.UpdateCurrentRow();
             //gridVGiangVien.EndDataUpdate();
         }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aceTatCa_Click(object sender, EventArgs e)
+        {
+            colmaKhoa.SortOrder = ColumnSortOrder.None;
+            colmaKhoa.GroupIndex = -1;
+            coltrinhDo.SortOrder = ColumnSortOrder.None;
+            coltrinhDo.GroupIndex = -1;
+            colgioiTinh.SortOrder = ColumnSortOrder.None;
+            colgioiTinh.GroupIndex = -1;
+            colthamNien.SortOrder = ColumnSortOrder.None;
+            colthamNien.GroupIndex = -1;
+        }
+
+        private void aceKhoa_Click(object sender, EventArgs e)
+        {
+            colmaKhoa.SortOrder = ColumnSortOrder.Ascending;
+            colmaKhoa.GroupIndex = 0;
+        }
+
+        private void aceTrinhDo_Click(object sender, EventArgs e)
+        {
+            coltrinhDo.SortOrder = ColumnSortOrder.Ascending;
+            coltrinhDo.GroupIndex = 0;
+        }
+
+        private void aceGioiTinh_Click(object sender, EventArgs e)
+        {
+            colgioiTinh.SortOrder = ColumnSortOrder.Ascending;
+            colgioiTinh.GroupIndex = 0;
+        }
+
+        private void aceThamNien_Click(object sender, EventArgs e)
+        {
+            colthamNien.SortOrder = ColumnSortOrder.Ascending;
+            colthamNien.GroupIndex = 0;
+        }
     }
+    
 }

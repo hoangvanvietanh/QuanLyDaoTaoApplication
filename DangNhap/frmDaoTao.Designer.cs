@@ -78,7 +78,7 @@
             this.laGiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laGiangVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laGiangVien.ForeColor = System.Drawing.Color.White;
-            this.laGiangVien.Image = global::DangNhap.Properties.Resources.iconfinder_Professor_131512__1_;
+            this.laGiangVien.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_Professor_131512__1_;
             this.laGiangVien.Location = new System.Drawing.Point(0, 0);
             this.laGiangVien.Name = "laGiangVien";
             this.laGiangVien.Size = new System.Drawing.Size(110, 99);
@@ -121,7 +121,7 @@
             // 
             this.laSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laSinhVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laSinhVien.Image = global::DangNhap.Properties.Resources.iconfinder_130_man_student_2_3099383;
+            this.laSinhVien.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_130_man_student_2_3099383;
             this.laSinhVien.Location = new System.Drawing.Point(0, 0);
             this.laSinhVien.Name = "laSinhVien";
             this.laSinhVien.Size = new System.Drawing.Size(110, 99);
@@ -146,7 +146,7 @@
             this.laLop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laLop.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laLop.ForeColor = System.Drawing.Color.White;
-            this.laLop.Image = global::DangNhap.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
+            this.laLop.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
             this.laLop.Location = new System.Drawing.Point(0, 0);
             this.laLop.Name = "laLop";
             this.laLop.Size = new System.Drawing.Size(110, 99);
@@ -168,7 +168,7 @@
             this.laKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laKhoa.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laKhoa.ForeColor = System.Drawing.Color.White;
-            this.laKhoa.Image = global::DangNhap.Properties.Resources.iconfinder_20_Graduation_2064495;
+            this.laKhoa.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_20_Graduation_2064495;
             this.laKhoa.Location = new System.Drawing.Point(0, 0);
             this.laKhoa.Name = "laKhoa";
             this.laKhoa.Size = new System.Drawing.Size(110, 99);
@@ -190,7 +190,7 @@
             this.laThoiKhoaBieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laThoiKhoaBieu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laThoiKhoaBieu.ForeColor = System.Drawing.Color.White;
-            this.laThoiKhoaBieu.Image = global::DangNhap.Properties.Resources.iconfinder_resolutions_04_897245;
+            this.laThoiKhoaBieu.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_resolutions_04_897245;
             this.laThoiKhoaBieu.Location = new System.Drawing.Point(0, 0);
             this.laThoiKhoaBieu.Name = "laThoiKhoaBieu";
             this.laThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
@@ -212,7 +212,7 @@
             this.laMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laMonHoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laMonHoc.ForeColor = System.Drawing.Color.White;
-            this.laMonHoc.Image = global::DangNhap.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
+            this.laMonHoc.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
             this.laMonHoc.Location = new System.Drawing.Point(0, 0);
             this.laMonHoc.Name = "laMonHoc";
             this.laMonHoc.Size = new System.Drawing.Size(232, 75);
@@ -234,7 +234,7 @@
             this.laChuyenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laChuyenNganh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laChuyenNganh.ForeColor = System.Drawing.Color.White;
-            this.laChuyenNganh.Image = global::DangNhap.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
+            this.laChuyenNganh.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
             this.laChuyenNganh.Location = new System.Drawing.Point(0, 0);
             this.laChuyenNganh.Name = "laChuyenNganh";
             this.laChuyenNganh.Size = new System.Drawing.Size(232, 75);
@@ -256,7 +256,7 @@
             this.laCoSoVatChat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laCoSoVatChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laCoSoVatChat.ForeColor = System.Drawing.Color.White;
-            this.laCoSoVatChat.Image = global::DangNhap.Properties.Resources.iconfinder_school_01_1989001;
+            this.laCoSoVatChat.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_school_01_1989001;
             this.laCoSoVatChat.Location = new System.Drawing.Point(0, 0);
             this.laCoSoVatChat.Name = "laCoSoVatChat";
             this.laCoSoVatChat.Size = new System.Drawing.Size(232, 75);
@@ -278,7 +278,7 @@
             this.laTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laTaiKhoan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.laTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.laTaiKhoan.Image = global::DangNhap.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
+            this.laTaiKhoan.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
             this.laTaiKhoan.Location = new System.Drawing.Point(0, 0);
             this.laTaiKhoan.Name = "laTaiKhoan";
             this.laTaiKhoan.Size = new System.Drawing.Size(157, 65);
@@ -299,7 +299,7 @@
             // 
             this.laThoat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laThoat.ForeColor = System.Drawing.Color.White;
-            this.laThoat.Image = global::DangNhap.Properties.Resources.iconfinder_Exit_132037;
+            this.laThoat.Image = global::QuanLyDaoTao.Properties.Resources.iconfinder_Exit_132037;
             this.laThoat.Location = new System.Drawing.Point(0, 0);
             this.laThoat.Name = "laThoat";
             this.laThoat.Size = new System.Drawing.Size(69, 65);
@@ -311,7 +311,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox1.Image = global::DangNhap.Properties.Resources._19d8a051527db023e96c;
+            this.pictureBox1.Image = global::QuanLyDaoTao.Properties.Resources._19d8a051527db023e96c;
             this.pictureBox1.Location = new System.Drawing.Point(280, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(137, 299);
