@@ -46,6 +46,7 @@ namespace DangNhap
             txtNoiSinh.Text = noiSinh;
             txtEmail.Text = email;
             txtNgaySinh.Text = ngaySinh;
+            tbThamNien.Value = Convert.ToInt16(thamNien);
             if (thamNien.Length == 1)
             {
                 txtMThamNien.Text = "0" + thamNien;
@@ -246,6 +247,124 @@ namespace DangNhap
             {
                 strFilePath = ofd.FileName;
                 picGiangVien.Image = new Bitmap(strFilePath);
+            }
+        }
+
+        private void tbThamNien_Scroll(object sender, EventArgs e)
+        {
+            txtMThamNien.Text = tbThamNien.Value.ToString();
+        }
+
+        private void txtMaGV_Leave(object sender, EventArgs e)
+        {
+            int flat = 0;
+            SqlCommand sqlCmd = new SqlCommand("findGiangVien", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maGV", txtMaGV.Text);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                flat = 1;
+            }
+            DR.Close();
+            if (flat == 1)
+            {
+                laCheckMaGV.Text = "Mã giảng viên đã tồn tại !!!";
+            }
+            else if (txtMaGV.TextLength == 0)
+            {
+                laCheckMaGV.Text = "Bạn chưa điền mã giảng viên nhé";
+            }
+            else
+            {
+                laCheckMaGV.Text = "";
+            }
+            
+        }
+
+        private void txtHoTen_Leave(object sender, EventArgs e)
+        {
+            if (txtHoTen.TextLength == 0)
+            {
+                laCheckHoTen.Text = "Bạn bỏ trống họ tên kìa lêu lêu";
+            }
+            else
+            {
+                laCheckHoTen.Text = "";
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.TextLength == 0)
+            {
+                laEmail.Text = "Email kêu bạn điền kìa ";
+            }
+            else
+            {
+                laEmail.Text = "";
+            }
+        }
+
+        private void txtDiaChi_Leave(object sender, EventArgs e)
+        {
+            if (txtDiaChi.TextLength == 0)
+            {
+                laDiaChi.Text = "Bạn là người ngoài hành tinh hả";
+            }
+            else
+            {
+                laDiaChi.Text = "";
+            }
+        }
+
+        private void cbTrinhDo_Leave(object sender, EventArgs e)
+        {
+            if (cbTrinhDo.Text.Equals("                 -- Chọn Trình Độ --"))
+            {
+                laTrinhDo.Text = "Đồ lười biếng";
+            }
+            else
+            {
+                laTrinhDo.Text = "";
+            }
+        }
+
+        private void cbKhoa_Leave(object sender, EventArgs e)
+        {
+            if (cbKhoa.Text.Equals("                     --Chọn Khoa--"))
+            {
+                laKhoa.Text = "Bạn ơi tíck đi";
+            }
+            else
+            {
+                laKhoa.Text = "";
+            }
+        }
+
+        private void txtMSoDT_Leave(object sender, EventArgs e)
+        {
+            if (txtMSoDT.Text.Equals("(    )    -"))
+            {
+                laSoDT.Text = "Liên lạc với bạn bằng niềm tin à";
+            }
+            else
+            {
+                laSoDT.Text = "";
+            }
+        }
+
+        private void laNoiSinh_Leave(object sender, EventArgs e)
+        {
+            if (txtNoiSinh.TextLength == 0)
+            {
+                laNoiSinh.Text = "Bạn ơi nơi bạn sinh ra ở đâu";
+            }
+            else
+            {
+                laNoiSinh.Text = "";
             }
         }
     }

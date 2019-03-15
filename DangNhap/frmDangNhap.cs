@@ -24,6 +24,32 @@ namespace DangNhap
 
         private void laDNGiangVien_Click(object sender, EventArgs e)
         {
+            if (txtMaSo.TextLength != 0)
+            {
+                int flat = 0;
+                SqlCommand sqlCmd = new SqlCommand("findTaiKhoan", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@tenTK", txtMaSo.Text);
+                sqlCmd.Parameters.AddWithValue("@quyen", 2);
+                SqlDataReader DR = sqlCmd.ExecuteReader();
+                while (DR.Read())
+                {
+                    flat = 1;
+                }
+                DR.Close();
+                if (flat == 1)
+                {
+                    laCheckTK.Text = "Mã số hợp lệ ^^";
+                    laCheckTK.ForeColor = Color.Green;
+                }
+                else
+                {
+                    laCheckTK.Text = "Mã số giảng viên không tồn tại !!!";
+                    laCheckTK.ForeColor = Color.Red;
+                }
+            }
             laDNGiangVien.BackColor = Color.LightSkyBlue;
             laDNSinhVien.BackColor = Color.LightGray;
             laDNDaoTao.BackColor = Color.LightGray;
@@ -37,6 +63,32 @@ namespace DangNhap
 
         private void laDNSinhVien_Click(object sender, EventArgs e)
         {
+            if (txtMaSo.TextLength != 0)
+            {
+                int flat = 0;
+                SqlCommand sqlCmd = new SqlCommand("findTaiKhoan", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@tenTK", txtMaSo.Text);
+                sqlCmd.Parameters.AddWithValue("@quyen", 3);
+                SqlDataReader DR = sqlCmd.ExecuteReader();
+                while (DR.Read())
+                {
+                    flat = 1;
+                }
+                DR.Close();
+                if (flat == 1)
+                {
+                    laCheckTK.Text = "Mã số hợp lệ ^^";
+                    laCheckTK.ForeColor = Color.Green;
+                }
+                else
+                {
+                    laCheckTK.Text = "Mã số sinh viên không tồn tại !!!";
+                    laCheckTK.ForeColor = Color.Red;
+                }
+            }
             laDNGiangVien.BackColor = Color.LightGray;
             laDNSinhVien.BackColor = Color.LightSkyBlue;
             laDNDaoTao.BackColor = Color.LightGray;
@@ -45,6 +97,32 @@ namespace DangNhap
 
         private void laDNDaoTao_Click(object sender, EventArgs e)
         {
+            if (txtMaSo.TextLength != 0)
+            {
+                int flat = 0;
+                SqlCommand sqlCmd = new SqlCommand("findTaiKhoan", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@tenTK", txtMaSo.Text);
+                sqlCmd.Parameters.AddWithValue("@quyen", 1);
+                SqlDataReader DR = sqlCmd.ExecuteReader();
+                while (DR.Read())
+                {
+                    flat = 1;
+                }
+                DR.Close();
+                if (flat == 1)
+                {
+                    laCheckTK.Text = "Mã số hợp lệ ^^";
+                    laCheckTK.ForeColor = Color.Green;
+                }
+                else
+                {
+                    laCheckTK.Text = "Mã số không tồn tại !!!";
+                    laCheckTK.ForeColor = Color.Red;
+                }
+            }
             laDNDaoTao.BackColor = Color.LightSkyBlue;
             laDNSinhVien.BackColor = Color.LightGray;
             laDNGiangVien.BackColor = Color.LightGray;
