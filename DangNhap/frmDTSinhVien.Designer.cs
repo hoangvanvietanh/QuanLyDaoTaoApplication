@@ -125,6 +125,7 @@
             this.btnSuaSV.Caption = "Sửa SV";
             this.btnSuaSV.Id = 3;
             this.btnSuaSV.Name = "btnSuaSV";
+            this.btnSuaSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaSV_ItemClick);
             // 
             // rpTrangChu
             // 

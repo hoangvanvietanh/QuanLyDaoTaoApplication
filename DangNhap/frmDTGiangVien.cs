@@ -54,7 +54,7 @@ namespace DangNhap
             //this.Close();
 
             frmTTGiangVien frmTTGiangVien = new frmTTGiangVien();
-            frmTTGiangVien.TTGiangVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
+            frmTTGiangVien.TTSinhVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
             frmTTGiangVien.menu("Sua");
             frmTTGiangVien.Show();
         }

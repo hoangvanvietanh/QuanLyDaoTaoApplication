@@ -33,7 +33,7 @@ namespace DangNhap
         private void btnThemSV_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Close();
-            frmTTSinhVien frmTTSinhVien = new frmTTSinhVien();
+            frmThongTinSV frmTTSinhVien = new frmThongTinSV();
             frmTTSinhVien.menu("Them");
             frmTTSinhVien.Show();
         }
@@ -99,6 +99,34 @@ namespace DangNhap
         {
             colgioiTinh.SortOrder = ColumnSortOrder.Ascending;
             colgioiTinh.GroupIndex = 0;
+        }
+
+        private void btnSuaSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String maSV = gridVSinhVien.Columns.View.GetFocusedRowCellValue("maSV").ToString();
+            String diaChi = gridVSinhVien.Columns.View.GetFocusedRowCellValue("diaChi").ToString();
+            String soDT = gridVSinhVien.Columns.View.GetFocusedRowCellValue("SDT").ToString();
+            String gioiTinh = gridVSinhVien.Columns.View.GetFocusedRowCellValue("gioiTinh").ToString();
+            String hoTen = gridVSinhVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
+            //String trinhDo = gridVSinhVien.Columns.View.GetFocusedRowCellValue("trinhDo").ToString();
+            String lopHoc = gridVSinhVien.Columns.View.GetFocusedRowCellValue("tenLop").ToString()+" "+ gridVSinhVien.Columns.View.GetFocusedRowCellValue("maLop").ToString();
+            String khoa = gridVSinhVien.Columns.View.GetFocusedRowCellValue("khoa").ToString();
+            String nganhHoc = gridVSinhVien.Columns.View.GetFocusedRowCellValue("tenNganh").ToString() +" "+ gridVSinhVien.Columns.View.GetFocusedRowCellValue("maNganh").ToString();
+            String noiSinh = gridVSinhVien.Columns.View.GetFocusedRowCellValue("noiSinh").ToString();
+            String email = gridVSinhVien.Columns.View.GetFocusedRowCellValue("email").ToString();
+            String ngaySinh = gridVSinhVien.Columns.View.GetFocusedRowCellValue("ngaySinh").ToString();
+            byte[] ImageArray = (byte[])gridVSinhVien.Columns.View.GetFocusedRowCellValue("hinh");
+            //this.Close();
+
+            /*frmTTSinhVien frmTTSinhVien = new frmTTSinhVien();
+            frmTTSinhVien.TTSinhVien(maGV, hoTen, diaChi, soDT, gioiTinh, trinhDo, lopHoc, khoa, email, noiSinh, ngaySinh, ImageArray);
+            frmTTSinhVien.menu("Sua");
+            frmTTSinhVien.Show();*/
+
+            frmThongTinSV frmThongTinSV = new frmThongTinSV();
+            frmThongTinSV.TTSinhVien(maSV, hoTen, diaChi, soDT, gioiTinh, lopHoc, nganhHoc,khoa, email, noiSinh, ngaySinh, ImageArray);
+            frmThongTinSV.menu("Sua");
+            frmThongTinSV.Show();
         }
     }
 }

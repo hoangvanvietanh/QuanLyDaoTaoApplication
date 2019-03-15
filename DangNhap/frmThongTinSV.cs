@@ -10,17 +10,16 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using System.IO;
-using DangNhap;
 
-namespace QuanLyDaoTao
+namespace DangNhap
 {
-    public partial class frmTTSinhVien : DevExpress.XtraEditors.XtraForm
+    public partial class frmThongTinSV : DevExpress.XtraEditors.XtraForm
     {
         String strFilePath = "";
         Byte[] ImageByArray;
         String thaoTac;
         SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
-        public frmTTSinhVien()
+        public frmThongTinSV()
         {
             InitializeComponent();
             con.Open();
@@ -31,7 +30,7 @@ namespace QuanLyDaoTao
             SqlDataReader DR = sqlCmd.ExecuteReader();
             while (DR.Read())
             {
-                cbNganh.Items.Add(DR[1]+" "+DR[0]);
+                cbNganh.Items.Add(DR[1] + " " + DR[0]);
 
             }
             DR.Close();
@@ -43,7 +42,7 @@ namespace QuanLyDaoTao
             DR = sqlCmd.ExecuteReader();
             while (DR.Read())
             {
-                cbLop.Items.Add(DR[1] + " "+DR[0]);
+                cbLop.Items.Add(DR[1] + " " + DR[0]);
 
             }
             DR.Close();
@@ -59,7 +58,7 @@ namespace QuanLyDaoTao
             txtNoiSinh.Text = noiSinh;
             txtEmail.Text = email;
             txtNgaySinh.Text = ngaySinh;
-           
+
             if (gioiTinh.Equals("Nam"))
             {
                 radNam.Checked = true;
@@ -79,14 +78,9 @@ namespace QuanLyDaoTao
                 picSinhVien.Image = Image.FromStream(new MemoryStream(ImageArray));
             }
         }
-
         public void menu(String chon)
         {
             thaoTac = chon;
-        }
-        private void windowsUIButtonPanelCloseButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
@@ -196,11 +190,11 @@ namespace QuanLyDaoTao
                 {
                     con.Open();
                 }
-                SqlCommand sqlCmd = new SqlCommand("GV_Update", con)
+                SqlCommand sqlCmd = new SqlCommand("SV_Update", con)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                sqlCmd.Parameters.AddWithValue("@maGV", txtMaSV.Text);
+                sqlCmd.Parameters.AddWithValue("@maSV", txtMaSV.Text);
                 sqlCmd.Parameters.AddWithValue("@hoTen", txtHoTen.Text);
                 if (radNam.Checked == true)
                 {
@@ -214,8 +208,8 @@ namespace QuanLyDaoTao
                 sqlCmd.Parameters.AddWithValue("@SDT", txtMSoDT.Text);
                 sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
-                sqlCmd.Parameters.AddWithValue("@lop", cbLop.Text);
-                sqlCmd.Parameters.AddWithValue("@nganh", cbNganh.Text);
+                sqlCmd.Parameters.AddWithValue("@maLop", cbLop.Text.Substring(cbLop.Text.LastIndexOf(' ') + 1));
+                sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
                 sqlCmd.Parameters.AddWithValue("@quyen", 3);
                 sqlCmd.Parameters.AddWithValue("@khoa", txtMKhoaHoc.Text);
                 sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);
@@ -228,6 +222,11 @@ namespace QuanLyDaoTao
                 //frmDTGiangVien.WindowState = FormWindowState.Maximized;
                 //frmDTGiangVien.Show();
             }
+        }
+
+        private void windowsUIButtonPanelCloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void picSinhVien_Click(object sender, EventArgs e)
