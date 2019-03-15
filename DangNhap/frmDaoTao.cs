@@ -33,6 +33,7 @@ namespace DangNhap
         private void laSinhVien_Click(object sender, EventArgs e)
         {
             frmDTSinhVien frmDTSinhVien = new frmDTSinhVien();
+            frmDTSinhVien.WindowState = FormWindowState.Maximized;
             frmDTSinhVien.Show();
             this.Close();
         }

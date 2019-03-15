@@ -40,7 +40,7 @@ namespace DangNhap
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.picGiangVien = new System.Windows.Forms.PictureBox();
             this.gridCGiangVien = new DevExpress.XtraGrid.GridControl();
-            this.qlDaoTaoDataSet = new QuanLyDaoTao.QLDaoTaoDataSet();
+            this.qlDaoTaoDataSet = new DangNhap.QLDaoTaoDataSet();
             this.gridVGiangVien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colmaGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhoTen = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,7 +55,7 @@ namespace DangNhap
             this.colhinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmaKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.giangVien_SelectAllTableAdapter = new QuanLyDaoTao.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter();
+            this.giangVien_SelectAllTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.aceSapXep = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -108,7 +108,7 @@ namespace DangNhap
             // 
             this.btnThemGV.Caption = "Thêm GV";
             this.btnThemGV.Id = 1;
-            this.btnThemGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.businessman;
+            this.btnThemGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.businessman;
             this.btnThemGV.LargeWidth = 80;
             this.btnThemGV.Name = "btnThemGV";
             this.btnThemGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemGV_ItemClick);
@@ -117,7 +117,7 @@ namespace DangNhap
             // 
             this.btnXoaGV.Caption = "Xóa GV";
             this.btnXoaGV.Id = 2;
-            this.btnXoaGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.delete_modern_user;
+            this.btnXoaGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.delete_modern_user;
             this.btnXoaGV.LargeWidth = 80;
             this.btnXoaGV.Name = "btnXoaGV";
             this.btnXoaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaGV_ItemClick);
@@ -126,7 +126,7 @@ namespace DangNhap
             // 
             this.btnSuaGV.Caption = "Sửa GV";
             this.btnSuaGV.Id = 3;
-            this.btnSuaGV.ImageOptions.SvgImage = global::QuanLyDaoTao.Properties.Resources.edit_woman_with_bund_profile;
+            this.btnSuaGV.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.edit_woman_with_bund_profile;
             this.btnSuaGV.LargeWidth = 80;
             this.btnSuaGV.Name = "btnSuaGV";
             this.btnSuaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaGV_ItemClick);
@@ -161,10 +161,13 @@ namespace DangNhap
             // 
             // picGiangVien
             // 
+            this.picGiangVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picGiangVien.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picGiangVien.Image = global::DangNhap.Properties.Resources.no_avatar;
             this.picGiangVien.Location = new System.Drawing.Point(10, 0);
             this.picGiangVien.Name = "picGiangVien";
-            this.picGiangVien.Size = new System.Drawing.Size(184, 186);
+            this.picGiangVien.Size = new System.Drawing.Size(186, 186);
+            this.picGiangVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGiangVien.TabIndex = 0;
             this.picGiangVien.TabStop = false;
             // 
@@ -493,9 +496,9 @@ namespace DangNhap
             // 
             this.laEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laEmail.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laEmail.Location = new System.Drawing.Point(209, 153);
+            this.laEmail.Location = new System.Drawing.Point(211, 153);
             this.laEmail.Name = "laEmail";
-            this.laEmail.Size = new System.Drawing.Size(255, 33);
+            this.laEmail.Size = new System.Drawing.Size(253, 33);
             this.laEmail.TabIndex = 6;
             this.laEmail.TabStop = true;
             this.laEmail.Text = "Email";
@@ -504,9 +507,9 @@ namespace DangNhap
             // 
             this.laSoDT.Dock = System.Windows.Forms.DockStyle.Top;
             this.laSoDT.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laSoDT.Location = new System.Drawing.Point(209, 121);
+            this.laSoDT.Location = new System.Drawing.Point(211, 121);
             this.laSoDT.Name = "laSoDT";
-            this.laSoDT.Size = new System.Drawing.Size(255, 32);
+            this.laSoDT.Size = new System.Drawing.Size(253, 32);
             this.laSoDT.TabIndex = 5;
             this.laSoDT.Text = "Số điện thoại";
             this.laSoDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,9 +518,9 @@ namespace DangNhap
             // 
             this.laKhoa.Dock = System.Windows.Forms.DockStyle.Top;
             this.laKhoa.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laKhoa.Location = new System.Drawing.Point(209, 90);
+            this.laKhoa.Location = new System.Drawing.Point(211, 90);
             this.laKhoa.Name = "laKhoa";
-            this.laKhoa.Size = new System.Drawing.Size(255, 31);
+            this.laKhoa.Size = new System.Drawing.Size(253, 31);
             this.laKhoa.TabIndex = 4;
             this.laKhoa.Text = "Khoa";
             // 
@@ -525,9 +528,9 @@ namespace DangNhap
             // 
             this.laTrinhDo.Dock = System.Windows.Forms.DockStyle.Top;
             this.laTrinhDo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laTrinhDo.Location = new System.Drawing.Point(209, 48);
+            this.laTrinhDo.Location = new System.Drawing.Point(211, 48);
             this.laTrinhDo.Name = "laTrinhDo";
-            this.laTrinhDo.Size = new System.Drawing.Size(255, 42);
+            this.laTrinhDo.Size = new System.Drawing.Size(253, 42);
             this.laTrinhDo.TabIndex = 3;
             this.laTrinhDo.Text = "Trình độ";
             this.laTrinhDo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -536,9 +539,9 @@ namespace DangNhap
             // 
             this.laHoTen.Dock = System.Windows.Forms.DockStyle.Top;
             this.laHoTen.Font = new System.Drawing.Font("Times New Roman", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laHoTen.Location = new System.Drawing.Point(209, 0);
+            this.laHoTen.Location = new System.Drawing.Point(211, 0);
             this.laHoTen.Name = "laHoTen";
-            this.laHoTen.Size = new System.Drawing.Size(255, 48);
+            this.laHoTen.Size = new System.Drawing.Size(253, 48);
             this.laHoTen.TabIndex = 2;
             this.laHoTen.Text = "Họ tên";
             this.laHoTen.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -546,7 +549,7 @@ namespace DangNhap
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(194, 0);
+            this.panel7.Location = new System.Drawing.Point(196, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(15, 186);
             this.panel7.TabIndex = 1;
@@ -636,7 +639,7 @@ namespace DangNhap
         private DevExpress.XtraGrid.Columns.GridColumn colhinh;
         private DevExpress.XtraGrid.Columns.GridColumn colmaKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn coltenKhoa;
-        private QuanLyDaoTao.QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter giangVien_SelectAllTableAdapter;
+        private QLDaoTaoDataSetTableAdapters.GiangVien_SelectAllTableAdapter giangVien_SelectAllTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceSapXep;

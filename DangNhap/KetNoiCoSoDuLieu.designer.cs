@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyDaoTao
+namespace DangNhap
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -66,7 +66,7 @@ namespace QuanLyDaoTao
     #endregion
 		
 		public KetNoiCoSoDuLieuDataContext() : 
-				base(global::QuanLyDaoTao.Properties.Settings.Default.QuanLyDaoTaoConnectionString, mappingSource)
+				base(global::DangNhap.Properties.Settings.Default.QuanLyDaoTaoConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -230,6 +230,20 @@ namespace QuanLyDaoTao
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<selectAllKhoaResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectAllNganhHoc")]
+		public ISingleResult<selectAllNganhHocResult> selectAllNganhHoc()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<selectAllNganhHocResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.slectAllLopHoc")]
+		public ISingleResult<slectAllLopHocResult> slectAllLopHoc()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<slectAllLopHocResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -3084,6 +3098,112 @@ namespace QuanLyDaoTao
 				if ((this._tenKhoa != value))
 				{
 					this._tenKhoa = value;
+				}
+			}
+		}
+	}
+	
+	public partial class selectAllNganhHocResult
+	{
+		
+		private string _maNganh;
+		
+		private string _tenNganh;
+		
+		private string _maKhoa;
+		
+		public selectAllNganhHocResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNganh", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string maNganh
+		{
+			get
+			{
+				return this._maNganh;
+			}
+			set
+			{
+				if ((this._maNganh != value))
+				{
+					this._maNganh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNganh", DbType="NVarChar(50)")]
+		public string tenNganh
+		{
+			get
+			{
+				return this._tenNganh;
+			}
+			set
+			{
+				if ((this._tenNganh != value))
+				{
+					this._tenNganh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKhoa", DbType="VarChar(10)")]
+		public string maKhoa
+		{
+			get
+			{
+				return this._maKhoa;
+			}
+			set
+			{
+				if ((this._maKhoa != value))
+				{
+					this._maKhoa = value;
+				}
+			}
+		}
+	}
+	
+	public partial class slectAllLopHocResult
+	{
+		
+		private string _maLop;
+		
+		private string _tenLop;
+		
+		public slectAllLopHocResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLop", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string maLop
+		{
+			get
+			{
+				return this._maLop;
+			}
+			set
+			{
+				if ((this._maLop != value))
+				{
+					this._maLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLop", DbType="NVarChar(50)")]
+		public string tenLop
+		{
+			get
+			{
+				return this._tenLop;
+			}
+			set
+			{
+				if ((this._tenLop != value))
+				{
+					this._tenLop = value;
 				}
 			}
 		}

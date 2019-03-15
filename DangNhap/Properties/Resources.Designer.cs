@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyDaoTao.Properties {
+namespace DangNhap.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace QuanLyDaoTao.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("QuanLyDaoTao.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DangNhap.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -346,6 +346,16 @@ namespace QuanLyDaoTao.Properties {
         internal static System.Drawing.Bitmap iconfinder_system_job_seeker_employee_unemployee_work_2620499 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_system_job_seeker_employee_unemployee_work_2620499", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_avatar {
+            get {
+                object obj = ResourceManager.GetObject("no_avatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

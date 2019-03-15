@@ -8,11 +8,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.Data;
+using QuanLyDaoTao;
+using System.IO;
 
 namespace DangNhap
 {
     public partial class frmDTSinhVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        Byte[] ImageByArray;
         public frmDTSinhVien()
         {
             InitializeComponent();
@@ -24,6 +28,77 @@ namespace DangNhap
         {
             frmDaoTao frmDaoTao = new frmDaoTao();
             frmDaoTao.Show();
+        }
+
+        private void btnThemSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+            frmTTSinhVien frmTTSinhVien = new frmTTSinhVien();
+            frmTTSinhVien.menu("Them");
+            frmTTSinhVien.Show();
+        }
+
+        private void gridVSinhVien_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            laHoTen.Text = gridVSinhVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
+            laNganh.Text = gridVSinhVien.Columns.View.GetFocusedRowCellValue("tenNganh").ToString();
+            laLop.Text = gridVSinhVien.Columns.View.GetFocusedRowCellValue("tenLop").ToString();
+            laSoDT.Text = gridVSinhVien.Columns.View.GetFocusedRowCellValue("SDT").ToString();
+            laEmail.Text = gridVSinhVien.Columns.View.GetFocusedRowCellValue("email").ToString();
+            byte[] ImageArray = (byte[])gridVSinhVien.Columns.View.GetFocusedRowCellValue("hinh");
+            if (ImageArray.Length == 0)
+            {
+                picSinhVien.Image = null;
+            }
+            else
+            {
+                ImageByArray = ImageArray;
+                picSinhVien.Image = Image.FromStream(new MemoryStream(ImageArray));
+            }
+        }
+
+        private void aceTatCa_Click(object sender, EventArgs e)
+        {
+            coltenKhoa.SortOrder = ColumnSortOrder.None;
+            coltenKhoa.GroupIndex = -1;
+            coltenLop.SortOrder = ColumnSortOrder.None;
+            coltenLop.GroupIndex = -1;
+            colgioiTinh.SortOrder = ColumnSortOrder.None;
+            colgioiTinh.GroupIndex = -1;
+            coltenNganh.SortOrder = ColumnSortOrder.None;
+            coltenNganh.GroupIndex = -1;
+            colkhoa.SortOrder = ColumnSortOrder.None;
+            colkhoa.GroupIndex = -1;
+        }
+
+        private void aceLop_Click(object sender, EventArgs e)
+        {
+            coltenLop.SortOrder = ColumnSortOrder.Ascending;
+            coltenLop.GroupIndex = 0;
+        }
+
+        private void aceKhoa_Click(object sender, EventArgs e)
+        {
+            coltenKhoa.SortOrder = ColumnSortOrder.Ascending;
+            coltenKhoa.GroupIndex = 0;
+        }
+
+        private void aceNganh_Click(object sender, EventArgs e)
+        {
+            coltenNganh.SortOrder = ColumnSortOrder.Ascending;
+            coltenNganh.GroupIndex = 0;
+        }
+
+        private void aceKhoaHoc_Click(object sender, EventArgs e)
+        {
+            colkhoa.SortOrder = ColumnSortOrder.Ascending;
+            colkhoa.GroupIndex = 0;
+        }
+
+        private void aceGioiTinh_Click(object sender, EventArgs e)
+        {
+            colgioiTinh.SortOrder = ColumnSortOrder.Ascending;
+            colgioiTinh.GroupIndex = 0;
         }
     }
 }

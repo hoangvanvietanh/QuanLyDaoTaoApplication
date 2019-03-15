@@ -8,8 +8,8 @@
     <ProjectGuid>{5D9B6E2F-460A-4F83-ACA1-473107EF9AB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuanLyDaoTao</RootNamespace>
-    <AssemblyName>QuanLyDaoTao</AssemblyName>
+    <RootNamespace>DangNhap</RootNamespace>
+    <AssemblyName>DangNhap</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -96,6 +96,12 @@
     <Compile Include="frmTTGiangVien.Designer.cs">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTTSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTTSinhVien.Designer.cs">
+      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoiCoSoDuLieu.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTTGiangVien.resx">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTTSinhVien.resx">
+      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -283,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_avatar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

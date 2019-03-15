@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace QuanLyDaoTao {
+namespace DangNhap {
     
     
     /// <summary>
@@ -2234,7 +2234,7 @@ namespace QuanLyDaoTao {
         }
     }
 }
-namespace QuanLyDaoTao.QLDaoTaoDataSetTableAdapters {
+namespace DangNhap.QLDaoTaoDataSetTableAdapters {
     
     
     /// <summary>
@@ -2378,7 +2378,7 @@ namespace QuanLyDaoTao.QLDaoTaoDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyDaoTao.Properties.Settings.Default.QuanLyDaoTaoConnectionString;
+            this._connection.ConnectionString = global::DangNhap.Properties.Settings.Default.QuanLyDaoTaoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2565,7 +2565,7 @@ namespace QuanLyDaoTao.QLDaoTaoDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyDaoTao.Properties.Settings.Default.QuanLyDaoTaoConnectionString;
+            this._connection.ConnectionString = global::DangNhap.Properties.Settings.Default.QuanLyDaoTaoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
