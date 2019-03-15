@@ -263,7 +263,7 @@
             // 
             this.txtMaGV.Location = new System.Drawing.Point(81, 67);
             this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(110, 21);
+            this.txtMaGV.Size = new System.Drawing.Size(206, 21);
             this.txtMaGV.TabIndex = 1;
             // 
             // label9

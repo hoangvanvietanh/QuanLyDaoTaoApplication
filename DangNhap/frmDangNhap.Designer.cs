@@ -41,6 +41,8 @@
             this.laDNGiangVien = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txtCheckMK = new System.Windows.Forms.Label();
+            this.laCheckTK = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -193,6 +195,8 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.txtCheckMK);
+            this.panel10.Controls.Add(this.laCheckTK);
             this.panel10.Controls.Add(this.btnThoat);
             this.panel10.Controls.Add(this.btnDangNhap);
             this.panel10.Controls.Add(this.txtMatKhau);
@@ -203,13 +207,33 @@
             this.panel10.Size = new System.Drawing.Size(303, 155);
             this.panel10.TabIndex = 2;
             // 
+            // txtCheckMK
+            // 
+            this.txtCheckMK.AutoSize = true;
+            this.txtCheckMK.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtCheckMK.ForeColor = System.Drawing.Color.Red;
+            this.txtCheckMK.Location = new System.Drawing.Point(6, 103);
+            this.txtCheckMK.Name = "txtCheckMK";
+            this.txtCheckMK.Size = new System.Drawing.Size(0, 13);
+            this.txtCheckMK.TabIndex = 2;
+            // 
+            // laCheckTK
+            // 
+            this.laCheckTK.AutoSize = true;
+            this.laCheckTK.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laCheckTK.ForeColor = System.Drawing.Color.Red;
+            this.laCheckTK.Location = new System.Drawing.Point(6, 50);
+            this.laCheckTK.Name = "laCheckTK";
+            this.laCheckTK.Size = new System.Drawing.Size(0, 13);
+            this.laCheckTK.TabIndex = 2;
+            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(189)))), ((int)(((byte)(240)))));
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Arial Narrow", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(154, 120);
+            this.btnThoat.Location = new System.Drawing.Point(154, 123);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(106, 29);
             this.btnThoat.TabIndex = 1;
@@ -223,7 +247,7 @@
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 10.25F);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(44, 120);
+            this.btnDangNhap.Location = new System.Drawing.Point(44, 123);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(104, 29);
             this.btnDangNhap.TabIndex = 1;
@@ -237,21 +261,24 @@
             this.txtMatKhau.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtMatKhau.Location = new System.Drawing.Point(6, 69);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(286, 31);
+            this.txtMatKhau.Size = new System.Drawing.Size(291, 31);
             this.txtMatKhau.TabIndex = 0;
             this.txtMatKhau.TabStop = false;
-            this.txtMatKhau.Text = "Mật Khẩu";
+            this.txtMatKhau.Text = "Mật khẩu";
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
             // 
             // txtMaSo
             // 
             this.txtMaSo.Font = new System.Drawing.Font("Arial", 15.25F);
             this.txtMaSo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtMaSo.Location = new System.Drawing.Point(6, 20);
+            this.txtMaSo.Location = new System.Drawing.Point(6, 16);
             this.txtMaSo.Name = "txtMaSo";
-            this.txtMaSo.Size = new System.Drawing.Size(286, 31);
+            this.txtMaSo.Size = new System.Drawing.Size(291, 31);
             this.txtMaSo.TabIndex = 0;
             this.txtMaSo.TabStop = false;
             this.txtMaSo.Text = "Mã số";
+            this.txtMaSo.Click += new System.EventHandler(this.txtMaSo_Click);
+            this.txtMaSo.Leave += new System.EventHandler(this.txtMaSo_Leave);
             // 
             // panel9
             // 
@@ -330,6 +357,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label laCheckTK;
+        private System.Windows.Forms.Label txtCheckMK;
     }
 }
 
