@@ -1,6 +1,4 @@
-﻿using QuanLyDaoTao;
-
-namespace DangNhap
+﻿namespace DangNhap
 {
     partial class frmDTGiangVien
     {

@@ -405,6 +405,8 @@
             this.colhinh,
             this.colmaKhoa});
             this.gridVSinhVien.GridControl = this.gridCSinhVien;
+            this.gridVSinhVien.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, " - Tổng: {0:n0}")});
             this.gridVSinhVien.Name = "gridVSinhVien";
             this.gridVSinhVien.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridVSinhVien_RowCellClick);
             // 

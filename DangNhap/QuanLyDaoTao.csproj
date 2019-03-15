@@ -90,23 +90,17 @@
     <Compile Include="frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinSV.cs">
+    <Compile Include="frmTTSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinSV.Designer.cs">
-      <DependentUpon>frmThongTinSV.cs</DependentUpon>
+    <Compile Include="frmTTSinhVien.Designer.cs">
+      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTTGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTTGiangVien.Designer.cs">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTTSinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTTSinhVien.Designer.cs">
-      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="KetNoiCoSoDuLieu.designer.cs">
       <AutoGen>True</AutoGen>
@@ -141,14 +135,11 @@
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinSV.resx">
-      <DependentUpon>frmThongTinSV.cs</DependentUpon>
+    <EmbeddedResource Include="frmTTSinhVien.resx">
+      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTTGiangVien.resx">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTTSinhVien.resx">
-      <DependentUpon>frmTTSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
