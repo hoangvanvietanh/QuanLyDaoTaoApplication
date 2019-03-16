@@ -36,7 +36,7 @@ namespace DangNhap
             DR.Close();
         }
 
-        public void TTSinhVien(String maGV, String hoTen, String diaChi, String soDT, String gioiTinh, String trinhDo, String thamNien, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
+        public void TTGiangVien(String maGV, String hoTen, String diaChi, String soDT, String gioiTinh, String trinhDo, String thamNien, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
         {
             txtMaGV.Text = maGV;
             txtHoTen.Text = hoTen;

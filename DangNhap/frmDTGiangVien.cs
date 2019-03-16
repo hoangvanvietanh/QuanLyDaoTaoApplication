@@ -57,9 +57,10 @@ namespace DangNhap
             //this.Close();
 
             frmTTGiangVien frmTTGiangVien = new frmTTGiangVien();
-            frmTTGiangVien.TTSinhVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
+            frmTTGiangVien.TTGiangVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
             frmTTGiangVien.menu("Sua");
             frmTTGiangVien.Show();
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -179,11 +180,6 @@ namespace DangNhap
             giangVien_SelectAllTableAdapter.Fill(qlDaoTaoDataSet.GiangVien_SelectAll);
             //gridVGiangVien.UpdateCurrentRow();
             //gridVGiangVien.EndDataUpdate();
-        }
-
-        private void accordionControlElement1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void aceTatCa_Click(object sender, EventArgs e)
