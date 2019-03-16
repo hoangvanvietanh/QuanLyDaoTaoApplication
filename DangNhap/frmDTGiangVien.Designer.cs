@@ -32,9 +32,11 @@
             this.btnThemGV = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoaGV = new DevExpress.XtraBars.BarButtonItem();
             this.btnSuaGV = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIn = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.picGiangVien = new System.Windows.Forms.PictureBox();
             this.gridCGiangVien = new DevExpress.XtraGrid.GridControl();
@@ -93,9 +95,10 @@
             this.ribbon.ExpandCollapseItem,
             this.btnThemGV,
             this.btnXoaGV,
-            this.btnSuaGV});
+            this.btnSuaGV,
+            this.btnIn});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 4;
+            this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -129,11 +132,20 @@
             this.btnSuaGV.Name = "btnSuaGV";
             this.btnSuaGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaGV_ItemClick);
             // 
+            // btnIn
+            // 
+            this.btnIn.Caption = "In";
+            this.btnIn.Id = 4;
+            this.btnIn.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.iconfinder_print_172530;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIn_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Trang Chủ";
             // 
@@ -149,6 +161,12 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnSuaGV);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Edit";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnIn);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "In";
             // 
             // ribbonStatusBar
             // 
@@ -658,5 +676,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceGioiTinh;
         private System.Windows.Forms.Label laKhoa;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThamNien;
+        private DevExpress.XtraBars.BarButtonItem btnIn;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }

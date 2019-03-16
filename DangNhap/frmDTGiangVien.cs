@@ -217,6 +217,12 @@ namespace DangNhap
             colthamNien.SortOrder = ColumnSortOrder.Ascending;
             colthamNien.GroupIndex = 0;
         }
+
+        private void btnIn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPreviewReport frmPreviewReport = new frmPreviewReport();
+            frmPreviewReport.Show();
+        }
     }
     
 }

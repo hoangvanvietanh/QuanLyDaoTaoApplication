@@ -57,5 +57,10 @@ namespace DangNhap
                 picGiangVien.Image = Image.FromStream(new MemoryStream(ImageArray));
             }
         }
+
+        private void laLichDay_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -202,6 +202,9 @@
   <data name="delete-modern-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-modern-user.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="19d8a051527db023e96c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19d8a051527db023e96c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_basics-22_296812" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_basics-22_296812.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -217,7 +220,7 @@
   <data name="iconfinder_Closed_Book_Icon_1741323" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Closed_Book_Icon_1741323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="19d8a051527db023e96c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\19d8a051527db023e96c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_print_172530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_print_172530.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
 </root>
