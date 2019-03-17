@@ -126,10 +126,22 @@
     <Compile Include="frmTTGiangVien.Designer.cs">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="giangVienReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="giangVienReport.Designer.cs">
+      <DependentUpon>giangVienReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoiCoSoDuLieu.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KetNoiCoSoDuLieu.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="listGiangVienReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="listGiangVienReport.Designer.cs">
+      <DependentUpon>listGiangVienReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,12 +155,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDaoTaoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="reportGiangVien.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="reportGiangVien.Designer.cs">
-      <DependentUpon>reportGiangVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -174,6 +180,12 @@
     <EmbeddedResource Include="frmTTGiangVien.resx">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="giangVienReport.resx">
+      <DependentUpon>giangVienReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listGiangVienReport.resx">
+      <DependentUpon>listGiangVienReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,9 +205,6 @@
     </Compile>
     <EmbeddedResource Include="frmGiangVien.resx">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reportGiangVien.resx">
-      <DependentUpon>reportGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="KetNoiCoSoDuLieu.dbml">

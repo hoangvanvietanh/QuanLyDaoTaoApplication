@@ -265,6 +265,7 @@
             this.txtMatKhau.TabIndex = 0;
             this.txtMatKhau.TabStop = false;
             this.txtMatKhau.Text = "Mật khẩu";
+            this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
             // 
             // txtMaSo

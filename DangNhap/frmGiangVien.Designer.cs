@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.laThongBao = new System.Windows.Forms.Label();
-            this.paThongTin = new System.Windows.Forms.Panel();
+            this.paLichDay = new System.Windows.Forms.Panel();
             this.laLichDay = new System.Windows.Forms.Label();
-            this.paThoat = new System.Windows.Forms.Panel();
+            this.paDangXuat = new System.Windows.Forms.Panel();
             this.laThoat = new System.Windows.Forms.Label();
-            this.paThongBao = new System.Windows.Forms.Panel();
+            this.paThongTin = new System.Windows.Forms.Panel();
             this.laThongTin = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.paShowThongTin = new System.Windows.Forms.Panel();
@@ -75,11 +74,13 @@
             this.picGiangVien = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.paInTT = new System.Windows.Forms.Panel();
+            this.paThongBao = new System.Windows.Forms.Panel();
+            this.laIn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.paLichDay.SuspendLayout();
+            this.paDangXuat.SuspendLayout();
             this.paThongTin.SuspendLayout();
-            this.paThoat.SuspendLayout();
-            this.paThongBao.SuspendLayout();
             this.panel2.SuspendLayout();
             this.paShowThongTin.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -90,29 +91,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).BeginInit();
+            this.paInTT.SuspendLayout();
+            this.paThongBao.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.paThongTin);
-            this.panel1.Controls.Add(this.paThoat);
             this.panel1.Controls.Add(this.paThongBao);
+            this.panel1.Controls.Add(this.paInTT);
+            this.panel1.Controls.Add(this.paLichDay);
+            this.panel1.Controls.Add(this.paDangXuat);
+            this.panel1.Controls.Add(this.paThongTin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(891, 33);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.laThongBao);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(372, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 33);
-            this.panel3.TabIndex = 3;
             // 
             // laThongBao
             // 
@@ -121,20 +115,20 @@
             this.laThongBao.ForeColor = System.Drawing.Color.White;
             this.laThongBao.Location = new System.Drawing.Point(0, 0);
             this.laThongBao.Name = "laThongBao";
-            this.laThongBao.Size = new System.Drawing.Size(333, 33);
+            this.laThongBao.Size = new System.Drawing.Size(179, 33);
             this.laThongBao.TabIndex = 0;
             this.laThongBao.Text = "Thông báo";
             this.laThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // paThongTin
+            // paLichDay
             // 
-            this.paThongTin.BackColor = System.Drawing.Color.Silver;
-            this.paThongTin.Controls.Add(this.laLichDay);
-            this.paThongTin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.paThongTin.Location = new System.Drawing.Point(186, 0);
-            this.paThongTin.Name = "paThongTin";
-            this.paThongTin.Size = new System.Drawing.Size(186, 33);
-            this.paThongTin.TabIndex = 2;
+            this.paLichDay.BackColor = System.Drawing.Color.Silver;
+            this.paLichDay.Controls.Add(this.laLichDay);
+            this.paLichDay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.paLichDay.Location = new System.Drawing.Point(178, 0);
+            this.paLichDay.Name = "paLichDay";
+            this.paLichDay.Size = new System.Drawing.Size(178, 33);
+            this.paLichDay.TabIndex = 2;
             // 
             // laLichDay
             // 
@@ -143,21 +137,22 @@
             this.laLichDay.ForeColor = System.Drawing.Color.White;
             this.laLichDay.Location = new System.Drawing.Point(0, 0);
             this.laLichDay.Name = "laLichDay";
-            this.laLichDay.Size = new System.Drawing.Size(186, 33);
+            this.laLichDay.Size = new System.Drawing.Size(178, 33);
             this.laLichDay.TabIndex = 0;
             this.laLichDay.Text = "Lịch dạy";
             this.laLichDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.laLichDay.Click += new System.EventHandler(this.laLichDay_Click);
+           
             // 
-            // paThoat
+            // paDangXuat
             // 
-            this.paThoat.BackColor = System.Drawing.Color.Silver;
-            this.paThoat.Controls.Add(this.laThoat);
-            this.paThoat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.paThoat.Location = new System.Drawing.Point(705, 0);
-            this.paThoat.Name = "paThoat";
-            this.paThoat.Size = new System.Drawing.Size(186, 33);
-            this.paThoat.TabIndex = 1;
+            this.paDangXuat.BackColor = System.Drawing.Color.Silver;
+            this.paDangXuat.Controls.Add(this.laThoat);
+            this.paDangXuat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.paDangXuat.Location = new System.Drawing.Point(713, 0);
+            this.paDangXuat.Name = "paDangXuat";
+            this.paDangXuat.Size = new System.Drawing.Size(178, 33);
+            this.paDangXuat.TabIndex = 1;
             // 
             // laThoat
             // 
@@ -166,21 +161,21 @@
             this.laThoat.ForeColor = System.Drawing.Color.White;
             this.laThoat.Location = new System.Drawing.Point(0, 0);
             this.laThoat.Name = "laThoat";
-            this.laThoat.Size = new System.Drawing.Size(186, 33);
+            this.laThoat.Size = new System.Drawing.Size(178, 33);
             this.laThoat.TabIndex = 0;
-            this.laThoat.Text = "Thoát";
+            this.laThoat.Text = "Đăng xuất";
             this.laThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.laThoat.Click += new System.EventHandler(this.laThoat_Click);
             // 
-            // paThongBao
+            // paThongTin
             // 
-            this.paThongBao.BackColor = System.Drawing.Color.Silver;
-            this.paThongBao.Controls.Add(this.laThongTin);
-            this.paThongBao.Dock = System.Windows.Forms.DockStyle.Left;
-            this.paThongBao.Location = new System.Drawing.Point(0, 0);
-            this.paThongBao.Name = "paThongBao";
-            this.paThongBao.Size = new System.Drawing.Size(186, 33);
-            this.paThongBao.TabIndex = 0;
+            this.paThongTin.BackColor = System.Drawing.Color.Silver;
+            this.paThongTin.Controls.Add(this.laThongTin);
+            this.paThongTin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.paThongTin.Location = new System.Drawing.Point(0, 0);
+            this.paThongTin.Name = "paThongTin";
+            this.paThongTin.Size = new System.Drawing.Size(178, 33);
+            this.paThongTin.TabIndex = 0;
             // 
             // laThongTin
             // 
@@ -190,7 +185,7 @@
             this.laThongTin.ForeColor = System.Drawing.Color.White;
             this.laThongTin.Location = new System.Drawing.Point(0, 0);
             this.laThongTin.Name = "laThongTin";
-            this.laThongTin.Size = new System.Drawing.Size(186, 33);
+            this.laThongTin.Size = new System.Drawing.Size(178, 33);
             this.laThongTin.TabIndex = 0;
             this.laThongTin.Text = "Thông tin";
             this.laThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +220,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(195, 245);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(673, 17);
+            this.panel14.Size = new System.Drawing.Size(673, 10);
             this.panel14.TabIndex = 4;
             // 
             // panel9
@@ -560,6 +555,7 @@
             this.picGiangVien.Location = new System.Drawing.Point(0, 77);
             this.picGiangVien.Name = "picGiangVien";
             this.picGiangVien.Size = new System.Drawing.Size(180, 168);
+            this.picGiangVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGiangVien.TabIndex = 2;
             this.picGiangVien.TabStop = false;
             // 
@@ -581,6 +577,39 @@
             this.panel5.Size = new System.Drawing.Size(180, 77);
             this.panel5.TabIndex = 0;
             // 
+            // paInTT
+            // 
+            this.paInTT.BackColor = System.Drawing.Color.Silver;
+            this.paInTT.Controls.Add(this.laIn);
+            this.paInTT.Dock = System.Windows.Forms.DockStyle.Right;
+            this.paInTT.Location = new System.Drawing.Point(535, 0);
+            this.paInTT.Name = "paInTT";
+            this.paInTT.Size = new System.Drawing.Size(178, 33);
+            this.paInTT.TabIndex = 4;
+            // 
+            // paThongBao
+            // 
+            this.paThongBao.BackColor = System.Drawing.Color.Silver;
+            this.paThongBao.Controls.Add(this.laThongBao);
+            this.paThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paThongBao.Location = new System.Drawing.Point(356, 0);
+            this.paThongBao.Name = "paThongBao";
+            this.paThongBao.Size = new System.Drawing.Size(179, 33);
+            this.paThongBao.TabIndex = 5;
+            // 
+            // laIn
+            // 
+            this.laIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laIn.Font = new System.Drawing.Font("Tahoma", 15.25F, System.Drawing.FontStyle.Bold);
+            this.laIn.ForeColor = System.Drawing.Color.White;
+            this.laIn.Location = new System.Drawing.Point(0, 0);
+            this.laIn.Name = "laIn";
+            this.laIn.Size = new System.Drawing.Size(178, 33);
+            this.laIn.TabIndex = 0;
+            this.laIn.Text = "In thông tin";
+            this.laIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.laIn.Click += new System.EventHandler(this.laIn_Click);
+            // 
             // frmGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,10 +623,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giảng Viên";
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.paLichDay.ResumeLayout(false);
+            this.paDangXuat.ResumeLayout(false);
             this.paThongTin.ResumeLayout(false);
-            this.paThoat.ResumeLayout(false);
-            this.paThongBao.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.paShowThongTin.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -608,6 +636,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picGiangVien)).EndInit();
+            this.paInTT.ResumeLayout(false);
+            this.paThongBao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -615,13 +645,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label laThongBao;
-        private System.Windows.Forms.Panel paThongTin;
+        private System.Windows.Forms.Panel paLichDay;
         private System.Windows.Forms.Label laLichDay;
-        private System.Windows.Forms.Panel paThoat;
+        private System.Windows.Forms.Panel paDangXuat;
         private System.Windows.Forms.Label laThoat;
-        private System.Windows.Forms.Panel paThongBao;
+        private System.Windows.Forms.Panel paThongTin;
         private System.Windows.Forms.Label laThongTin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel paShowThongTin;
@@ -661,5 +690,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel paThongBao;
+        private System.Windows.Forms.Panel paInTT;
+        private System.Windows.Forms.Label laIn;
     }
 }

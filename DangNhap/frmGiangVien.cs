@@ -30,8 +30,9 @@ namespace DangNhap
 
         private void laThoat_Click(object sender, EventArgs e)
         {
-            laThoat.BackColor = Color.SkyBlue;
             this.Close();
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.Show();
         }
 
         public void TTGiangVien(String maGV, String hoTen, String diaChi, String soDT, String gioiTinh, String trinhDo, String thamNien, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
@@ -61,6 +62,18 @@ namespace DangNhap
         private void laLichDay_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void laIn_Click(object sender, EventArgs e)
+        {
+            laIn.BackColor = Color.SkyBlue;
+            laThongTin.BackColor = Color.Silver;
+            using (frmPreviewReport frm = new frmPreviewReport())
+            {
+                frm.WindowState = FormWindowState.Maximized;
+                frm.inGiangVien(laMaGV.Text, laHoTen.Text, laDiaChi.Text, laSoDT.Text, laGioiTinh.Text, laTrinhDo.Text, laThamNien.Text, laKhoa.Text, laEmail.Text, laNoiSinh.Text, laNgaySinh.Text, ImageByArray);
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -221,7 +221,9 @@ namespace DangNhap
         private void btnIn_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmPreviewReport frmPreviewReport = new frmPreviewReport();
-            frmPreviewReport.Show();
+            frmPreviewReport.inListGiangVien();
+            frmPreviewReport.WindowState = FormWindowState.Maximized;
+            frmPreviewReport.ShowDialog();
         }
     }
     
