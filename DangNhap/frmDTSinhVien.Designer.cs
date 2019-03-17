@@ -111,6 +111,8 @@
             // 
             this.btnThemSV.Caption = "Thêm SV";
             this.btnThemSV.Id = 1;
+            this.btnThemSV.ImageOptions.Image = global::DangNhap.Properties.Resources.student_add_512;
+            this.btnThemSV.LargeWidth = 80;
             this.btnThemSV.Name = "btnThemSV";
             this.btnThemSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemSV_ItemClick);
             // 

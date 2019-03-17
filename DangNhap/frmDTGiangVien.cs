@@ -54,13 +54,12 @@ namespace DangNhap
             String email = gridVGiangVien.Columns.View.GetFocusedRowCellValue("email").ToString();
             String ngaySinh = gridVGiangVien.Columns.View.GetFocusedRowCellValue("ngaySinh").ToString();
             byte[] ImageArray = (byte[])gridVGiangVien.Columns.View.GetFocusedRowCellValue("hinh");
-            //this.Close();
+            this.Close();
 
             frmTTGiangVien frmTTGiangVien = new frmTTGiangVien();
             frmTTGiangVien.TTGiangVien(maGV,hoTen,diaChi,soDT,gioiTinh,trinhDo,thamNien,khoa,email,noiSinh,ngaySinh, ImageArray);
             frmTTGiangVien.menu("Sua");
             frmTTGiangVien.Show();
-
         }
 
         private void btnShow_Click(object sender, EventArgs e)

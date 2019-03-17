@@ -391,6 +391,16 @@ namespace DangNhap.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student_add_512 {
+            get {
+                object obj = ResourceManager.GetObject("student_add-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage user {

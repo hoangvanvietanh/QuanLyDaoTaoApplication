@@ -118,7 +118,7 @@ namespace DangNhap
             String email = gridVSinhVien.Columns.View.GetFocusedRowCellValue("email").ToString();
             String ngaySinh = gridVSinhVien.Columns.View.GetFocusedRowCellValue("ngaySinh").ToString();
             byte[] ImageArray = (byte[])gridVSinhVien.Columns.View.GetFocusedRowCellValue("hinh");
-            //this.Close();
+            this.Close();
 
             /*frmTTSinhVien frmTTSinhVien = new frmTTSinhVien();
             frmTTSinhVien.TTSinhVien(maGV, hoTen, diaChi, soDT, gioiTinh, trinhDo, lopHoc, khoa, email, noiSinh, ngaySinh, ImageArray);

@@ -19,7 +19,9 @@ namespace DangNhap
         }
         private void laThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            frmDangNhap dangNhap = new frmDangNhap();
+            dangNhap.Show();
         }
 
         private void laGiangVien_Click(object sender, EventArgs e)

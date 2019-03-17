@@ -153,24 +153,24 @@ namespace DangNhap
                 con.Close();
                 MessageBox.Show("Lưu thành công ^^");
                 this.Close();
-                frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
-                frmDTGiangVien.WindowState = FormWindowState.Maximized;
-                frmDTGiangVien.Show();
+                frmDTGiangVien frm = new frmDTGiangVien();
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
             }
             else
             {
-                if (strFilePath != "")
+                if (strFilePath != "" && ImageByArray != null)
                 {
                     /*if (ImageByArray.Length != 0)
-                        ImageByArray = new byte[] { };*/
-                    MessageBox.Show("Vui lòng chọn hình đại diện ^^");
+                        ImageByArray = new byte[] { };
+                   // MessageBox.Show("Vui lòng chọn hình đại diện ^^");
                     OpenFileDialog ofd = new OpenFileDialog();
                     ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
                         strFilePath = ofd.FileName;
                         picGiangVien.Image = new Bitmap(strFilePath);
-                    }
+                    }*/
                     Image temp = new Bitmap(strFilePath);
                     MemoryStream strm = new MemoryStream();
                     temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -227,16 +227,19 @@ namespace DangNhap
                 con.Close();
                 MessageBox.Show("Lưu thành công ^^");
                 this.Close();
-                // frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
-                //frmDTGiangVien.WindowState = FormWindowState.Maximized;
-                //frmDTGiangVien.Show();
+                
             }
-            
+             frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
+            frmDTGiangVien.WindowState = FormWindowState.Maximized;
+            frmDTGiangVien.Show();
         }
 
         private void windowsUIButtonPanelCloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
+            frmDTGiangVien.WindowState = FormWindowState.Maximized;
+            frmDTGiangVien.Show();
         }
 
         private void picGiangVien_Click(object sender, EventArgs e)
