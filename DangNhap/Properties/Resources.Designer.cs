@@ -283,6 +283,16 @@ namespace DangNhap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_delete_51514 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_delete_51514", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Exit_132037 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Exit_132037", resourceCulture);
@@ -297,6 +307,56 @@ namespace DangNhap.Properties {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_General_Office_35_3592854", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minimize_82798 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minimize_82798", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minus_1303882 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minus_1303882", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minus_13038821 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minus_13038821", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minus_circle_1303875 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minus_circle_1303875", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minus_circle_13038751 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minus_circle_13038751", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDaoTao));
             this.paGiangVien = new System.Windows.Forms.Panel();
-            this.laGiangVien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.paSinhVien = new System.Windows.Forms.Panel();
-            this.laSinhVien = new System.Windows.Forms.Label();
             this.paLop = new System.Windows.Forms.Panel();
-            this.laLop = new System.Windows.Forms.Label();
             this.paKhoa = new System.Windows.Forms.Panel();
-            this.laKhoa = new System.Windows.Forms.Label();
             this.paThoiKhoaBieu = new System.Windows.Forms.Panel();
-            this.laThoiKhoaBieu = new System.Windows.Forms.Label();
             this.paMonHoc = new System.Windows.Forms.Panel();
-            this.laMonHoc = new System.Windows.Forms.Label();
             this.paChuyenNganh = new System.Windows.Forms.Panel();
-            this.laChuyenNganh = new System.Windows.Forms.Label();
             this.paCoSoVatChat = new System.Windows.Forms.Panel();
-            this.laCoSoVatChat = new System.Windows.Forms.Label();
             this.paTaiKhoan = new System.Windows.Forms.Panel();
-            this.laTaiKhoan = new System.Windows.Forms.Label();
             this.paThoat = new System.Windows.Forms.Panel();
-            this.laThoat = new System.Windows.Forms.Label();
+            this.btnMinize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.laKhoa = new System.Windows.Forms.Label();
+            this.laChuyenNganh = new System.Windows.Forms.Label();
+            this.laThoiKhoaBieu = new System.Windows.Forms.Label();
+            this.laLop = new System.Windows.Forms.Label();
+            this.laCoSoVatChat = new System.Windows.Forms.Label();
+            this.laMonHoc = new System.Windows.Forms.Label();
+            this.laThoat = new System.Windows.Forms.Label();
+            this.laTaiKhoan = new System.Windows.Forms.Label();
+            this.laSinhVien = new System.Windows.Forms.Label();
+            this.laGiangVien = new System.Windows.Forms.Label();
+            this.notifyDashboard = new System.Windows.Forms.NotifyIcon(this.components);
             this.paGiangVien.SuspendLayout();
             this.paSinhVien.SuspendLayout();
             this.paLop.SuspendLayout();
@@ -73,28 +77,12 @@
             this.paGiangVien.Size = new System.Drawing.Size(110, 99);
             this.paGiangVien.TabIndex = 0;
             // 
-            // laGiangVien
-            // 
-            this.laGiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laGiangVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laGiangVien.ForeColor = System.Drawing.Color.White;
-            this.laGiangVien.Image = global::DangNhap.Properties.Resources.iconfinder_Professor_131512__1_;
-            this.laGiangVien.Location = new System.Drawing.Point(0, 0);
-            this.laGiangVien.Name = "laGiangVien";
-            this.laGiangVien.Size = new System.Drawing.Size(110, 99);
-            this.laGiangVien.TabIndex = 0;
-            this.laGiangVien.Text = "Giảng Viên";
-            this.laGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laGiangVien.Click += new System.EventHandler(this.laGiangVien_Click);
-            this.laGiangVien.MouseLeave += new System.EventHandler(this.laGiangVien_MouseLeave);
-            this.laGiangVien.MouseHover += new System.EventHandler(this.laGiangVien_MouseHover);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel2.Location = new System.Drawing.Point(5, 4);
+            this.panel2.Location = new System.Drawing.Point(18, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(685, 10);
+            this.panel2.Size = new System.Drawing.Size(634, 19);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -117,6 +105,207 @@
             this.paSinhVien.Size = new System.Drawing.Size(110, 99);
             this.paSinhVien.TabIndex = 0;
             // 
+            // paLop
+            // 
+            this.paLop.BackColor = System.Drawing.Color.SkyBlue;
+            this.paLop.Controls.Add(this.laLop);
+            this.paLop.Location = new System.Drawing.Point(164, 189);
+            this.paLop.Name = "paLop";
+            this.paLop.Size = new System.Drawing.Size(110, 99);
+            this.paLop.TabIndex = 0;
+            // 
+            // paKhoa
+            // 
+            this.paKhoa.BackColor = System.Drawing.Color.SkyBlue;
+            this.paKhoa.Controls.Add(this.laKhoa);
+            this.paKhoa.Location = new System.Drawing.Point(48, 189);
+            this.paKhoa.Name = "paKhoa";
+            this.paKhoa.Size = new System.Drawing.Size(110, 99);
+            this.paKhoa.TabIndex = 0;
+            // 
+            // paThoiKhoaBieu
+            // 
+            this.paThoiKhoaBieu.BackColor = System.Drawing.Color.SkyBlue;
+            this.paThoiKhoaBieu.Controls.Add(this.laThoiKhoaBieu);
+            this.paThoiKhoaBieu.Location = new System.Drawing.Point(48, 294);
+            this.paThoiKhoaBieu.Name = "paThoiKhoaBieu";
+            this.paThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
+            this.paThoiKhoaBieu.TabIndex = 0;
+            // 
+            // paMonHoc
+            // 
+            this.paMonHoc.BackColor = System.Drawing.Color.SkyBlue;
+            this.paMonHoc.Controls.Add(this.laMonHoc);
+            this.paMonHoc.Location = new System.Drawing.Point(423, 84);
+            this.paMonHoc.Name = "paMonHoc";
+            this.paMonHoc.Size = new System.Drawing.Size(232, 75);
+            this.paMonHoc.TabIndex = 0;
+            // 
+            // paChuyenNganh
+            // 
+            this.paChuyenNganh.BackColor = System.Drawing.Color.SkyBlue;
+            this.paChuyenNganh.Controls.Add(this.laChuyenNganh);
+            this.paChuyenNganh.Location = new System.Drawing.Point(423, 162);
+            this.paChuyenNganh.Name = "paChuyenNganh";
+            this.paChuyenNganh.Size = new System.Drawing.Size(232, 75);
+            this.paChuyenNganh.TabIndex = 0;
+            // 
+            // paCoSoVatChat
+            // 
+            this.paCoSoVatChat.BackColor = System.Drawing.Color.SkyBlue;
+            this.paCoSoVatChat.Controls.Add(this.laCoSoVatChat);
+            this.paCoSoVatChat.Location = new System.Drawing.Point(423, 240);
+            this.paCoSoVatChat.Name = "paCoSoVatChat";
+            this.paCoSoVatChat.Size = new System.Drawing.Size(232, 75);
+            this.paCoSoVatChat.TabIndex = 0;
+            // 
+            // paTaiKhoan
+            // 
+            this.paTaiKhoan.BackColor = System.Drawing.Color.SkyBlue;
+            this.paTaiKhoan.Controls.Add(this.laTaiKhoan);
+            this.paTaiKhoan.Location = new System.Drawing.Point(423, 318);
+            this.paTaiKhoan.Name = "paTaiKhoan";
+            this.paTaiKhoan.Size = new System.Drawing.Size(152, 65);
+            this.paTaiKhoan.TabIndex = 0;
+            // 
+            // paThoat
+            // 
+            this.paThoat.BackColor = System.Drawing.Color.SkyBlue;
+            this.paThoat.Controls.Add(this.laThoat);
+            this.paThoat.Location = new System.Drawing.Point(581, 318);
+            this.paThoat.Name = "paThoat";
+            this.paThoat.Size = new System.Drawing.Size(74, 65);
+            this.paThoat.TabIndex = 0;
+            // 
+            // btnMinize
+            // 
+            this.btnMinize.FlatAppearance.BorderSize = 0;
+            this.btnMinize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinize.Image = global::DangNhap.Properties.Resources.iconfinder_minimize_82798;
+            this.btnMinize.Location = new System.Drawing.Point(658, 1);
+            this.btnMinize.Name = "btnMinize";
+            this.btnMinize.Size = new System.Drawing.Size(44, 19);
+            this.btnMinize.TabIndex = 5;
+            this.btnMinize.UseVisualStyleBackColor = true;
+            this.btnMinize.Click += new System.EventHandler(this.btnMinize_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox1.Image = global::DangNhap.Properties.Resources._19d8a051527db023e96c;
+            this.pictureBox1.Location = new System.Drawing.Point(280, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 299);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // laKhoa
+            // 
+            this.laKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laKhoa.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laKhoa.ForeColor = System.Drawing.Color.White;
+            this.laKhoa.Image = global::DangNhap.Properties.Resources.iconfinder_20_Graduation_2064495;
+            this.laKhoa.Location = new System.Drawing.Point(0, 0);
+            this.laKhoa.Name = "laKhoa";
+            this.laKhoa.Size = new System.Drawing.Size(110, 99);
+            this.laKhoa.TabIndex = 0;
+            this.laKhoa.Text = "Khoa";
+            this.laKhoa.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // laChuyenNganh
+            // 
+            this.laChuyenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laChuyenNganh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laChuyenNganh.ForeColor = System.Drawing.Color.White;
+            this.laChuyenNganh.Image = global::DangNhap.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
+            this.laChuyenNganh.Location = new System.Drawing.Point(0, 0);
+            this.laChuyenNganh.Name = "laChuyenNganh";
+            this.laChuyenNganh.Size = new System.Drawing.Size(232, 75);
+            this.laChuyenNganh.TabIndex = 0;
+            this.laChuyenNganh.Text = "Chuyên Ngành";
+            this.laChuyenNganh.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // laThoiKhoaBieu
+            // 
+            this.laThoiKhoaBieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laThoiKhoaBieu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laThoiKhoaBieu.ForeColor = System.Drawing.Color.White;
+            this.laThoiKhoaBieu.Image = global::DangNhap.Properties.Resources.iconfinder_resolutions_04_897245;
+            this.laThoiKhoaBieu.Location = new System.Drawing.Point(0, 0);
+            this.laThoiKhoaBieu.Name = "laThoiKhoaBieu";
+            this.laThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
+            this.laThoiKhoaBieu.TabIndex = 0;
+            this.laThoiKhoaBieu.Text = "Thời Khóa Biểu";
+            this.laThoiKhoaBieu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // laLop
+            // 
+            this.laLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laLop.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laLop.ForeColor = System.Drawing.Color.White;
+            this.laLop.Image = global::DangNhap.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
+            this.laLop.Location = new System.Drawing.Point(0, 0);
+            this.laLop.Name = "laLop";
+            this.laLop.Size = new System.Drawing.Size(110, 99);
+            this.laLop.TabIndex = 0;
+            this.laLop.Text = "Lớp";
+            this.laLop.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // laCoSoVatChat
+            // 
+            this.laCoSoVatChat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laCoSoVatChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laCoSoVatChat.ForeColor = System.Drawing.Color.White;
+            this.laCoSoVatChat.Image = global::DangNhap.Properties.Resources.iconfinder_school_01_1989001;
+            this.laCoSoVatChat.Location = new System.Drawing.Point(0, 0);
+            this.laCoSoVatChat.Name = "laCoSoVatChat";
+            this.laCoSoVatChat.Size = new System.Drawing.Size(232, 75);
+            this.laCoSoVatChat.TabIndex = 0;
+            this.laCoSoVatChat.Text = "Cơ Sở Vật Chất";
+            this.laCoSoVatChat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // laMonHoc
+            // 
+            this.laMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laMonHoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laMonHoc.ForeColor = System.Drawing.Color.White;
+            this.laMonHoc.Image = global::DangNhap.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
+            this.laMonHoc.Location = new System.Drawing.Point(0, 0);
+            this.laMonHoc.Name = "laMonHoc";
+            this.laMonHoc.Size = new System.Drawing.Size(232, 75);
+            this.laMonHoc.TabIndex = 0;
+            this.laMonHoc.Text = "Môn Học";
+            this.laMonHoc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laMonHoc.Click += new System.EventHandler(this.laMonHoc_Click);
+            // 
+            // laThoat
+            // 
+            this.laThoat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laThoat.ForeColor = System.Drawing.Color.White;
+            this.laThoat.Image = global::DangNhap.Properties.Resources.iconfinder_Exit_132037;
+            this.laThoat.Location = new System.Drawing.Point(0, 0);
+            this.laThoat.Name = "laThoat";
+            this.laThoat.Size = new System.Drawing.Size(74, 65);
+            this.laThoat.TabIndex = 0;
+            this.laThoat.Text = "Đăng xuất";
+            this.laThoat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laThoat.Click += new System.EventHandler(this.laThoat_Click);
+            // 
+            // laTaiKhoan
+            // 
+            this.laTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laTaiKhoan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.laTaiKhoan.Image = global::DangNhap.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
+            this.laTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.laTaiKhoan.Name = "laTaiKhoan";
+            this.laTaiKhoan.Size = new System.Drawing.Size(152, 65);
+            this.laTaiKhoan.TabIndex = 0;
+            this.laTaiKhoan.Text = "Tài Khoản";
+            this.laTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // laSinhVien
             // 
             this.laSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -132,192 +321,30 @@
             this.laSinhVien.MouseLeave += new System.EventHandler(this.laSinhVien_MouseLeave);
             this.laSinhVien.MouseHover += new System.EventHandler(this.laSinhVien_MouseHover);
             // 
-            // paLop
+            // laGiangVien
             // 
-            this.paLop.BackColor = System.Drawing.Color.SkyBlue;
-            this.paLop.Controls.Add(this.laLop);
-            this.paLop.Location = new System.Drawing.Point(164, 189);
-            this.paLop.Name = "paLop";
-            this.paLop.Size = new System.Drawing.Size(110, 99);
-            this.paLop.TabIndex = 0;
+            this.laGiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laGiangVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laGiangVien.ForeColor = System.Drawing.Color.White;
+            this.laGiangVien.Image = global::DangNhap.Properties.Resources.iconfinder_Professor_131512__1_;
+            this.laGiangVien.Location = new System.Drawing.Point(0, 0);
+            this.laGiangVien.Name = "laGiangVien";
+            this.laGiangVien.Size = new System.Drawing.Size(110, 99);
+            this.laGiangVien.TabIndex = 0;
+            this.laGiangVien.Text = "Giảng Viên";
+            this.laGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laGiangVien.Click += new System.EventHandler(this.laGiangVien_Click);
+            this.laGiangVien.MouseLeave += new System.EventHandler(this.laGiangVien_MouseLeave);
+            this.laGiangVien.MouseHover += new System.EventHandler(this.laGiangVien_MouseHover);
             // 
-            // laLop
+            // notifyDashboard
             // 
-            this.laLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laLop.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laLop.ForeColor = System.Drawing.Color.White;
-            this.laLop.Image = global::DangNhap.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
-            this.laLop.Location = new System.Drawing.Point(0, 0);
-            this.laLop.Name = "laLop";
-            this.laLop.Size = new System.Drawing.Size(110, 99);
-            this.laLop.TabIndex = 0;
-            this.laLop.Text = "Lớp";
-            this.laLop.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paKhoa
-            // 
-            this.paKhoa.BackColor = System.Drawing.Color.SkyBlue;
-            this.paKhoa.Controls.Add(this.laKhoa);
-            this.paKhoa.Location = new System.Drawing.Point(48, 189);
-            this.paKhoa.Name = "paKhoa";
-            this.paKhoa.Size = new System.Drawing.Size(110, 99);
-            this.paKhoa.TabIndex = 0;
-            // 
-            // laKhoa
-            // 
-            this.laKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laKhoa.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laKhoa.ForeColor = System.Drawing.Color.White;
-            this.laKhoa.Image = global::DangNhap.Properties.Resources.iconfinder_20_Graduation_2064495;
-            this.laKhoa.Location = new System.Drawing.Point(0, 0);
-            this.laKhoa.Name = "laKhoa";
-            this.laKhoa.Size = new System.Drawing.Size(110, 99);
-            this.laKhoa.TabIndex = 0;
-            this.laKhoa.Text = "Khoa";
-            this.laKhoa.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paThoiKhoaBieu
-            // 
-            this.paThoiKhoaBieu.BackColor = System.Drawing.Color.SkyBlue;
-            this.paThoiKhoaBieu.Controls.Add(this.laThoiKhoaBieu);
-            this.paThoiKhoaBieu.Location = new System.Drawing.Point(48, 294);
-            this.paThoiKhoaBieu.Name = "paThoiKhoaBieu";
-            this.paThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
-            this.paThoiKhoaBieu.TabIndex = 0;
-            // 
-            // laThoiKhoaBieu
-            // 
-            this.laThoiKhoaBieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laThoiKhoaBieu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laThoiKhoaBieu.ForeColor = System.Drawing.Color.White;
-            this.laThoiKhoaBieu.Image = global::DangNhap.Properties.Resources.iconfinder_resolutions_04_897245;
-            this.laThoiKhoaBieu.Location = new System.Drawing.Point(0, 0);
-            this.laThoiKhoaBieu.Name = "laThoiKhoaBieu";
-            this.laThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
-            this.laThoiKhoaBieu.TabIndex = 0;
-            this.laThoiKhoaBieu.Text = "Thời Khóa Biểu";
-            this.laThoiKhoaBieu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paMonHoc
-            // 
-            this.paMonHoc.BackColor = System.Drawing.Color.SkyBlue;
-            this.paMonHoc.Controls.Add(this.laMonHoc);
-            this.paMonHoc.Location = new System.Drawing.Point(423, 84);
-            this.paMonHoc.Name = "paMonHoc";
-            this.paMonHoc.Size = new System.Drawing.Size(232, 75);
-            this.paMonHoc.TabIndex = 0;
-            // 
-            // laMonHoc
-            // 
-            this.laMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laMonHoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laMonHoc.ForeColor = System.Drawing.Color.White;
-            this.laMonHoc.Image = global::DangNhap.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
-            this.laMonHoc.Location = new System.Drawing.Point(0, 0);
-            this.laMonHoc.Name = "laMonHoc";
-            this.laMonHoc.Size = new System.Drawing.Size(232, 75);
-            this.laMonHoc.TabIndex = 0;
-            this.laMonHoc.Text = "Môn Học";
-            this.laMonHoc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paChuyenNganh
-            // 
-            this.paChuyenNganh.BackColor = System.Drawing.Color.SkyBlue;
-            this.paChuyenNganh.Controls.Add(this.laChuyenNganh);
-            this.paChuyenNganh.Location = new System.Drawing.Point(423, 162);
-            this.paChuyenNganh.Name = "paChuyenNganh";
-            this.paChuyenNganh.Size = new System.Drawing.Size(232, 75);
-            this.paChuyenNganh.TabIndex = 0;
-            // 
-            // laChuyenNganh
-            // 
-            this.laChuyenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laChuyenNganh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laChuyenNganh.ForeColor = System.Drawing.Color.White;
-            this.laChuyenNganh.Image = global::DangNhap.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
-            this.laChuyenNganh.Location = new System.Drawing.Point(0, 0);
-            this.laChuyenNganh.Name = "laChuyenNganh";
-            this.laChuyenNganh.Size = new System.Drawing.Size(232, 75);
-            this.laChuyenNganh.TabIndex = 0;
-            this.laChuyenNganh.Text = "Chuyên Ngành";
-            this.laChuyenNganh.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paCoSoVatChat
-            // 
-            this.paCoSoVatChat.BackColor = System.Drawing.Color.SkyBlue;
-            this.paCoSoVatChat.Controls.Add(this.laCoSoVatChat);
-            this.paCoSoVatChat.Location = new System.Drawing.Point(423, 240);
-            this.paCoSoVatChat.Name = "paCoSoVatChat";
-            this.paCoSoVatChat.Size = new System.Drawing.Size(232, 75);
-            this.paCoSoVatChat.TabIndex = 0;
-            // 
-            // laCoSoVatChat
-            // 
-            this.laCoSoVatChat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laCoSoVatChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laCoSoVatChat.ForeColor = System.Drawing.Color.White;
-            this.laCoSoVatChat.Image = global::DangNhap.Properties.Resources.iconfinder_school_01_1989001;
-            this.laCoSoVatChat.Location = new System.Drawing.Point(0, 0);
-            this.laCoSoVatChat.Name = "laCoSoVatChat";
-            this.laCoSoVatChat.Size = new System.Drawing.Size(232, 75);
-            this.laCoSoVatChat.TabIndex = 0;
-            this.laCoSoVatChat.Text = "Cơ Sở Vật Chất";
-            this.laCoSoVatChat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paTaiKhoan
-            // 
-            this.paTaiKhoan.BackColor = System.Drawing.Color.SkyBlue;
-            this.paTaiKhoan.Controls.Add(this.laTaiKhoan);
-            this.paTaiKhoan.Location = new System.Drawing.Point(423, 318);
-            this.paTaiKhoan.Name = "paTaiKhoan";
-            this.paTaiKhoan.Size = new System.Drawing.Size(157, 65);
-            this.paTaiKhoan.TabIndex = 0;
-            // 
-            // laTaiKhoan
-            // 
-            this.laTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laTaiKhoan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.laTaiKhoan.Image = global::DangNhap.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
-            this.laTaiKhoan.Location = new System.Drawing.Point(0, 0);
-            this.laTaiKhoan.Name = "laTaiKhoan";
-            this.laTaiKhoan.Size = new System.Drawing.Size(157, 65);
-            this.laTaiKhoan.TabIndex = 0;
-            this.laTaiKhoan.Text = "Tài Khoản";
-            this.laTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // paThoat
-            // 
-            this.paThoat.BackColor = System.Drawing.Color.SkyBlue;
-            this.paThoat.Controls.Add(this.laThoat);
-            this.paThoat.Location = new System.Drawing.Point(586, 318);
-            this.paThoat.Name = "paThoat";
-            this.paThoat.Size = new System.Drawing.Size(69, 65);
-            this.paThoat.TabIndex = 0;
-            // 
-            // laThoat
-            // 
-            this.laThoat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laThoat.ForeColor = System.Drawing.Color.White;
-            this.laThoat.Image = global::DangNhap.Properties.Resources.iconfinder_Exit_132037;
-            this.laThoat.Location = new System.Drawing.Point(0, 0);
-            this.laThoat.Name = "laThoat";
-            this.laThoat.Size = new System.Drawing.Size(69, 65);
-            this.laThoat.TabIndex = 0;
-            this.laThoat.Text = "Thoát";
-            this.laThoat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laThoat.Click += new System.EventHandler(this.laThoat_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox1.Image = global::DangNhap.Properties.Resources._19d8a051527db023e96c;
-            this.pictureBox1.Location = new System.Drawing.Point(280, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 299);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.notifyDashboard.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyDashboard.BalloonTipText = "Phần mềm quản lý đào tạo";
+            this.notifyDashboard.BalloonTipTitle = "Quản lý đào tạo";
+            this.notifyDashboard.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyDashboard.Icon")));
+            this.notifyDashboard.Text = "Phần mềm quản lý đào tạo";
+            this.notifyDashboard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyDashboard_MouseClick);
             // 
             // frmDaoTao
             // 
@@ -326,6 +353,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 416);
+            this.Controls.Add(this.btnMinize);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.paKhoa);
@@ -384,5 +412,7 @@
         private System.Windows.Forms.Label laThoat;
         private System.Windows.Forms.Label laGiangVien;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnMinize;
+        private System.Windows.Forms.NotifyIcon notifyDashboard;
     }
 }

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.Data;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace DangNhap
 {
     public partial class frmDTSinhVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Byte[] ImageByArray;
+        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
         public frmDTSinhVien()
         {
             InitializeComponent();
@@ -28,8 +30,8 @@ namespace DangNhap
 
         private void frmDTSinhVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmDaoTao frmDaoTao = new frmDaoTao();
-            frmDaoTao.Show();
+           // frmDaoTao frmDaoTao = new frmDaoTao();
+            //frmDaoTao.Show();
         }
 
         private void btnThemSV_ItemClick(object sender, ItemClickEventArgs e)
@@ -129,6 +131,36 @@ namespace DangNhap
             frmThongTinSV.TTSinhVien(maSV, hoTen, diaChi, soDT, gioiTinh, lopHoc, nganhHoc,khoa, email, noiSinh, ngaySinh, ImageArray);
             frmThongTinSV.menu("Sua");
             frmThongTinSV.Show();
+        }
+
+        private void btnXoaSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String hoTen = gridVSinhVien.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
+            String maSV = gridVSinhVien.Columns.View.GetFocusedRowCellValue("maSV").ToString();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa \n Sinh viên: " + hoTen + "\n Mã số: " + maSV, "Cảnh báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand sqlCmd = new SqlCommand("xoaSinhVien", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maSV", maSV);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Xóa thành công ^^");
+                this.Close();
+                frmDTSinhVien frmDTSinhVien = new frmDTSinhVien();
+                frmDTSinhVien.WindowState = FormWindowState.Maximized;
+                frmDTSinhVien.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }

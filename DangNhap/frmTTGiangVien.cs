@@ -126,7 +126,7 @@ namespace DangNhap
                 }
                 sqlCmd.Parameters.AddWithValue("@diaChi", txtDiaChi.Text);
                 sqlCmd.Parameters.AddWithValue("@SDT", txtMSoDT.Text);
-                sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
+                sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@trinhDo", cbTrinhDo.Text);
                 sqlCmd.Parameters.AddWithValue("@thamNien", txtMThamNien.Text);
@@ -153,9 +153,9 @@ namespace DangNhap
                 con.Close();
                 MessageBox.Show("Lưu thành công ^^");
                 this.Close();
-                frmDTGiangVien frm = new frmDTGiangVien();
-                frm.WindowState = FormWindowState.Maximized;
-                frm.Show();
+                //frmDTGiangVien frm = new frmDTGiangVien();
+                //frm.WindowState = FormWindowState.Maximized;
+                //frm.Show();
             }
             else
             {
@@ -208,7 +208,7 @@ namespace DangNhap
                 }
                 sqlCmd.Parameters.AddWithValue("@diaChi", txtDiaChi.Text);
                 sqlCmd.Parameters.AddWithValue("@SDT", txtMSoDT.Text);
-                sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
+                sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@trinhDo", cbTrinhDo.Text);
                 sqlCmd.Parameters.AddWithValue("@thamNien", txtMThamNien.Text);
@@ -237,6 +237,8 @@ namespace DangNhap
         private void windowsUIButtonPanelCloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            //frmDaoTao frmDaoTao = new frmDaoTao();
+            //frmDaoTao.Show();
             frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
             frmDTGiangVien.WindowState = FormWindowState.Maximized;
             frmDTGiangVien.Show();

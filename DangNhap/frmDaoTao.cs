@@ -29,7 +29,7 @@ namespace DangNhap
             frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
             frmDTGiangVien.WindowState = FormWindowState.Maximized;
             frmDTGiangVien.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void laSinhVien_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace DangNhap
             frmDTSinhVien frmDTSinhVien = new frmDTSinhVien();
             frmDTSinhVien.WindowState = FormWindowState.Maximized;
             frmDTSinhVien.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void laGiangVien_MouseHover(object sender, EventArgs e)
@@ -64,6 +64,24 @@ namespace DangNhap
 
             laSinhVien.BackColor = Color.SkyBlue;
             paSinhVien.Size = new Size(110, 99);
+        }
+
+        private void laMonHoc_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnMinize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            Hide();
+            notifyDashboard.Visible = true;
+        }
+
+        private void notifyDashboard_MouseClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            notifyDashboard.Visible = false;
         }
     }
 }

@@ -131,7 +131,7 @@ namespace DangNhap
                 }
                 sqlCmd.Parameters.AddWithValue("@diaChi", txtDiaChi.Text);
                 sqlCmd.Parameters.AddWithValue("@SDT", txtMSoDT.Text);
-                sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
+                sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@maLop", cbLop.Text.Substring(cbLop.Text.LastIndexOf(' ') + 1));
                 sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
@@ -151,9 +151,9 @@ namespace DangNhap
                 con.Close();
                 MessageBox.Show("Lưu thành công ^^");
                 this.Close();
-                frmDTSinhVien frmDTGiangVien = new frmDTSinhVien();
-                frmDTGiangVien.WindowState = FormWindowState.Maximized;
-                frmDTGiangVien.Show();
+                frmDTSinhVien frmDTSinhVien = new frmDTSinhVien();
+                frmDTSinhVien.WindowState = FormWindowState.Maximized;
+                frmDTSinhVien.Show();
             }
             else
             {
@@ -206,7 +206,7 @@ namespace DangNhap
                 }
                 sqlCmd.Parameters.AddWithValue("@diaChi", txtDiaChi.Text);
                 sqlCmd.Parameters.AddWithValue("@SDT", txtMSoDT.Text);
-                sqlCmd.Parameters.AddWithValue("@ngaySinh", txtNgaySinh.Text);
+                sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@maLop", cbLop.Text.Substring(cbLop.Text.LastIndexOf(' ') + 1));
                 sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
@@ -227,9 +227,9 @@ namespace DangNhap
         private void windowsUIButtonPanelCloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmDTGiangVien frmDTGiangVien = new frmDTGiangVien();
-            frmDTGiangVien.WindowState = FormWindowState.Maximized;
-            frmDTGiangVien.Show();
+            frmDTSinhVien frmDTSinhVien = new frmDTSinhVien();
+            frmDTSinhVien.WindowState = FormWindowState.Maximized;
+            frmDTSinhVien.Show();
         }
 
         private void picSinhVien_Click(object sender, EventArgs e)

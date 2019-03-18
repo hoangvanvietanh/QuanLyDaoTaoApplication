@@ -121,6 +121,7 @@
             this.btnXoaSV.Caption = "Xóa SV";
             this.btnXoaSV.Id = 2;
             this.btnXoaSV.Name = "btnXoaSV";
+            this.btnXoaSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaSV_ItemClick);
             // 
             // btnSuaSV
             // 

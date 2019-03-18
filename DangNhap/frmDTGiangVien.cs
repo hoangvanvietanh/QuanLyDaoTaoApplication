@@ -134,8 +134,9 @@ namespace DangNhap
 
         private void frmDTGiangVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmDaoTao frmDaoTao = new frmDaoTao();
-            frmDaoTao.Show();
+            //this.Close();
+            //frmDaoTao frmDaoTao = new frmDaoTao();
+            //frmDaoTao.Show();
         }
 
         private void btnXoaGV_ItemClick(object sender, ItemClickEventArgs e)
