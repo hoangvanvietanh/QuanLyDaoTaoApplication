@@ -150,6 +150,12 @@ namespace DangNhap
                 };
                 sqlCmd.Parameters.AddWithValue("@maSV", maSV);
                 sqlCmd.ExecuteNonQuery();
+                sqlCmd = new SqlCommand("deleteTaiKhoan", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@tenTK", maSV);
+                sqlCmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Xóa thành công ^^");
                 this.Close();

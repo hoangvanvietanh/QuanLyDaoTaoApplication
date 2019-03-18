@@ -31,29 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDaoTao));
             this.paGiangVien = new System.Windows.Forms.Panel();
+            this.laGiangVien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.paSinhVien = new System.Windows.Forms.Panel();
+            this.laSinhVien = new System.Windows.Forms.Label();
             this.paLop = new System.Windows.Forms.Panel();
+            this.laLop = new System.Windows.Forms.Label();
             this.paKhoa = new System.Windows.Forms.Panel();
+            this.laKhoa = new System.Windows.Forms.Label();
             this.paThoiKhoaBieu = new System.Windows.Forms.Panel();
+            this.laThoiKhoaBieu = new System.Windows.Forms.Label();
             this.paMonHoc = new System.Windows.Forms.Panel();
+            this.laMonHoc = new System.Windows.Forms.Label();
             this.paChuyenNganh = new System.Windows.Forms.Panel();
+            this.laChuyenNganh = new System.Windows.Forms.Label();
             this.paCoSoVatChat = new System.Windows.Forms.Panel();
+            this.laCoSoVatChat = new System.Windows.Forms.Label();
             this.paTaiKhoan = new System.Windows.Forms.Panel();
+            this.laTaiKhoan = new System.Windows.Forms.Label();
             this.paThoat = new System.Windows.Forms.Panel();
+            this.laThoat = new System.Windows.Forms.Label();
             this.btnMinize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.laKhoa = new System.Windows.Forms.Label();
-            this.laChuyenNganh = new System.Windows.Forms.Label();
-            this.laThoiKhoaBieu = new System.Windows.Forms.Label();
-            this.laLop = new System.Windows.Forms.Label();
-            this.laCoSoVatChat = new System.Windows.Forms.Label();
-            this.laMonHoc = new System.Windows.Forms.Label();
-            this.laThoat = new System.Windows.Forms.Label();
-            this.laTaiKhoan = new System.Windows.Forms.Label();
-            this.laSinhVien = new System.Windows.Forms.Label();
-            this.laGiangVien = new System.Windows.Forms.Label();
             this.notifyDashboard = new System.Windows.Forms.NotifyIcon(this.components);
             this.paGiangVien.SuspendLayout();
             this.paSinhVien.SuspendLayout();
@@ -76,6 +76,22 @@
             this.paGiangVien.Name = "paGiangVien";
             this.paGiangVien.Size = new System.Drawing.Size(110, 99);
             this.paGiangVien.TabIndex = 0;
+            // 
+            // laGiangVien
+            // 
+            this.laGiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laGiangVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laGiangVien.ForeColor = System.Drawing.Color.White;
+            this.laGiangVien.Image = global::DangNhap.Properties.Resources.iconfinder_Professor_131512__1_;
+            this.laGiangVien.Location = new System.Drawing.Point(0, 0);
+            this.laGiangVien.Name = "laGiangVien";
+            this.laGiangVien.Size = new System.Drawing.Size(110, 99);
+            this.laGiangVien.TabIndex = 0;
+            this.laGiangVien.Text = "Giảng Viên";
+            this.laGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laGiangVien.Click += new System.EventHandler(this.laGiangVien_Click);
+            this.laGiangVien.MouseLeave += new System.EventHandler(this.laGiangVien_MouseLeave);
+            this.laGiangVien.MouseHover += new System.EventHandler(this.laGiangVien_MouseHover);
             // 
             // panel2
             // 
@@ -105,6 +121,21 @@
             this.paSinhVien.Size = new System.Drawing.Size(110, 99);
             this.paSinhVien.TabIndex = 0;
             // 
+            // laSinhVien
+            // 
+            this.laSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laSinhVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laSinhVien.Image = global::DangNhap.Properties.Resources.iconfinder_130_man_student_2_3099383;
+            this.laSinhVien.Location = new System.Drawing.Point(0, 0);
+            this.laSinhVien.Name = "laSinhVien";
+            this.laSinhVien.Size = new System.Drawing.Size(110, 99);
+            this.laSinhVien.TabIndex = 0;
+            this.laSinhVien.Text = "Sinh Viên";
+            this.laSinhVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laSinhVien.Click += new System.EventHandler(this.laSinhVien_Click);
+            this.laSinhVien.MouseLeave += new System.EventHandler(this.laSinhVien_MouseLeave);
+            this.laSinhVien.MouseHover += new System.EventHandler(this.laSinhVien_MouseHover);
+            // 
             // paLop
             // 
             this.paLop.BackColor = System.Drawing.Color.SkyBlue;
@@ -113,6 +144,22 @@
             this.paLop.Name = "paLop";
             this.paLop.Size = new System.Drawing.Size(110, 99);
             this.paLop.TabIndex = 0;
+            // 
+            // laLop
+            // 
+            this.laLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laLop.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laLop.ForeColor = System.Drawing.Color.White;
+            this.laLop.Image = global::DangNhap.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
+            this.laLop.Location = new System.Drawing.Point(0, 0);
+            this.laLop.Name = "laLop";
+            this.laLop.Size = new System.Drawing.Size(110, 99);
+            this.laLop.TabIndex = 0;
+            this.laLop.Text = "Lớp";
+            this.laLop.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laLop.Click += new System.EventHandler(this.laLop_Click);
+            this.laLop.MouseLeave += new System.EventHandler(this.laLop_MouseLeave);
+            this.laLop.MouseHover += new System.EventHandler(this.laLop_MouseHover);
             // 
             // paKhoa
             // 
@@ -123,6 +170,22 @@
             this.paKhoa.Size = new System.Drawing.Size(110, 99);
             this.paKhoa.TabIndex = 0;
             // 
+            // laKhoa
+            // 
+            this.laKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laKhoa.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laKhoa.ForeColor = System.Drawing.Color.White;
+            this.laKhoa.Image = global::DangNhap.Properties.Resources.iconfinder_20_Graduation_2064495;
+            this.laKhoa.Location = new System.Drawing.Point(0, 0);
+            this.laKhoa.Name = "laKhoa";
+            this.laKhoa.Size = new System.Drawing.Size(110, 99);
+            this.laKhoa.TabIndex = 0;
+            this.laKhoa.Text = "Khoa";
+            this.laKhoa.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laKhoa.Click += new System.EventHandler(this.laKhoa_Click);
+            this.laKhoa.MouseLeave += new System.EventHandler(this.laKhoa_MouseLeave);
+            this.laKhoa.MouseHover += new System.EventHandler(this.laKhoa_MouseHover);
+            // 
             // paThoiKhoaBieu
             // 
             this.paThoiKhoaBieu.BackColor = System.Drawing.Color.SkyBlue;
@@ -131,6 +194,22 @@
             this.paThoiKhoaBieu.Name = "paThoiKhoaBieu";
             this.paThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
             this.paThoiKhoaBieu.TabIndex = 0;
+            // 
+            // laThoiKhoaBieu
+            // 
+            this.laThoiKhoaBieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laThoiKhoaBieu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laThoiKhoaBieu.ForeColor = System.Drawing.Color.White;
+            this.laThoiKhoaBieu.Image = global::DangNhap.Properties.Resources.iconfinder_resolutions_04_897245;
+            this.laThoiKhoaBieu.Location = new System.Drawing.Point(0, 0);
+            this.laThoiKhoaBieu.Name = "laThoiKhoaBieu";
+            this.laThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
+            this.laThoiKhoaBieu.TabIndex = 0;
+            this.laThoiKhoaBieu.Text = "Thời Khóa Biểu";
+            this.laThoiKhoaBieu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laThoiKhoaBieu.Click += new System.EventHandler(this.laThoiKhoaBieu_Click);
+            this.laThoiKhoaBieu.MouseLeave += new System.EventHandler(this.laThoiKhoaBieu_MouseLeave);
+            this.laThoiKhoaBieu.MouseHover += new System.EventHandler(this.laThoiKhoaBieu_MouseHover);
             // 
             // paMonHoc
             // 
@@ -141,6 +220,22 @@
             this.paMonHoc.Size = new System.Drawing.Size(232, 75);
             this.paMonHoc.TabIndex = 0;
             // 
+            // laMonHoc
+            // 
+            this.laMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laMonHoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laMonHoc.ForeColor = System.Drawing.Color.White;
+            this.laMonHoc.Image = global::DangNhap.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
+            this.laMonHoc.Location = new System.Drawing.Point(0, 0);
+            this.laMonHoc.Name = "laMonHoc";
+            this.laMonHoc.Size = new System.Drawing.Size(232, 75);
+            this.laMonHoc.TabIndex = 0;
+            this.laMonHoc.Text = "Môn Học";
+            this.laMonHoc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laMonHoc.Click += new System.EventHandler(this.laMonHoc_Click);
+            this.laMonHoc.MouseLeave += new System.EventHandler(this.laMonHoc_MouseLeave);
+            this.laMonHoc.MouseHover += new System.EventHandler(this.laMonHoc_MouseHover);
+            // 
             // paChuyenNganh
             // 
             this.paChuyenNganh.BackColor = System.Drawing.Color.SkyBlue;
@@ -149,6 +244,22 @@
             this.paChuyenNganh.Name = "paChuyenNganh";
             this.paChuyenNganh.Size = new System.Drawing.Size(232, 75);
             this.paChuyenNganh.TabIndex = 0;
+            // 
+            // laChuyenNganh
+            // 
+            this.laChuyenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laChuyenNganh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laChuyenNganh.ForeColor = System.Drawing.Color.White;
+            this.laChuyenNganh.Image = global::DangNhap.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
+            this.laChuyenNganh.Location = new System.Drawing.Point(0, 0);
+            this.laChuyenNganh.Name = "laChuyenNganh";
+            this.laChuyenNganh.Size = new System.Drawing.Size(232, 75);
+            this.laChuyenNganh.TabIndex = 0;
+            this.laChuyenNganh.Text = "Chuyên Ngành";
+            this.laChuyenNganh.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laChuyenNganh.Click += new System.EventHandler(this.laChuyenNganh_Click);
+            this.laChuyenNganh.MouseLeave += new System.EventHandler(this.laChuyenNganh_MouseLeave);
+            this.laChuyenNganh.MouseHover += new System.EventHandler(this.laChuyenNganh_MouseHover);
             // 
             // paCoSoVatChat
             // 
@@ -159,6 +270,22 @@
             this.paCoSoVatChat.Size = new System.Drawing.Size(232, 75);
             this.paCoSoVatChat.TabIndex = 0;
             // 
+            // laCoSoVatChat
+            // 
+            this.laCoSoVatChat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laCoSoVatChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laCoSoVatChat.ForeColor = System.Drawing.Color.White;
+            this.laCoSoVatChat.Image = global::DangNhap.Properties.Resources.iconfinder_school_01_1989001;
+            this.laCoSoVatChat.Location = new System.Drawing.Point(0, 0);
+            this.laCoSoVatChat.Name = "laCoSoVatChat";
+            this.laCoSoVatChat.Size = new System.Drawing.Size(232, 75);
+            this.laCoSoVatChat.TabIndex = 0;
+            this.laCoSoVatChat.Text = "Cơ Sở Vật Chất";
+            this.laCoSoVatChat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laCoSoVatChat.Click += new System.EventHandler(this.laCoSoVatChat_Click);
+            this.laCoSoVatChat.MouseLeave += new System.EventHandler(this.laCoSoVatChat_MouseLeave);
+            this.laCoSoVatChat.MouseHover += new System.EventHandler(this.laCoSoVatChat_MouseHover);
+            // 
             // paTaiKhoan
             // 
             this.paTaiKhoan.BackColor = System.Drawing.Color.SkyBlue;
@@ -168,6 +295,22 @@
             this.paTaiKhoan.Size = new System.Drawing.Size(152, 65);
             this.paTaiKhoan.TabIndex = 0;
             // 
+            // laTaiKhoan
+            // 
+            this.laTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laTaiKhoan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.laTaiKhoan.Image = global::DangNhap.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
+            this.laTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.laTaiKhoan.Name = "laTaiKhoan";
+            this.laTaiKhoan.Size = new System.Drawing.Size(152, 65);
+            this.laTaiKhoan.TabIndex = 0;
+            this.laTaiKhoan.Text = "Tài Khoản";
+            this.laTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laTaiKhoan.Click += new System.EventHandler(this.laTaiKhoan_Click);
+            this.laTaiKhoan.MouseLeave += new System.EventHandler(this.laTaiKhoan_MouseLeave);
+            this.laTaiKhoan.MouseHover += new System.EventHandler(this.laTaiKhoan_MouseHover);
+            // 
             // paThoat
             // 
             this.paThoat.BackColor = System.Drawing.Color.SkyBlue;
@@ -176,6 +319,22 @@
             this.paThoat.Name = "paThoat";
             this.paThoat.Size = new System.Drawing.Size(74, 65);
             this.paThoat.TabIndex = 0;
+            // 
+            // laThoat
+            // 
+            this.laThoat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.laThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.laThoat.ForeColor = System.Drawing.Color.White;
+            this.laThoat.Image = global::DangNhap.Properties.Resources.iconfinder_Exit_132037;
+            this.laThoat.Location = new System.Drawing.Point(0, 0);
+            this.laThoat.Name = "laThoat";
+            this.laThoat.Size = new System.Drawing.Size(74, 65);
+            this.laThoat.TabIndex = 0;
+            this.laThoat.Text = "Đăng xuất";
+            this.laThoat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.laThoat.Click += new System.EventHandler(this.laThoat_Click);
+            this.laThoat.MouseLeave += new System.EventHandler(this.laThoat_MouseLeave);
+            this.laThoat.MouseHover += new System.EventHandler(this.laThoat_MouseHover);
             // 
             // btnMinize
             // 
@@ -199,143 +358,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // laKhoa
-            // 
-            this.laKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laKhoa.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laKhoa.ForeColor = System.Drawing.Color.White;
-            this.laKhoa.Image = global::DangNhap.Properties.Resources.iconfinder_20_Graduation_2064495;
-            this.laKhoa.Location = new System.Drawing.Point(0, 0);
-            this.laKhoa.Name = "laKhoa";
-            this.laKhoa.Size = new System.Drawing.Size(110, 99);
-            this.laKhoa.TabIndex = 0;
-            this.laKhoa.Text = "Khoa";
-            this.laKhoa.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laChuyenNganh
-            // 
-            this.laChuyenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laChuyenNganh.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laChuyenNganh.ForeColor = System.Drawing.Color.White;
-            this.laChuyenNganh.Image = global::DangNhap.Properties.Resources.iconfinder_system_job_seeker_employee_unemployee_work_2620499;
-            this.laChuyenNganh.Location = new System.Drawing.Point(0, 0);
-            this.laChuyenNganh.Name = "laChuyenNganh";
-            this.laChuyenNganh.Size = new System.Drawing.Size(232, 75);
-            this.laChuyenNganh.TabIndex = 0;
-            this.laChuyenNganh.Text = "Chuyên Ngành";
-            this.laChuyenNganh.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laThoiKhoaBieu
-            // 
-            this.laThoiKhoaBieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laThoiKhoaBieu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laThoiKhoaBieu.ForeColor = System.Drawing.Color.White;
-            this.laThoiKhoaBieu.Image = global::DangNhap.Properties.Resources.iconfinder_resolutions_04_897245;
-            this.laThoiKhoaBieu.Location = new System.Drawing.Point(0, 0);
-            this.laThoiKhoaBieu.Name = "laThoiKhoaBieu";
-            this.laThoiKhoaBieu.Size = new System.Drawing.Size(226, 89);
-            this.laThoiKhoaBieu.TabIndex = 0;
-            this.laThoiKhoaBieu.Text = "Thời Khóa Biểu";
-            this.laThoiKhoaBieu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laLop
-            // 
-            this.laLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laLop.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laLop.ForeColor = System.Drawing.Color.White;
-            this.laLop.Image = global::DangNhap.Properties.Resources.iconfinder_classeducationschoolstudystudentsteacherleacture_4332319;
-            this.laLop.Location = new System.Drawing.Point(0, 0);
-            this.laLop.Name = "laLop";
-            this.laLop.Size = new System.Drawing.Size(110, 99);
-            this.laLop.TabIndex = 0;
-            this.laLop.Text = "Lớp";
-            this.laLop.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laCoSoVatChat
-            // 
-            this.laCoSoVatChat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laCoSoVatChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laCoSoVatChat.ForeColor = System.Drawing.Color.White;
-            this.laCoSoVatChat.Image = global::DangNhap.Properties.Resources.iconfinder_school_01_1989001;
-            this.laCoSoVatChat.Location = new System.Drawing.Point(0, 0);
-            this.laCoSoVatChat.Name = "laCoSoVatChat";
-            this.laCoSoVatChat.Size = new System.Drawing.Size(232, 75);
-            this.laCoSoVatChat.TabIndex = 0;
-            this.laCoSoVatChat.Text = "Cơ Sở Vật Chất";
-            this.laCoSoVatChat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laMonHoc
-            // 
-            this.laMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laMonHoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laMonHoc.ForeColor = System.Drawing.Color.White;
-            this.laMonHoc.Image = global::DangNhap.Properties.Resources.iconfinder_Closed_Book_Icon_1741323;
-            this.laMonHoc.Location = new System.Drawing.Point(0, 0);
-            this.laMonHoc.Name = "laMonHoc";
-            this.laMonHoc.Size = new System.Drawing.Size(232, 75);
-            this.laMonHoc.TabIndex = 0;
-            this.laMonHoc.Text = "Môn Học";
-            this.laMonHoc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laMonHoc.Click += new System.EventHandler(this.laMonHoc_Click);
-            // 
-            // laThoat
-            // 
-            this.laThoat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laThoat.ForeColor = System.Drawing.Color.White;
-            this.laThoat.Image = global::DangNhap.Properties.Resources.iconfinder_Exit_132037;
-            this.laThoat.Location = new System.Drawing.Point(0, 0);
-            this.laThoat.Name = "laThoat";
-            this.laThoat.Size = new System.Drawing.Size(74, 65);
-            this.laThoat.TabIndex = 0;
-            this.laThoat.Text = "Đăng xuất";
-            this.laThoat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laThoat.Click += new System.EventHandler(this.laThoat_Click);
-            // 
-            // laTaiKhoan
-            // 
-            this.laTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laTaiKhoan.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.laTaiKhoan.Image = global::DangNhap.Properties.Resources.iconfinder_146_man_mechanic_2_3099399;
-            this.laTaiKhoan.Location = new System.Drawing.Point(0, 0);
-            this.laTaiKhoan.Name = "laTaiKhoan";
-            this.laTaiKhoan.Size = new System.Drawing.Size(152, 65);
-            this.laTaiKhoan.TabIndex = 0;
-            this.laTaiKhoan.Text = "Tài Khoản";
-            this.laTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // laSinhVien
-            // 
-            this.laSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laSinhVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laSinhVien.Image = global::DangNhap.Properties.Resources.iconfinder_130_man_student_2_3099383;
-            this.laSinhVien.Location = new System.Drawing.Point(0, 0);
-            this.laSinhVien.Name = "laSinhVien";
-            this.laSinhVien.Size = new System.Drawing.Size(110, 99);
-            this.laSinhVien.TabIndex = 0;
-            this.laSinhVien.Text = "Sinh Viên";
-            this.laSinhVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laSinhVien.Click += new System.EventHandler(this.laSinhVien_Click);
-            this.laSinhVien.MouseLeave += new System.EventHandler(this.laSinhVien_MouseLeave);
-            this.laSinhVien.MouseHover += new System.EventHandler(this.laSinhVien_MouseHover);
-            // 
-            // laGiangVien
-            // 
-            this.laGiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laGiangVien.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.laGiangVien.ForeColor = System.Drawing.Color.White;
-            this.laGiangVien.Image = global::DangNhap.Properties.Resources.iconfinder_Professor_131512__1_;
-            this.laGiangVien.Location = new System.Drawing.Point(0, 0);
-            this.laGiangVien.Name = "laGiangVien";
-            this.laGiangVien.Size = new System.Drawing.Size(110, 99);
-            this.laGiangVien.TabIndex = 0;
-            this.laGiangVien.Text = "Giảng Viên";
-            this.laGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.laGiangVien.Click += new System.EventHandler(this.laGiangVien_Click);
-            this.laGiangVien.MouseLeave += new System.EventHandler(this.laGiangVien_MouseLeave);
-            this.laGiangVien.MouseHover += new System.EventHandler(this.laGiangVien_MouseHover);
             // 
             // notifyDashboard
             // 

@@ -179,7 +179,7 @@
             // 
             this.picGiangVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picGiangVien.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picGiangVien.Image = global::DangNhap.Properties.Resources.no_avatar;
+            this.picGiangVien.Image = global::DangNhap.Properties.Resources._19d8a051527db023e96c;
             this.picGiangVien.Location = new System.Drawing.Point(10, 0);
             this.picGiangVien.Name = "picGiangVien";
             this.picGiangVien.Size = new System.Drawing.Size(186, 186);

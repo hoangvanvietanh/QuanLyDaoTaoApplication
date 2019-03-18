@@ -17,5 +17,12 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.Show();
+        }
     }
 }

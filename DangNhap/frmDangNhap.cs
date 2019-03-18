@@ -130,7 +130,14 @@ namespace DangNhap
 
         private void txtMaSo_Leave(object sender, EventArgs e)
         {
-            maSo = txtMaSo.Text.Substring(0, 2);
+            if (txtMaSo.Text.Length == 0)
+            {
+                laCheckTK.Text = "Đừng bỏ trống nhé bạn ơi lỗi đó !!!";
+            }
+            else
+            {
+                maSo = txtMaSo.Text.Substring(0, 2);
+            }
             if (maSo.Equals("SV"))
             {
                 int flat = 0;
