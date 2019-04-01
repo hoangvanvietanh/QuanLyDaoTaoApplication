@@ -773,7 +773,7 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="VarChar(11)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="VarChar(15)")]
 		public string SDT
 		{
 			get
@@ -1187,11 +1187,13 @@ namespace DangNhap
 		
 		private string _maLop;
 		
-		private string _tenLop;
+		private string _maNganh;
 		
 		private EntitySet<PhanCong> _PhanCongs;
 		
 		private EntitySet<SinhVien> _SinhViens;
+		
+		private EntityRef<NganhHoc> _NganhHoc;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1199,14 +1201,15 @@ namespace DangNhap
     partial void OnCreated();
     partial void OnmaLopChanging(string value);
     partial void OnmaLopChanged();
-    partial void OntenLopChanging(string value);
-    partial void OntenLopChanged();
+    partial void OnmaNganhChanging(string value);
+    partial void OnmaNganhChanged();
     #endregion
 		
 		public LopHoc()
 		{
 			this._PhanCongs = new EntitySet<PhanCong>(new Action<PhanCong>(this.attach_PhanCongs), new Action<PhanCong>(this.detach_PhanCongs));
 			this._SinhViens = new EntitySet<SinhVien>(new Action<SinhVien>(this.attach_SinhViens), new Action<SinhVien>(this.detach_SinhViens));
+			this._NganhHoc = default(EntityRef<NganhHoc>);
 			OnCreated();
 		}
 		
@@ -1230,22 +1233,26 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLop", DbType="VarChar(20)")]
-		public string tenLop
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNganh", DbType="VarChar(10)")]
+		public string maNganh
 		{
 			get
 			{
-				return this._tenLop;
+				return this._maNganh;
 			}
 			set
 			{
-				if ((this._tenLop != value))
+				if ((this._maNganh != value))
 				{
-					this.OntenLopChanging(value);
+					if (this._NganhHoc.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaNganhChanging(value);
 					this.SendPropertyChanging();
-					this._tenLop = value;
-					this.SendPropertyChanged("tenLop");
-					this.OntenLopChanged();
+					this._maNganh = value;
+					this.SendPropertyChanged("maNganh");
+					this.OnmaNganhChanged();
 				}
 			}
 		}
@@ -1273,6 +1280,40 @@ namespace DangNhap
 			set
 			{
 				this._SinhViens.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NganhHoc_LopHoc", Storage="_NganhHoc", ThisKey="maNganh", OtherKey="maNganh", IsForeignKey=true)]
+		public NganhHoc NganhHoc
+		{
+			get
+			{
+				return this._NganhHoc.Entity;
+			}
+			set
+			{
+				NganhHoc previousValue = this._NganhHoc.Entity;
+				if (((previousValue != value) 
+							|| (this._NganhHoc.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NganhHoc.Entity = null;
+						previousValue.LopHocs.Remove(this);
+					}
+					this._NganhHoc.Entity = value;
+					if ((value != null))
+					{
+						value.LopHocs.Add(this);
+						this._maNganh = value.maNganh;
+					}
+					else
+					{
+						this._maNganh = default(string);
+					}
+					this.SendPropertyChanged("NganhHoc");
+				}
 			}
 		}
 		
@@ -1333,10 +1374,6 @@ namespace DangNhap
 		
 		private System.Nullable<byte> _soTC;
 		
-		private System.Nullable<byte> _lyThuyet;
-		
-		private System.Nullable<byte> _thucHanh;
-		
 		private EntitySet<PhanCong> _PhanCongs;
 		
     #region Extensibility Method Definitions
@@ -1349,10 +1386,6 @@ namespace DangNhap
     partial void OntenMHChanged();
     partial void OnsoTCChanging(System.Nullable<byte> value);
     partial void OnsoTCChanged();
-    partial void OnlyThuyetChanging(System.Nullable<byte> value);
-    partial void OnlyThuyetChanged();
-    partial void OnthucHanhChanging(System.Nullable<byte> value);
-    partial void OnthucHanhChanged();
     #endregion
 		
 		public MonHoc()
@@ -1421,46 +1454,6 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lyThuyet", DbType="TinyInt")]
-		public System.Nullable<byte> lyThuyet
-		{
-			get
-			{
-				return this._lyThuyet;
-			}
-			set
-			{
-				if ((this._lyThuyet != value))
-				{
-					this.OnlyThuyetChanging(value);
-					this.SendPropertyChanging();
-					this._lyThuyet = value;
-					this.SendPropertyChanged("lyThuyet");
-					this.OnlyThuyetChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thucHanh", DbType="TinyInt")]
-		public System.Nullable<byte> thucHanh
-		{
-			get
-			{
-				return this._thucHanh;
-			}
-			set
-			{
-				if ((this._thucHanh != value))
-				{
-					this.OnthucHanhChanging(value);
-					this.SendPropertyChanging();
-					this._thucHanh = value;
-					this.SendPropertyChanged("thucHanh");
-					this.OnthucHanhChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MonHoc_PhanCong", Storage="_PhanCongs", ThisKey="maMH", OtherKey="maMH")]
 		public EntitySet<PhanCong> PhanCongs
 		{
@@ -1519,7 +1512,7 @@ namespace DangNhap
 		
 		private string _maKhoa;
 		
-		private EntitySet<SinhVien> _SinhViens;
+		private EntitySet<LopHoc> _LopHocs;
 		
 		private EntityRef<Khoa> _Khoa;
 		
@@ -1537,7 +1530,7 @@ namespace DangNhap
 		
 		public NganhHoc()
 		{
-			this._SinhViens = new EntitySet<SinhVien>(new Action<SinhVien>(this.attach_SinhViens), new Action<SinhVien>(this.detach_SinhViens));
+			this._LopHocs = new EntitySet<LopHoc>(new Action<LopHoc>(this.attach_LopHocs), new Action<LopHoc>(this.detach_LopHocs));
 			this._Khoa = default(EntityRef<Khoa>);
 			OnCreated();
 		}
@@ -1606,16 +1599,16 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NganhHoc_SinhVien", Storage="_SinhViens", ThisKey="maNganh", OtherKey="maNganh")]
-		public EntitySet<SinhVien> SinhViens
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NganhHoc_LopHoc", Storage="_LopHocs", ThisKey="maNganh", OtherKey="maNganh")]
+		public EntitySet<LopHoc> LopHocs
 		{
 			get
 			{
-				return this._SinhViens;
+				return this._LopHocs;
 			}
 			set
 			{
-				this._SinhViens.Assign(value);
+				this._LopHocs.Assign(value);
 			}
 		}
 		
@@ -1673,13 +1666,13 @@ namespace DangNhap
 			}
 		}
 		
-		private void attach_SinhViens(SinhVien entity)
+		private void attach_LopHocs(LopHoc entity)
 		{
 			this.SendPropertyChanging();
 			entity.NganhHoc = this;
 		}
 		
-		private void detach_SinhViens(SinhVien entity)
+		private void detach_LopHocs(LopHoc entity)
 		{
 			this.SendPropertyChanging();
 			entity.NganhHoc = null;
@@ -1696,17 +1689,15 @@ namespace DangNhap
 		
 		private string _maGV;
 		
-		private string _maLop;
-		
 		private string _maMH;
+		
+		private string _maLop;
 		
 		private System.Nullable<System.DateTime> _ngayBD;
 		
 		private System.Nullable<System.DateTime> _ngayKT;
 		
 		private System.Nullable<byte> _hocKy;
-		
-		private System.Nullable<int> _namHoc;
 		
 		private EntitySet<ThoiKhoaBieu> _ThoiKhoaBieus;
 		
@@ -1724,18 +1715,16 @@ namespace DangNhap
     partial void OnmaPCChanged();
     partial void OnmaGVChanging(string value);
     partial void OnmaGVChanged();
-    partial void OnmaLopChanging(string value);
-    partial void OnmaLopChanged();
     partial void OnmaMHChanging(string value);
     partial void OnmaMHChanged();
+    partial void OnmaLopChanging(string value);
+    partial void OnmaLopChanged();
     partial void OnngayBDChanging(System.Nullable<System.DateTime> value);
     partial void OnngayBDChanged();
     partial void OnngayKTChanging(System.Nullable<System.DateTime> value);
     partial void OnngayKTChanged();
     partial void OnhocKyChanging(System.Nullable<byte> value);
     partial void OnhocKyChanged();
-    partial void OnnamHocChanging(System.Nullable<int> value);
-    partial void OnnamHocChanged();
     #endregion
 		
 		public PhanCong()
@@ -1791,30 +1780,6 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLop", DbType="VarChar(10)")]
-		public string maLop
-		{
-			get
-			{
-				return this._maLop;
-			}
-			set
-			{
-				if ((this._maLop != value))
-				{
-					if (this._LopHoc.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnmaLopChanging(value);
-					this.SendPropertyChanging();
-					this._maLop = value;
-					this.SendPropertyChanged("maLop");
-					this.OnmaLopChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maMH", DbType="VarChar(10)")]
 		public string maMH
 		{
@@ -1835,6 +1800,30 @@ namespace DangNhap
 					this._maMH = value;
 					this.SendPropertyChanged("maMH");
 					this.OnmaMHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLop", DbType="VarChar(10)")]
+		public string maLop
+		{
+			get
+			{
+				return this._maLop;
+			}
+			set
+			{
+				if ((this._maLop != value))
+				{
+					if (this._LopHoc.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaLopChanging(value);
+					this.SendPropertyChanging();
+					this._maLop = value;
+					this.SendPropertyChanged("maLop");
+					this.OnmaLopChanged();
 				}
 			}
 		}
@@ -1895,26 +1884,6 @@ namespace DangNhap
 					this._hocKy = value;
 					this.SendPropertyChanged("hocKy");
 					this.OnhocKyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_namHoc", DbType="Int")]
-		public System.Nullable<int> namHoc
-		{
-			get
-			{
-				return this._namHoc;
-			}
-			set
-			{
-				if ((this._namHoc != value))
-				{
-					this.OnnamHocChanging(value);
-					this.SendPropertyChanging();
-					this._namHoc = value;
-					this.SendPropertyChanged("namHoc");
-					this.OnnamHocChanged();
 				}
 			}
 		}
@@ -2201,17 +2170,17 @@ namespace DangNhap
 		
 		private string _noiSinh;
 		
-		private System.Nullable<int> _khoa;
+		private string _email;
+		
+		private System.Data.Linq.Binary _hinh;
 		
 		private System.Nullable<byte> _quyen;
 		
+		private System.Nullable<byte> _khoa;
+		
 		private string _maLop;
 		
-		private string _maNganh;
-		
 		private EntityRef<LopHoc> _LopHoc;
-		
-		private EntityRef<NganhHoc> _NganhHoc;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2231,24 +2200,25 @@ namespace DangNhap
     partial void OnngaySinhChanged();
     partial void OnnoiSinhChanging(string value);
     partial void OnnoiSinhChanged();
-    partial void OnkhoaChanging(System.Nullable<int> value);
-    partial void OnkhoaChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OnhinhChanging(System.Data.Linq.Binary value);
+    partial void OnhinhChanged();
     partial void OnquyenChanging(System.Nullable<byte> value);
     partial void OnquyenChanged();
+    partial void OnkhoaChanging(System.Nullable<byte> value);
+    partial void OnkhoaChanged();
     partial void OnmaLopChanging(string value);
     partial void OnmaLopChanged();
-    partial void OnmaNganhChanging(string value);
-    partial void OnmaNganhChanged();
     #endregion
 		
 		public SinhVien()
 		{
 			this._LopHoc = default(EntityRef<LopHoc>);
-			this._NganhHoc = default(EntityRef<NganhHoc>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSV", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSV", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string maSV
 		{
 			get
@@ -2288,7 +2258,7 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioiTinh", DbType="NVarChar(5)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioiTinh", DbType="NVarChar(10)")]
 		public string gioiTinh
 		{
 			get
@@ -2388,22 +2358,42 @@ namespace DangNhap
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_khoa", DbType="Int")]
-		public System.Nullable<int> khoa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50)")]
+		public string email
 		{
 			get
 			{
-				return this._khoa;
+				return this._email;
 			}
 			set
 			{
-				if ((this._khoa != value))
+				if ((this._email != value))
 				{
-					this.OnkhoaChanging(value);
+					this.OnemailChanging(value);
 					this.SendPropertyChanging();
-					this._khoa = value;
-					this.SendPropertyChanged("khoa");
-					this.OnkhoaChanged();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hinh", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary hinh
+		{
+			get
+			{
+				return this._hinh;
+			}
+			set
+			{
+				if ((this._hinh != value))
+				{
+					this.OnhinhChanging(value);
+					this.SendPropertyChanging();
+					this._hinh = value;
+					this.SendPropertyChanged("hinh");
+					this.OnhinhChanged();
 				}
 			}
 		}
@@ -2428,6 +2418,26 @@ namespace DangNhap
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_khoa", DbType="TinyInt")]
+		public System.Nullable<byte> khoa
+		{
+			get
+			{
+				return this._khoa;
+			}
+			set
+			{
+				if ((this._khoa != value))
+				{
+					this.OnkhoaChanging(value);
+					this.SendPropertyChanging();
+					this._khoa = value;
+					this.SendPropertyChanged("khoa");
+					this.OnkhoaChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLop", DbType="VarChar(10)")]
 		public string maLop
 		{
@@ -2448,30 +2458,6 @@ namespace DangNhap
 					this._maLop = value;
 					this.SendPropertyChanged("maLop");
 					this.OnmaLopChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNganh", DbType="VarChar(10)")]
-		public string maNganh
-		{
-			get
-			{
-				return this._maNganh;
-			}
-			set
-			{
-				if ((this._maNganh != value))
-				{
-					if (this._NganhHoc.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnmaNganhChanging(value);
-					this.SendPropertyChanging();
-					this._maNganh = value;
-					this.SendPropertyChanged("maNganh");
-					this.OnmaNganhChanged();
 				}
 			}
 		}
@@ -2506,40 +2492,6 @@ namespace DangNhap
 						this._maLop = default(string);
 					}
 					this.SendPropertyChanged("LopHoc");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NganhHoc_SinhVien", Storage="_NganhHoc", ThisKey="maNganh", OtherKey="maNganh", IsForeignKey=true)]
-		public NganhHoc NganhHoc
-		{
-			get
-			{
-				return this._NganhHoc.Entity;
-			}
-			set
-			{
-				NganhHoc previousValue = this._NganhHoc.Entity;
-				if (((previousValue != value) 
-							|| (this._NganhHoc.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._NganhHoc.Entity = null;
-						previousValue.SinhViens.Remove(this);
-					}
-					this._NganhHoc.Entity = value;
-					if ((value != null))
-					{
-						value.SinhViens.Add(this);
-						this._maNganh = value.maNganh;
-					}
-					else
-					{
-						this._maNganh = default(string);
-					}
-					this.SendPropertyChanged("NganhHoc");
 				}
 			}
 		}

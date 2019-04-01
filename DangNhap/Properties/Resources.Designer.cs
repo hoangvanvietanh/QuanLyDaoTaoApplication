@@ -93,6 +93,16 @@ namespace DangNhap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage add_friend {
+            get {
+                object obj = ResourceManager.GetObject("add-friend", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage add_user {
             get {
                 object obj = ResourceManager.GetObject("add-user", resourceCulture);
@@ -187,6 +197,16 @@ namespace DangNhap.Properties {
             get {
                 object obj = ResourceManager.GetObject("delete-modern-user", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_user_512 {
+            get {
+                object obj = ResourceManager.GetObject("delete-user-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -437,6 +457,16 @@ namespace DangNhap.Properties {
             get {
                 object obj = ResourceManager.GetObject("no_avatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage remove {
+            get {
+                object obj = ResourceManager.GetObject("remove", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         

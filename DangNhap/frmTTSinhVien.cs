@@ -23,37 +23,25 @@ namespace DangNhap
         {
             InitializeComponent();
             con.Open();
-            SqlCommand sqlCmd = new SqlCommand("selectAllNganhHoc", con)
+            SqlCommand sqlCmd = new SqlCommand("selectAllLopHoc", con)
             {
                 CommandType = CommandType.StoredProcedure
             };
             SqlDataReader DR = sqlCmd.ExecuteReader();
             while (DR.Read())
             {
-                cbNganh.Items.Add(DR[1] + " " + DR[0]);
-
-            }
-            DR.Close();
-
-            sqlCmd = new SqlCommand("selectAllLopHoc", con)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            DR = sqlCmd.ExecuteReader();
-            while (DR.Read())
-            {
-                cbLop.Items.Add(DR[1] + " " + DR[0]);
+                cbLop.Items.Add(DR[0]);
 
             }
             DR.Close();
         }
-        public void TTSinhVien(String maSV, String hoTen, String diaChi, String soDT, String gioiTinh, String lopHoc, String nganhHoc, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
+        public void TTSinhVien(String maSV, String hoTen, String diaChi, String soDT, String gioiTinh, String lopHoc, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
         {
             txtMaSV.Text = maSV;
             txtHoTen.Text = hoTen;
             txtMSoDT.Text = soDT;
             cbLop.Text = lopHoc;
-            cbNganh.Text = nganhHoc;
+            //cbNganh.Text = nganhHoc;
             txtMKhoaHoc.Text = khoa;
             txtNoiSinh.Text = noiSinh;
             txtEmail.Text = email;
@@ -134,7 +122,7 @@ namespace DangNhap
                 sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@maLop", cbLop.Text.Substring(cbLop.Text.LastIndexOf(' ') + 1));
-                sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
+                //sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
                 sqlCmd.Parameters.AddWithValue("@quyen", 3);
                 sqlCmd.Parameters.AddWithValue("@khoa", txtMKhoaHoc.Text);
                 sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);
@@ -209,7 +197,7 @@ namespace DangNhap
                 sqlCmd.Parameters.AddWithValue("@ngaySinh", Convert.ToDateTime(txtNgaySinh.Text));
                 sqlCmd.Parameters.AddWithValue("@noiSinh", txtNoiSinh.Text);
                 sqlCmd.Parameters.AddWithValue("@maLop", cbLop.Text.Substring(cbLop.Text.LastIndexOf(' ') + 1));
-                sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
+                //sqlCmd.Parameters.AddWithValue("@maNganh", cbNganh.Text.Substring(cbNganh.Text.LastIndexOf(' ') + 1));
                 sqlCmd.Parameters.AddWithValue("@quyen", 3);
                 sqlCmd.Parameters.AddWithValue("@khoa", txtMKhoaHoc.Text);
                 sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);

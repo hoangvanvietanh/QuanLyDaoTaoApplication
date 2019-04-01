@@ -29,7 +29,7 @@ namespace DangNhap
         {
             if (maSo.Equals("SV"))
             {
-                int flat = 1;
+                int flat = 0;
                 SqlCommand sqlCmd = new SqlCommand("dangNhap", con)
                 {
                     CommandType = CommandType.StoredProcedure

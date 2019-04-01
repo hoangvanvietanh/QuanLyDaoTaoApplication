@@ -24,7 +24,7 @@
       <Column Name="hoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="ngaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="noiSinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="trinhDo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
@@ -48,9 +48,10 @@
   <Table Name="dbo.LopHoc" Member="LopHocs">
     <Type Name="LopHoc">
       <Column Name="maLop" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="tenLop" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="maNganh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="LopHoc_PhanCong" Member="PhanCongs" ThisKey="maLop" OtherKey="maLop" Type="PhanCong" />
       <Association Name="LopHoc_SinhVien" Member="SinhViens" ThisKey="maLop" OtherKey="maLop" Type="SinhVien" />
+      <Association Name="NganhHoc_LopHoc" Member="NganhHoc" ThisKey="maNganh" OtherKey="maNganh" Type="NganhHoc" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MonHoc" Member="MonHocs">
@@ -58,8 +59,6 @@
       <Column Name="maMH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="tenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="soTC" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Column Name="lyThuyet" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Column Name="thucHanh" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
       <Association Name="MonHoc_PhanCong" Member="PhanCongs" ThisKey="maMH" OtherKey="maMH" Type="PhanCong" />
     </Type>
   </Table>
@@ -68,7 +67,7 @@
       <Column Name="maNganh" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="tenNganh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKhoa" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Association Name="NganhHoc_SinhVien" Member="SinhViens" ThisKey="maNganh" OtherKey="maNganh" Type="SinhVien" />
+      <Association Name="NganhHoc_LopHoc" Member="LopHocs" ThisKey="maNganh" OtherKey="maNganh" Type="LopHoc" />
       <Association Name="Khoa_NganhHoc" Member="Khoa" ThisKey="maKhoa" OtherKey="maKhoa" Type="Khoa" IsForeignKey="true" />
     </Type>
   </Table>
@@ -76,12 +75,11 @@
     <Type Name="PhanCong">
       <Column Name="maPC" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="maGV" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="maLop" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="maMH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="maLop" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="ngayBD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ngayKT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="hocKy" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Column Name="namHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PhanCong_ThoiKhoaBieu" Member="ThoiKhoaBieus" ThisKey="maPC" OtherKey="maPC" Type="ThoiKhoaBieu" />
       <Association Name="GiangVien_PhanCong" Member="GiangVien" ThisKey="maGV" OtherKey="maGV" Type="GiangVien" IsForeignKey="true" />
       <Association Name="LopHoc_PhanCong" Member="LopHoc" ThisKey="maLop" OtherKey="maLop" Type="LopHoc" IsForeignKey="true" />
@@ -97,19 +95,19 @@
   </Table>
   <Table Name="dbo.SinhVien" Member="SinhViens">
     <Type Name="SinhVien">
-      <Column Name="maSV" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maSV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="hoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
       <Column Name="ngaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="noiSinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="khoa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hinh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="quyen" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="khoa" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
       <Column Name="maLop" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="maNganh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="LopHoc_SinhVien" Member="LopHoc" ThisKey="maLop" OtherKey="maLop" Type="LopHoc" IsForeignKey="true" />
-      <Association Name="NganhHoc_SinhVien" Member="NganhHoc" ThisKey="maNganh" OtherKey="maNganh" Type="NganhHoc" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">

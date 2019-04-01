@@ -766,29 +766,19 @@ namespace DangNhap {
             
             private global::System.Data.DataColumn columnnoiSinh;
             
-            private global::System.Data.DataColumn columnkhoa;
-            
-            private global::System.Data.DataColumn columnquyen;
-            
-            private global::System.Data.DataColumn columnmaLop;
-            
-            private global::System.Data.DataColumn columnmaNganh;
-            
             private global::System.Data.DataColumn columnemail;
             
             private global::System.Data.DataColumn columnhinh;
             
-            private global::System.Data.DataColumn columnmaLop1;
+            private global::System.Data.DataColumn columnkhoa;
             
-            private global::System.Data.DataColumn columntenLop;
-            
-            private global::System.Data.DataColumn columnmaNganh1;
+            private global::System.Data.DataColumn columnmaLop;
             
             private global::System.Data.DataColumn columntenNganh;
             
-            private global::System.Data.DataColumn columnmaKhoa;
+            private global::System.Data.DataColumn columnmaNganh;
             
-            private global::System.Data.DataColumn columnmaKhoa1;
+            private global::System.Data.DataColumn columnmaKhoa;
             
             private global::System.Data.DataColumn columntenKhoa;
             
@@ -883,38 +873,6 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn khoaColumn {
-                get {
-                    return this.columnkhoa;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn quyenColumn {
-                get {
-                    return this.columnquyen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maLopColumn {
-                get {
-                    return this.columnmaLop;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maNganhColumn {
-                get {
-                    return this.columnmaNganh;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn emailColumn {
                 get {
                     return this.columnemail;
@@ -931,25 +889,17 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maLop1Column {
+            public global::System.Data.DataColumn khoaColumn {
                 get {
-                    return this.columnmaLop1;
+                    return this.columnkhoa;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn tenLopColumn {
+            public global::System.Data.DataColumn maLopColumn {
                 get {
-                    return this.columntenLop;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maNganh1Column {
-                get {
-                    return this.columnmaNganh1;
+                    return this.columnmaLop;
                 }
             }
             
@@ -963,17 +913,17 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maKhoaColumn {
+            public global::System.Data.DataColumn maNganhColumn {
                 get {
-                    return this.columnmaKhoa;
+                    return this.columnmaNganh;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn maKhoa1Column {
+            public global::System.Data.DataColumn maKhoaColumn {
                 get {
-                    return this.columnmaKhoa1;
+                    return this.columnmaKhoa;
                 }
             }
             
@@ -1022,27 +972,7 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public selectAllSVRow AddselectAllSVRow(
-                        string maSV, 
-                        string hoTen, 
-                        string gioiTinh, 
-                        string diaChi, 
-                        string SDT, 
-                        System.DateTime ngaySinh, 
-                        string noiSinh, 
-                        int khoa, 
-                        byte quyen, 
-                        string maLop, 
-                        string maNganh, 
-                        string email, 
-                        byte[] hinh, 
-                        string maLop1, 
-                        string tenLop, 
-                        string maNganh1, 
-                        string tenNganh, 
-                        string maKhoa, 
-                        string maKhoa1, 
-                        string tenKhoa) {
+            public selectAllSVRow AddselectAllSVRow(string maSV, string hoTen, string gioiTinh, string diaChi, string SDT, System.DateTime ngaySinh, string noiSinh, string email, byte[] hinh, byte khoa, string maLop, string tenNganh, string maNganh, string maKhoa, string tenKhoa) {
                 selectAllSVRow rowselectAllSVRow = ((selectAllSVRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         maSV,
@@ -1052,18 +982,13 @@ namespace DangNhap {
                         SDT,
                         ngaySinh,
                         noiSinh,
-                        khoa,
-                        quyen,
-                        maLop,
-                        maNganh,
                         email,
                         hinh,
-                        maLop1,
-                        tenLop,
-                        maNganh1,
+                        khoa,
+                        maLop,
                         tenNganh,
+                        maNganh,
                         maKhoa,
-                        maKhoa1,
                         tenKhoa};
                 rowselectAllSVRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowselectAllSVRow);
@@ -1072,12 +997,12 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public selectAllSVRow FindBymaSVmaLop1maNganh1maKhoa1(string maSV, string maLop1, string maNganh1, string maKhoa1) {
+            public selectAllSVRow FindBymaSVmaLopmaNganhmaKhoa(string maSV, string maLop, string maNganh, string maKhoa) {
                 return ((selectAllSVRow)(this.Rows.Find(new object[] {
                             maSV,
-                            maLop1,
-                            maNganh1,
-                            maKhoa1})));
+                            maLop,
+                            maNganh,
+                            maKhoa})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1104,18 +1029,13 @@ namespace DangNhap {
                 this.columnSDT = base.Columns["SDT"];
                 this.columnngaySinh = base.Columns["ngaySinh"];
                 this.columnnoiSinh = base.Columns["noiSinh"];
-                this.columnkhoa = base.Columns["khoa"];
-                this.columnquyen = base.Columns["quyen"];
-                this.columnmaLop = base.Columns["maLop"];
-                this.columnmaNganh = base.Columns["maNganh"];
                 this.columnemail = base.Columns["email"];
                 this.columnhinh = base.Columns["hinh"];
-                this.columnmaLop1 = base.Columns["maLop1"];
-                this.columntenLop = base.Columns["tenLop"];
-                this.columnmaNganh1 = base.Columns["maNganh1"];
+                this.columnkhoa = base.Columns["khoa"];
+                this.columnmaLop = base.Columns["maLop"];
                 this.columntenNganh = base.Columns["tenNganh"];
+                this.columnmaNganh = base.Columns["maNganh"];
                 this.columnmaKhoa = base.Columns["maKhoa"];
-                this.columnmaKhoa1 = base.Columns["maKhoa1"];
                 this.columntenKhoa = base.Columns["tenKhoa"];
             }
             
@@ -1136,56 +1056,42 @@ namespace DangNhap {
                 base.Columns.Add(this.columnngaySinh);
                 this.columnnoiSinh = new global::System.Data.DataColumn("noiSinh", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnoiSinh);
-                this.columnkhoa = new global::System.Data.DataColumn("khoa", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnkhoa);
-                this.columnquyen = new global::System.Data.DataColumn("quyen", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquyen);
-                this.columnmaLop = new global::System.Data.DataColumn("maLop", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmaLop);
-                this.columnmaNganh = new global::System.Data.DataColumn("maNganh", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmaNganh);
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
                 this.columnhinh = new global::System.Data.DataColumn("hinh", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhinh);
-                this.columnmaLop1 = new global::System.Data.DataColumn("maLop1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmaLop1);
-                this.columntenLop = new global::System.Data.DataColumn("tenLop", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntenLop);
-                this.columnmaNganh1 = new global::System.Data.DataColumn("maNganh1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmaNganh1);
+                this.columnkhoa = new global::System.Data.DataColumn("khoa", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkhoa);
+                this.columnmaLop = new global::System.Data.DataColumn("maLop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmaLop);
                 this.columntenNganh = new global::System.Data.DataColumn("tenNganh", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntenNganh);
+                this.columnmaNganh = new global::System.Data.DataColumn("maNganh", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmaNganh);
                 this.columnmaKhoa = new global::System.Data.DataColumn("maKhoa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmaKhoa);
-                this.columnmaKhoa1 = new global::System.Data.DataColumn("maKhoa1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmaKhoa1);
                 this.columntenKhoa = new global::System.Data.DataColumn("tenKhoa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntenKhoa);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnmaSV,
-                                this.columnmaLop1,
-                                this.columnmaNganh1,
-                                this.columnmaKhoa1}, true));
+                                this.columnmaLop,
+                                this.columnmaNganh,
+                                this.columnmaKhoa}, true));
                 this.columnmaSV.AllowDBNull = false;
-                this.columnmaSV.MaxLength = 15;
+                this.columnmaSV.MaxLength = 10;
                 this.columnhoTen.MaxLength = 50;
-                this.columngioiTinh.MaxLength = 5;
+                this.columngioiTinh.MaxLength = 10;
                 this.columndiaChi.MaxLength = 50;
                 this.columnSDT.MaxLength = 11;
                 this.columnnoiSinh.MaxLength = 50;
-                this.columnmaLop.MaxLength = 10;
-                this.columnmaNganh.MaxLength = 10;
                 this.columnemail.MaxLength = 50;
-                this.columnmaLop1.AllowDBNull = false;
-                this.columnmaLop1.MaxLength = 10;
-                this.columntenLop.MaxLength = 50;
-                this.columnmaNganh1.AllowDBNull = false;
-                this.columnmaNganh1.MaxLength = 10;
+                this.columnmaLop.AllowDBNull = false;
+                this.columnmaLop.MaxLength = 10;
                 this.columntenNganh.MaxLength = 50;
+                this.columnmaNganh.AllowDBNull = false;
+                this.columnmaNganh.MaxLength = 10;
+                this.columnmaKhoa.AllowDBNull = false;
                 this.columnmaKhoa.MaxLength = 10;
-                this.columnmaKhoa1.AllowDBNull = false;
-                this.columnmaKhoa1.MaxLength = 10;
                 this.columntenKhoa.MaxLength = 50;
             }
             
@@ -1781,70 +1687,6 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int khoa {
-                get {
-                    try {
-                        return ((int)(this[this.tableselectAllSV.khoaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'khoa\' in table \'selectAllSV\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableselectAllSV.khoaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public byte quyen {
-                get {
-                    try {
-                        return ((byte)(this[this.tableselectAllSV.quyenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'quyen\' in table \'selectAllSV\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableselectAllSV.quyenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maLop {
-                get {
-                    try {
-                        return ((string)(this[this.tableselectAllSV.maLopColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'maLop\' in table \'selectAllSV\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableselectAllSV.maLopColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maNganh {
-                get {
-                    try {
-                        return ((string)(this[this.tableselectAllSV.maNganhColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'maNganh\' in table \'selectAllSV\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableselectAllSV.maNganhColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string email {
                 get {
                     try {
@@ -1877,39 +1719,28 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maLop1 {
-                get {
-                    return ((string)(this[this.tableselectAllSV.maLop1Column]));
-                }
-                set {
-                    this[this.tableselectAllSV.maLop1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string tenLop {
+            public byte khoa {
                 get {
                     try {
-                        return ((string)(this[this.tableselectAllSV.tenLopColumn]));
+                        return ((byte)(this[this.tableselectAllSV.khoaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tenLop\' in table \'selectAllSV\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'khoa\' in table \'selectAllSV\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableselectAllSV.tenLopColumn] = value;
+                    this[this.tableselectAllSV.khoaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maNganh1 {
+            public string maLop {
                 get {
-                    return ((string)(this[this.tableselectAllSV.maNganh1Column]));
+                    return ((string)(this[this.tableselectAllSV.maLopColumn]));
                 }
                 set {
-                    this[this.tableselectAllSV.maNganh1Column] = value;
+                    this[this.tableselectAllSV.maLopColumn] = value;
                 }
             }
             
@@ -1931,28 +1762,23 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maKhoa {
+            public string maNganh {
                 get {
-                    try {
-                        return ((string)(this[this.tableselectAllSV.maKhoaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'maKhoa\' in table \'selectAllSV\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableselectAllSV.maNganhColumn]));
                 }
                 set {
-                    this[this.tableselectAllSV.maKhoaColumn] = value;
+                    this[this.tableselectAllSV.maNganhColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string maKhoa1 {
+            public string maKhoa {
                 get {
-                    return ((string)(this[this.tableselectAllSV.maKhoa1Column]));
+                    return ((string)(this[this.tableselectAllSV.maKhoaColumn]));
                 }
                 set {
-                    this[this.tableselectAllSV.maKhoa1Column] = value;
+                    this[this.tableselectAllSV.maKhoaColumn] = value;
                 }
             }
             
@@ -2046,54 +1872,6 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IskhoaNull() {
-                return this.IsNull(this.tableselectAllSV.khoaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetkhoaNull() {
-                this[this.tableselectAllSV.khoaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsquyenNull() {
-                return this.IsNull(this.tableselectAllSV.quyenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetquyenNull() {
-                this[this.tableselectAllSV.quyenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsmaLopNull() {
-                return this.IsNull(this.tableselectAllSV.maLopColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetmaLopNull() {
-                this[this.tableselectAllSV.maLopColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsmaNganhNull() {
-                return this.IsNull(this.tableselectAllSV.maNganhColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetmaNganhNull() {
-                this[this.tableselectAllSV.maNganhColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsemailNull() {
                 return this.IsNull(this.tableselectAllSV.emailColumn);
             }
@@ -2118,14 +1896,14 @@ namespace DangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IstenLopNull() {
-                return this.IsNull(this.tableselectAllSV.tenLopColumn);
+            public bool IskhoaNull() {
+                return this.IsNull(this.tableselectAllSV.khoaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SettenLopNull() {
-                this[this.tableselectAllSV.tenLopColumn] = global::System.Convert.DBNull;
+            public void SetkhoaNull() {
+                this[this.tableselectAllSV.khoaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2138,18 +1916,6 @@ namespace DangNhap {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettenNganhNull() {
                 this[this.tableselectAllSV.tenNganhColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsmaKhoaNull() {
-                return this.IsNull(this.tableselectAllSV.maKhoaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetmaKhoaNull() {
-                this[this.tableselectAllSV.maKhoaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2545,18 +2311,13 @@ namespace DangNhap.QLDaoTaoDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SDT", "SDT");
             tableMapping.ColumnMappings.Add("ngaySinh", "ngaySinh");
             tableMapping.ColumnMappings.Add("noiSinh", "noiSinh");
-            tableMapping.ColumnMappings.Add("khoa", "khoa");
-            tableMapping.ColumnMappings.Add("quyen", "quyen");
-            tableMapping.ColumnMappings.Add("maLop", "maLop");
-            tableMapping.ColumnMappings.Add("maNganh", "maNganh");
             tableMapping.ColumnMappings.Add("email", "email");
             tableMapping.ColumnMappings.Add("hinh", "hinh");
-            tableMapping.ColumnMappings.Add("maLop1", "maLop1");
-            tableMapping.ColumnMappings.Add("tenLop", "tenLop");
-            tableMapping.ColumnMappings.Add("maNganh1", "maNganh1");
+            tableMapping.ColumnMappings.Add("khoa", "khoa");
+            tableMapping.ColumnMappings.Add("maLop", "maLop");
             tableMapping.ColumnMappings.Add("tenNganh", "tenNganh");
+            tableMapping.ColumnMappings.Add("maNganh", "maNganh");
             tableMapping.ColumnMappings.Add("maKhoa", "maKhoa");
-            tableMapping.ColumnMappings.Add("maKhoa1", "maKhoa1");
             tableMapping.ColumnMappings.Add("tenKhoa", "tenKhoa");
             this._adapter.TableMappings.Add(tableMapping);
         }

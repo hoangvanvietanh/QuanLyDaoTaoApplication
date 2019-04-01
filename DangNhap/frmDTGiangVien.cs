@@ -191,8 +191,8 @@ namespace DangNhap
 
         private void aceTatCa_Click(object sender, EventArgs e)
         {
-            colmaKhoa.SortOrder = ColumnSortOrder.None;
-            colmaKhoa.GroupIndex = -1;
+            coltenKhoa.SortOrder = ColumnSortOrder.None;
+            coltenKhoa.GroupIndex = -1;
             coltrinhDo.SortOrder = ColumnSortOrder.None;
             coltrinhDo.GroupIndex = -1;
             colgioiTinh.SortOrder = ColumnSortOrder.None;
@@ -203,8 +203,8 @@ namespace DangNhap
 
         private void aceKhoa_Click(object sender, EventArgs e)
         {
-            colmaKhoa.SortOrder = ColumnSortOrder.Ascending;
-            colmaKhoa.GroupIndex = 0;
+            coltenKhoa.SortOrder = ColumnSortOrder.Ascending;
+            coltenKhoa.GroupIndex = 0;
         }
 
         private void aceTrinhDo_Click(object sender, EventArgs e)
