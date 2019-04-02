@@ -102,6 +102,12 @@
     <Compile Include="frmDTSinhVien.Designer.cs">
       <DependentUpon>frmDTSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong.Designer.cs">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPreviewReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="frmTTGiangVien.Designer.cs">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXemThoiKhoaBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemThoiKhoaBieu.Designer.cs">
+      <DependentUpon>frmXemThoiKhoaBieu.cs</DependentUpon>
     </Compile>
     <Compile Include="giangVienReport.cs">
       <SubType>Component</SubType>
@@ -151,6 +163,9 @@
     <Compile Include="frmGiangVien.Designer.cs">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDaoTaoDataSet.cs">
+      <DependentUpon>QLDaoTaoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLDaoTaoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +186,9 @@
     <EmbeddedResource Include="frmDTSinhVien.resx">
       <DependentUpon>frmDTSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCong.resx">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPreviewReport.resx">
       <DependentUpon>frmPreviewReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTTGiangVien.resx">
       <DependentUpon>frmTTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemThoiKhoaBieu.resx">
+      <DependentUpon>frmXemThoiKhoaBieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="giangVienReport.resx">
       <DependentUpon>giangVienReport.cs</DependentUpon>
