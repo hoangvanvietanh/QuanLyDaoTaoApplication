@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using System.IO;
+using System.Configuration;
 
 namespace DangNhap
 {
@@ -18,7 +19,7 @@ namespace DangNhap
         String strFilePath = "";
         Byte[] ImageByArray;
         String thaoTac;
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmTTSinhVien()
         {
             InitializeComponent();

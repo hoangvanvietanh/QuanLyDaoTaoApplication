@@ -116,6 +116,44 @@
             this.colmaGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBoxEdit44 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.cT7Ca4 = new System.Windows.Forms.CheckBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cT6Ca4 = new System.Windows.Forms.CheckBox();
+            this.cT4Ca4 = new System.Windows.Forms.CheckBox();
+            this.cT5Ca4 = new System.Windows.Forms.CheckBox();
+            this.cT3Ca4 = new System.Windows.Forms.CheckBox();
+            this.cT2Ca4 = new System.Windows.Forms.CheckBox();
+            this.cT7Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT6Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT4Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT5Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT3Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT2Ca3 = new System.Windows.Forms.CheckBox();
+            this.cT7Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT7Ca1 = new System.Windows.Forms.CheckBox();
+            this.cT6Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT6Ca1 = new System.Windows.Forms.CheckBox();
+            this.cT4Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT4Ca1 = new System.Windows.Forms.CheckBox();
+            this.cT5Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT5Ca1 = new System.Windows.Forms.CheckBox();
+            this.cT3Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT3Ca1 = new System.Windows.Forms.CheckBox();
+            this.cT2Ca2 = new System.Windows.Forms.CheckBox();
+            this.cT2Ca1 = new System.Windows.Forms.CheckBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.laGV = new System.Windows.Forms.Label();
             this.laLop = new System.Windows.Forms.Label();
             this.comboBoxEdit38 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -134,44 +172,6 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colmaLop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timKhoaLopHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.timKhoaLopHocTableAdapter();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.cT2Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT2Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT2Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT2Ca4 = new System.Windows.Forms.CheckBox();
-            this.cT3Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT3Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT3Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT3Ca4 = new System.Windows.Forms.CheckBox();
-            this.cT5Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT5Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT5Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT5Ca4 = new System.Windows.Forms.CheckBox();
-            this.cT4Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT4Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT4Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT4Ca4 = new System.Windows.Forms.CheckBox();
-            this.cT6Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT6Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT6Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT6Ca4 = new System.Windows.Forms.CheckBox();
-            this.cT7Ca1 = new System.Windows.Forms.CheckBox();
-            this.cT7Ca2 = new System.Windows.Forms.CheckBox();
-            this.cT7Ca3 = new System.Windows.Forms.CheckBox();
-            this.cT7Ca4 = new System.Windows.Forms.CheckBox();
-            this.comboBoxEdit44 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit28.Properties)).BeginInit();
@@ -233,12 +233,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVKhoaGV)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit38.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit24.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit22.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1123,6 +1123,383 @@
             this.panel4.Size = new System.Drawing.Size(323, 424);
             this.panel4.TabIndex = 3;
             // 
+            // comboBoxEdit44
+            // 
+            this.comboBoxEdit44.EditValue = "Chọn phòng học";
+            this.comboBoxEdit44.Location = new System.Drawing.Point(69, 215);
+            this.comboBoxEdit44.Name = "comboBoxEdit44";
+            this.comboBoxEdit44.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit44.Size = new System.Drawing.Size(100, 20);
+            this.comboBoxEdit44.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cT7Ca4);
+            this.panel8.Controls.Add(this.label29);
+            this.panel8.Controls.Add(this.cT6Ca4);
+            this.panel8.Controls.Add(this.cT4Ca4);
+            this.panel8.Controls.Add(this.cT5Ca4);
+            this.panel8.Controls.Add(this.cT3Ca4);
+            this.panel8.Controls.Add(this.cT2Ca4);
+            this.panel8.Controls.Add(this.cT7Ca3);
+            this.panel8.Controls.Add(this.cT6Ca3);
+            this.panel8.Controls.Add(this.cT4Ca3);
+            this.panel8.Controls.Add(this.cT5Ca3);
+            this.panel8.Controls.Add(this.cT3Ca3);
+            this.panel8.Controls.Add(this.cT2Ca3);
+            this.panel8.Controls.Add(this.cT7Ca2);
+            this.panel8.Controls.Add(this.cT7Ca1);
+            this.panel8.Controls.Add(this.cT6Ca2);
+            this.panel8.Controls.Add(this.cT6Ca1);
+            this.panel8.Controls.Add(this.cT4Ca2);
+            this.panel8.Controls.Add(this.cT4Ca1);
+            this.panel8.Controls.Add(this.cT5Ca2);
+            this.panel8.Controls.Add(this.cT5Ca1);
+            this.panel8.Controls.Add(this.cT3Ca2);
+            this.panel8.Controls.Add(this.cT3Ca1);
+            this.panel8.Controls.Add(this.cT2Ca2);
+            this.panel8.Controls.Add(this.cT2Ca1);
+            this.panel8.Controls.Add(this.label40);
+            this.panel8.Controls.Add(this.label39);
+            this.panel8.Controls.Add(this.label38);
+            this.panel8.Controls.Add(this.label37);
+            this.panel8.Controls.Add(this.label35);
+            this.panel8.Controls.Add(this.label34);
+            this.panel8.Controls.Add(this.label33);
+            this.panel8.Controls.Add(this.label32);
+            this.panel8.Controls.Add(this.label31);
+            this.panel8.Controls.Add(this.label30);
+            this.panel8.Location = new System.Drawing.Point(27, 252);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(197, 164);
+            this.panel8.TabIndex = 9;
+            // 
+            // cT7Ca4
+            // 
+            this.cT7Ca4.AutoSize = true;
+            this.cT7Ca4.Location = new System.Drawing.Point(164, 119);
+            this.cT7Ca4.Name = "cT7Ca4";
+            this.cT7Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT7Ca4.TabIndex = 1;
+            this.cT7Ca4.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(82, 12);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(47, 13);
+            this.label29.TabIndex = 8;
+            this.label29.Text = "Buổi học";
+            // 
+            // cT6Ca4
+            // 
+            this.cT6Ca4.AutoSize = true;
+            this.cT6Ca4.Location = new System.Drawing.Point(139, 120);
+            this.cT6Ca4.Name = "cT6Ca4";
+            this.cT6Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT6Ca4.TabIndex = 1;
+            this.cT6Ca4.UseVisualStyleBackColor = true;
+            // 
+            // cT4Ca4
+            // 
+            this.cT4Ca4.AutoSize = true;
+            this.cT4Ca4.Location = new System.Drawing.Point(89, 120);
+            this.cT4Ca4.Name = "cT4Ca4";
+            this.cT4Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT4Ca4.TabIndex = 1;
+            this.cT4Ca4.UseVisualStyleBackColor = true;
+            // 
+            // cT5Ca4
+            // 
+            this.cT5Ca4.AutoSize = true;
+            this.cT5Ca4.Location = new System.Drawing.Point(114, 120);
+            this.cT5Ca4.Name = "cT5Ca4";
+            this.cT5Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT5Ca4.TabIndex = 1;
+            this.cT5Ca4.UseVisualStyleBackColor = true;
+            // 
+            // cT3Ca4
+            // 
+            this.cT3Ca4.AutoSize = true;
+            this.cT3Ca4.Location = new System.Drawing.Point(64, 120);
+            this.cT3Ca4.Name = "cT3Ca4";
+            this.cT3Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT3Ca4.TabIndex = 1;
+            this.cT3Ca4.UseVisualStyleBackColor = true;
+            // 
+            // cT2Ca4
+            // 
+            this.cT2Ca4.AutoSize = true;
+            this.cT2Ca4.Location = new System.Drawing.Point(39, 120);
+            this.cT2Ca4.Name = "cT2Ca4";
+            this.cT2Ca4.Size = new System.Drawing.Size(15, 14);
+            this.cT2Ca4.TabIndex = 1;
+            this.cT2Ca4.UseVisualStyleBackColor = true;
+            // 
+            // cT7Ca3
+            // 
+            this.cT7Ca3.AutoSize = true;
+            this.cT7Ca3.Location = new System.Drawing.Point(164, 99);
+            this.cT7Ca3.Name = "cT7Ca3";
+            this.cT7Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT7Ca3.TabIndex = 1;
+            this.cT7Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT6Ca3
+            // 
+            this.cT6Ca3.AutoSize = true;
+            this.cT6Ca3.Location = new System.Drawing.Point(139, 100);
+            this.cT6Ca3.Name = "cT6Ca3";
+            this.cT6Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT6Ca3.TabIndex = 1;
+            this.cT6Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT4Ca3
+            // 
+            this.cT4Ca3.AutoSize = true;
+            this.cT4Ca3.Location = new System.Drawing.Point(89, 100);
+            this.cT4Ca3.Name = "cT4Ca3";
+            this.cT4Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT4Ca3.TabIndex = 1;
+            this.cT4Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT5Ca3
+            // 
+            this.cT5Ca3.AutoSize = true;
+            this.cT5Ca3.Location = new System.Drawing.Point(114, 100);
+            this.cT5Ca3.Name = "cT5Ca3";
+            this.cT5Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT5Ca3.TabIndex = 1;
+            this.cT5Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT3Ca3
+            // 
+            this.cT3Ca3.AutoSize = true;
+            this.cT3Ca3.Location = new System.Drawing.Point(64, 100);
+            this.cT3Ca3.Name = "cT3Ca3";
+            this.cT3Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT3Ca3.TabIndex = 1;
+            this.cT3Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT2Ca3
+            // 
+            this.cT2Ca3.AutoSize = true;
+            this.cT2Ca3.Location = new System.Drawing.Point(39, 100);
+            this.cT2Ca3.Name = "cT2Ca3";
+            this.cT2Ca3.Size = new System.Drawing.Size(15, 14);
+            this.cT2Ca3.TabIndex = 1;
+            this.cT2Ca3.UseVisualStyleBackColor = true;
+            // 
+            // cT7Ca2
+            // 
+            this.cT7Ca2.AutoSize = true;
+            this.cT7Ca2.Location = new System.Drawing.Point(164, 79);
+            this.cT7Ca2.Name = "cT7Ca2";
+            this.cT7Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT7Ca2.TabIndex = 1;
+            this.cT7Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT7Ca1
+            // 
+            this.cT7Ca1.AutoSize = true;
+            this.cT7Ca1.Location = new System.Drawing.Point(164, 59);
+            this.cT7Ca1.Name = "cT7Ca1";
+            this.cT7Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT7Ca1.TabIndex = 1;
+            this.cT7Ca1.UseVisualStyleBackColor = true;
+            // 
+            // cT6Ca2
+            // 
+            this.cT6Ca2.AutoSize = true;
+            this.cT6Ca2.Location = new System.Drawing.Point(139, 80);
+            this.cT6Ca2.Name = "cT6Ca2";
+            this.cT6Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT6Ca2.TabIndex = 1;
+            this.cT6Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT6Ca1
+            // 
+            this.cT6Ca1.AutoSize = true;
+            this.cT6Ca1.Location = new System.Drawing.Point(139, 60);
+            this.cT6Ca1.Name = "cT6Ca1";
+            this.cT6Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT6Ca1.TabIndex = 1;
+            this.cT6Ca1.UseVisualStyleBackColor = true;
+            // 
+            // cT4Ca2
+            // 
+            this.cT4Ca2.AutoSize = true;
+            this.cT4Ca2.Location = new System.Drawing.Point(89, 80);
+            this.cT4Ca2.Name = "cT4Ca2";
+            this.cT4Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT4Ca2.TabIndex = 1;
+            this.cT4Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT4Ca1
+            // 
+            this.cT4Ca1.AutoSize = true;
+            this.cT4Ca1.Location = new System.Drawing.Point(89, 60);
+            this.cT4Ca1.Name = "cT4Ca1";
+            this.cT4Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT4Ca1.TabIndex = 1;
+            this.cT4Ca1.UseVisualStyleBackColor = true;
+            // 
+            // cT5Ca2
+            // 
+            this.cT5Ca2.AutoSize = true;
+            this.cT5Ca2.Location = new System.Drawing.Point(114, 80);
+            this.cT5Ca2.Name = "cT5Ca2";
+            this.cT5Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT5Ca2.TabIndex = 1;
+            this.cT5Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT5Ca1
+            // 
+            this.cT5Ca1.AutoSize = true;
+            this.cT5Ca1.Location = new System.Drawing.Point(114, 60);
+            this.cT5Ca1.Name = "cT5Ca1";
+            this.cT5Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT5Ca1.TabIndex = 1;
+            this.cT5Ca1.UseVisualStyleBackColor = true;
+            // 
+            // cT3Ca2
+            // 
+            this.cT3Ca2.AutoSize = true;
+            this.cT3Ca2.Location = new System.Drawing.Point(64, 80);
+            this.cT3Ca2.Name = "cT3Ca2";
+            this.cT3Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT3Ca2.TabIndex = 1;
+            this.cT3Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT3Ca1
+            // 
+            this.cT3Ca1.AutoSize = true;
+            this.cT3Ca1.Location = new System.Drawing.Point(64, 60);
+            this.cT3Ca1.Name = "cT3Ca1";
+            this.cT3Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT3Ca1.TabIndex = 1;
+            this.cT3Ca1.UseVisualStyleBackColor = true;
+            // 
+            // cT2Ca2
+            // 
+            this.cT2Ca2.AutoSize = true;
+            this.cT2Ca2.Location = new System.Drawing.Point(39, 80);
+            this.cT2Ca2.Name = "cT2Ca2";
+            this.cT2Ca2.Size = new System.Drawing.Size(15, 14);
+            this.cT2Ca2.TabIndex = 1;
+            this.cT2Ca2.UseVisualStyleBackColor = true;
+            // 
+            // cT2Ca1
+            // 
+            this.cT2Ca1.AutoSize = true;
+            this.cT2Ca1.Location = new System.Drawing.Point(39, 60);
+            this.cT2Ca1.Name = "cT2Ca1";
+            this.cT2Ca1.Size = new System.Drawing.Size(15, 14);
+            this.cT2Ca1.TabIndex = 1;
+            this.cT2Ca1.UseVisualStyleBackColor = true;
+            this.cT2Ca1.CheckedChanged += new System.EventHandler(this.cT2Ca1_CheckedChanged);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(13, 120);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(20, 13);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "C4";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(13, 100);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(20, 13);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "C3";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(13, 80);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(20, 13);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "C2";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(13, 60);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(20, 13);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "C1";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(161, 43);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(19, 13);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "T7";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(136, 43);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(19, 13);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "T6";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(111, 43);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(19, 13);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "T5";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(86, 43);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(19, 13);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "T4";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(61, 43);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(19, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "T3";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(36, 43);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(19, 13);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "T2";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 218);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(57, 13);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "Phòng học";
+            // 
             // laGV
             // 
             this.laGV.AutoSize = true;
@@ -1276,383 +1653,6 @@
             // 
             this.timKhoaLopHocTableAdapter.ClearBeforeFill = true;
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 218);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(57, 13);
-            this.label26.TabIndex = 7;
-            this.label26.Text = "Phòng học";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(82, 12);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(47, 13);
-            this.label29.TabIndex = 8;
-            this.label29.Text = "Buổi học";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.cT7Ca4);
-            this.panel8.Controls.Add(this.label29);
-            this.panel8.Controls.Add(this.cT6Ca4);
-            this.panel8.Controls.Add(this.cT4Ca4);
-            this.panel8.Controls.Add(this.cT5Ca4);
-            this.panel8.Controls.Add(this.cT3Ca4);
-            this.panel8.Controls.Add(this.cT2Ca4);
-            this.panel8.Controls.Add(this.cT7Ca3);
-            this.panel8.Controls.Add(this.cT6Ca3);
-            this.panel8.Controls.Add(this.cT4Ca3);
-            this.panel8.Controls.Add(this.cT5Ca3);
-            this.panel8.Controls.Add(this.cT3Ca3);
-            this.panel8.Controls.Add(this.cT2Ca3);
-            this.panel8.Controls.Add(this.cT7Ca2);
-            this.panel8.Controls.Add(this.cT7Ca1);
-            this.panel8.Controls.Add(this.cT6Ca2);
-            this.panel8.Controls.Add(this.cT6Ca1);
-            this.panel8.Controls.Add(this.cT4Ca2);
-            this.panel8.Controls.Add(this.cT4Ca1);
-            this.panel8.Controls.Add(this.cT5Ca2);
-            this.panel8.Controls.Add(this.cT5Ca1);
-            this.panel8.Controls.Add(this.cT3Ca2);
-            this.panel8.Controls.Add(this.cT3Ca1);
-            this.panel8.Controls.Add(this.cT2Ca2);
-            this.panel8.Controls.Add(this.cT2Ca1);
-            this.panel8.Controls.Add(this.label40);
-            this.panel8.Controls.Add(this.label39);
-            this.panel8.Controls.Add(this.label38);
-            this.panel8.Controls.Add(this.label37);
-            this.panel8.Controls.Add(this.label35);
-            this.panel8.Controls.Add(this.label34);
-            this.panel8.Controls.Add(this.label33);
-            this.panel8.Controls.Add(this.label32);
-            this.panel8.Controls.Add(this.label31);
-            this.panel8.Controls.Add(this.label30);
-            this.panel8.Location = new System.Drawing.Point(27, 252);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(197, 164);
-            this.panel8.TabIndex = 9;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(36, 43);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(19, 13);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "T2";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(61, 43);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(19, 13);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "T3";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(86, 43);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(19, 13);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "T4";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(111, 43);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(19, 13);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "T5";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(136, 43);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(19, 13);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "T6";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(161, 43);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(19, 13);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "T7";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(13, 60);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(20, 13);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "C1";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(13, 80);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(20, 13);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "C2";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(13, 100);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(20, 13);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "C3";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(13, 120);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(20, 13);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "C4";
-            // 
-            // cT2Ca1
-            // 
-            this.cT2Ca1.AutoSize = true;
-            this.cT2Ca1.Location = new System.Drawing.Point(39, 60);
-            this.cT2Ca1.Name = "cT2Ca1";
-            this.cT2Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT2Ca1.TabIndex = 1;
-            this.cT2Ca1.UseVisualStyleBackColor = true;
-            this.cT2Ca1.CheckedChanged += new System.EventHandler(this.cT2Ca1_CheckedChanged);
-            // 
-            // cT2Ca2
-            // 
-            this.cT2Ca2.AutoSize = true;
-            this.cT2Ca2.Location = new System.Drawing.Point(39, 80);
-            this.cT2Ca2.Name = "cT2Ca2";
-            this.cT2Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT2Ca2.TabIndex = 1;
-            this.cT2Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT2Ca3
-            // 
-            this.cT2Ca3.AutoSize = true;
-            this.cT2Ca3.Location = new System.Drawing.Point(39, 100);
-            this.cT2Ca3.Name = "cT2Ca3";
-            this.cT2Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT2Ca3.TabIndex = 1;
-            this.cT2Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT2Ca4
-            // 
-            this.cT2Ca4.AutoSize = true;
-            this.cT2Ca4.Location = new System.Drawing.Point(39, 120);
-            this.cT2Ca4.Name = "cT2Ca4";
-            this.cT2Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT2Ca4.TabIndex = 1;
-            this.cT2Ca4.UseVisualStyleBackColor = true;
-            // 
-            // cT3Ca1
-            // 
-            this.cT3Ca1.AutoSize = true;
-            this.cT3Ca1.Location = new System.Drawing.Point(64, 60);
-            this.cT3Ca1.Name = "cT3Ca1";
-            this.cT3Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT3Ca1.TabIndex = 1;
-            this.cT3Ca1.UseVisualStyleBackColor = true;
-            // 
-            // cT3Ca2
-            // 
-            this.cT3Ca2.AutoSize = true;
-            this.cT3Ca2.Location = new System.Drawing.Point(64, 80);
-            this.cT3Ca2.Name = "cT3Ca2";
-            this.cT3Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT3Ca2.TabIndex = 1;
-            this.cT3Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT3Ca3
-            // 
-            this.cT3Ca3.AutoSize = true;
-            this.cT3Ca3.Location = new System.Drawing.Point(64, 100);
-            this.cT3Ca3.Name = "cT3Ca3";
-            this.cT3Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT3Ca3.TabIndex = 1;
-            this.cT3Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT3Ca4
-            // 
-            this.cT3Ca4.AutoSize = true;
-            this.cT3Ca4.Location = new System.Drawing.Point(64, 120);
-            this.cT3Ca4.Name = "cT3Ca4";
-            this.cT3Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT3Ca4.TabIndex = 1;
-            this.cT3Ca4.UseVisualStyleBackColor = true;
-            // 
-            // cT5Ca1
-            // 
-            this.cT5Ca1.AutoSize = true;
-            this.cT5Ca1.Location = new System.Drawing.Point(114, 60);
-            this.cT5Ca1.Name = "cT5Ca1";
-            this.cT5Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT5Ca1.TabIndex = 1;
-            this.cT5Ca1.UseVisualStyleBackColor = true;
-            // 
-            // cT5Ca2
-            // 
-            this.cT5Ca2.AutoSize = true;
-            this.cT5Ca2.Location = new System.Drawing.Point(114, 80);
-            this.cT5Ca2.Name = "cT5Ca2";
-            this.cT5Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT5Ca2.TabIndex = 1;
-            this.cT5Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT5Ca3
-            // 
-            this.cT5Ca3.AutoSize = true;
-            this.cT5Ca3.Location = new System.Drawing.Point(114, 100);
-            this.cT5Ca3.Name = "cT5Ca3";
-            this.cT5Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT5Ca3.TabIndex = 1;
-            this.cT5Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT5Ca4
-            // 
-            this.cT5Ca4.AutoSize = true;
-            this.cT5Ca4.Location = new System.Drawing.Point(114, 120);
-            this.cT5Ca4.Name = "cT5Ca4";
-            this.cT5Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT5Ca4.TabIndex = 1;
-            this.cT5Ca4.UseVisualStyleBackColor = true;
-            // 
-            // cT4Ca1
-            // 
-            this.cT4Ca1.AutoSize = true;
-            this.cT4Ca1.Location = new System.Drawing.Point(89, 60);
-            this.cT4Ca1.Name = "cT4Ca1";
-            this.cT4Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT4Ca1.TabIndex = 1;
-            this.cT4Ca1.UseVisualStyleBackColor = true;
-            // 
-            // cT4Ca2
-            // 
-            this.cT4Ca2.AutoSize = true;
-            this.cT4Ca2.Location = new System.Drawing.Point(89, 80);
-            this.cT4Ca2.Name = "cT4Ca2";
-            this.cT4Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT4Ca2.TabIndex = 1;
-            this.cT4Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT4Ca3
-            // 
-            this.cT4Ca3.AutoSize = true;
-            this.cT4Ca3.Location = new System.Drawing.Point(89, 100);
-            this.cT4Ca3.Name = "cT4Ca3";
-            this.cT4Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT4Ca3.TabIndex = 1;
-            this.cT4Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT4Ca4
-            // 
-            this.cT4Ca4.AutoSize = true;
-            this.cT4Ca4.Location = new System.Drawing.Point(89, 120);
-            this.cT4Ca4.Name = "cT4Ca4";
-            this.cT4Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT4Ca4.TabIndex = 1;
-            this.cT4Ca4.UseVisualStyleBackColor = true;
-            // 
-            // cT6Ca1
-            // 
-            this.cT6Ca1.AutoSize = true;
-            this.cT6Ca1.Location = new System.Drawing.Point(139, 60);
-            this.cT6Ca1.Name = "cT6Ca1";
-            this.cT6Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT6Ca1.TabIndex = 1;
-            this.cT6Ca1.UseVisualStyleBackColor = true;
-            // 
-            // cT6Ca2
-            // 
-            this.cT6Ca2.AutoSize = true;
-            this.cT6Ca2.Location = new System.Drawing.Point(139, 80);
-            this.cT6Ca2.Name = "cT6Ca2";
-            this.cT6Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT6Ca2.TabIndex = 1;
-            this.cT6Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT6Ca3
-            // 
-            this.cT6Ca3.AutoSize = true;
-            this.cT6Ca3.Location = new System.Drawing.Point(139, 100);
-            this.cT6Ca3.Name = "cT6Ca3";
-            this.cT6Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT6Ca3.TabIndex = 1;
-            this.cT6Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT6Ca4
-            // 
-            this.cT6Ca4.AutoSize = true;
-            this.cT6Ca4.Location = new System.Drawing.Point(139, 120);
-            this.cT6Ca4.Name = "cT6Ca4";
-            this.cT6Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT6Ca4.TabIndex = 1;
-            this.cT6Ca4.UseVisualStyleBackColor = true;
-            // 
-            // cT7Ca1
-            // 
-            this.cT7Ca1.AutoSize = true;
-            this.cT7Ca1.Location = new System.Drawing.Point(164, 59);
-            this.cT7Ca1.Name = "cT7Ca1";
-            this.cT7Ca1.Size = new System.Drawing.Size(15, 14);
-            this.cT7Ca1.TabIndex = 1;
-            this.cT7Ca1.UseVisualStyleBackColor = true;
-            // 
-            // cT7Ca2
-            // 
-            this.cT7Ca2.AutoSize = true;
-            this.cT7Ca2.Location = new System.Drawing.Point(164, 79);
-            this.cT7Ca2.Name = "cT7Ca2";
-            this.cT7Ca2.Size = new System.Drawing.Size(15, 14);
-            this.cT7Ca2.TabIndex = 1;
-            this.cT7Ca2.UseVisualStyleBackColor = true;
-            // 
-            // cT7Ca3
-            // 
-            this.cT7Ca3.AutoSize = true;
-            this.cT7Ca3.Location = new System.Drawing.Point(164, 99);
-            this.cT7Ca3.Name = "cT7Ca3";
-            this.cT7Ca3.Size = new System.Drawing.Size(15, 14);
-            this.cT7Ca3.TabIndex = 1;
-            this.cT7Ca3.UseVisualStyleBackColor = true;
-            // 
-            // cT7Ca4
-            // 
-            this.cT7Ca4.AutoSize = true;
-            this.cT7Ca4.Location = new System.Drawing.Point(164, 119);
-            this.cT7Ca4.Name = "cT7Ca4";
-            this.cT7Ca4.Size = new System.Drawing.Size(15, 14);
-            this.cT7Ca4.TabIndex = 1;
-            this.cT7Ca4.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxEdit44
-            // 
-            this.comboBoxEdit44.EditValue = "Chọn phòng học";
-            this.comboBoxEdit44.Location = new System.Drawing.Point(69, 215);
-            this.comboBoxEdit44.Name = "comboBoxEdit44";
-            this.comboBoxEdit44.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit44.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit44.TabIndex = 10;
-            // 
             // frmPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1728,13 +1728,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridVKhoaGV)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit38.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit24.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit22.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

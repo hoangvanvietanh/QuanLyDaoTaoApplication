@@ -11,13 +11,14 @@ using DevExpress.XtraBars;
 using DevExpress.Data;
 using System.IO;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DangNhap
 {
     public partial class frmDTSinhVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Byte[] ImageByArray ;
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmDTSinhVien()
         {
             InitializeComponent();

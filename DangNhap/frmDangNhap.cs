@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,7 @@ namespace DangNhap
     public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
     {
         string maSo = "";
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmDangNhap()
         {
             InitializeComponent();

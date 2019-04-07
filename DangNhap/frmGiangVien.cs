@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.Data.SqlClient;
 using System.IO;
+using System.Configuration;
 
 namespace DangNhap
 {
     public partial class frmGiangVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Byte[] ImageByArray;
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmGiangVien()
         {
             InitializeComponent();

@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DangNhap
 {
     public partial class frmPhanCong : DevExpress.XtraEditors.XtraForm
     {
         String[] buoiHoc = new string[2];
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmPhanCong()
         {
             InitializeComponent();

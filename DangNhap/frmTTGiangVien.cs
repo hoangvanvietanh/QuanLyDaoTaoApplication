@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DangNhap
 {
@@ -18,22 +19,35 @@ namespace DangNhap
         String strFilePath = "";
         Byte[] ImageByArray;
         String thaoTac;
-        SqlConnection con = new SqlConnection(@"Data Source=HoangVanVietAnh;Initial Catalog=QuanLyDaoTao;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmTTGiangVien()
         {
+            
             InitializeComponent();
             con.Open();
             SqlCommand sqlCmd = new SqlCommand("selectAllKhoa", con)
             {
                 CommandType = CommandType.StoredProcedure
             };
-            SqlDataReader DR = sqlCmd.ExecuteReader();
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlCmd);
+            DataTable dt = new DataTable();
+            sdr.Fill(dt);
+            cbKhoa.DisplayMember = "tenKhoa";
+            cbKhoa.ValueMember = "maKhoa";
+            cbKhoa.DataSource = dt;
+            /*SqlDataReader DR = sqlCmd.ExecuteReader();
+            String[] comboKhoa = new string[10];
+            int i = 0;
+            //cbKhoa.DataBindings.
             while (DR.Read())
             {
+                i++;
                 cbKhoa.Items.Add(DR[1]);
+                comboKhoa[i] = DR[0].ToString();
 
             }
-            DR.Close();
+            DR.Close();*/
+            
         }
 
         public void TTGiangVien(String maGV, String hoTen, String diaChi, String soDT, String gioiTinh, String trinhDo, String thamNien, String khoa, String email, String noiSinh, String ngaySinh, byte[] ImageArray)
@@ -131,14 +145,15 @@ namespace DangNhap
                 sqlCmd.Parameters.AddWithValue("@trinhDo", cbTrinhDo.Text);
                 sqlCmd.Parameters.AddWithValue("@thamNien", txtMThamNien.Text);
                 sqlCmd.Parameters.AddWithValue("@quyen", 2);
-                if (cbKhoa.Text.Equals("Công Nghệ Thông Tin"))
+                sqlCmd.Parameters.AddWithValue("@maKhoa", cbKhoa.SelectedValue.ToString());
+                /*if (cbKhoa.Text.Equals("Công Nghệ Thông Tin"))
                 {
                     sqlCmd.Parameters.AddWithValue("@maKhoa", "CNTT");
                 }
                 else
                 {
                     sqlCmd.Parameters.AddWithValue("@maKhoa", "MMT");
-                }
+                }*/
                 sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);
                 sqlCmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 sqlCmd.ExecuteNonQuery();
@@ -213,14 +228,15 @@ namespace DangNhap
                 sqlCmd.Parameters.AddWithValue("@trinhDo", cbTrinhDo.Text);
                 sqlCmd.Parameters.AddWithValue("@thamNien", txtMThamNien.Text);
                 sqlCmd.Parameters.AddWithValue("@quyen", 2);
-                if (cbKhoa.Text.Equals("Công Nghệ Thông Tin"))
+                sqlCmd.Parameters.AddWithValue("@maKhoa", cbKhoa.SelectedValue.ToString());
+                /*if (cbKhoa.Text.Equals("Công Nghệ Thông Tin"))
                 {
                     sqlCmd.Parameters.AddWithValue("@maKhoa", "CNTT");
                 }
                 else
                 {
                     sqlCmd.Parameters.AddWithValue("@maKhoa", "MMT");
-                }
+                }*/
                 sqlCmd.Parameters.AddWithValue("@hinh", ImageByArray);
                 sqlCmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 sqlCmd.ExecuteNonQuery();
@@ -274,7 +290,7 @@ namespace DangNhap
                 flat = 1;
             }
             DR.Close();
-            if (flat == 1)
+            if (flat == 1 && thaoTac.Equals("Them"))
             {
                 laCheckMaGV.Text = "Mã giảng viên đã tồn tại !!!";
             }
