@@ -28,42 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.laTKBLop = new System.Windows.Forms.Label();
-            this.comboBoxEdit28 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T4Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cb2T2Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit29 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T5Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBoxEdit30 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit32 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit43 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T7Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T6Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T5Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cb2T2Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit35 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T7Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxEdit42 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T6Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxEdit34 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit25 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit36 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T4Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T7Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T6Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBoxEdit41 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T7Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxEdit33 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit21 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit40 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit20 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit37 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T3Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T3Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T4Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T3Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T5Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBoxEdit39 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit23 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T3Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T4Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cb2T2Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit27 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T6Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.cb2T2Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit26 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cb2T5Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.cbKhoaLop = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -77,29 +78,29 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.laTKBGiangVien = new System.Windows.Forms.Label();
             this.cbT2Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit15 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit19 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit10 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit7 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit6 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT5Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT6Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT7Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT4Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT3Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbT2Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit14 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit18 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit9 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit5 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit17 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit31 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit12 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit11 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit16 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit13 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit8 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT5Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT6Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT7Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT4Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT3Ca3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT6Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT7Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT5Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT4Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT6Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT5Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT7Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbT2Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT4Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbT2Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT3Ca2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbT3Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -116,7 +117,8 @@
             this.colmaGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBoxEdit44 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.laMaGV = new System.Windows.Forms.Label();
+            this.btnLuuTKB = new DevExpress.XtraEditors.SimpleButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cT7Ca4 = new System.Windows.Forms.CheckBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -156,11 +158,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.laGV = new System.Windows.Forms.Label();
             this.laLop = new System.Windows.Forms.Label();
-            this.comboBoxEdit38 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit24 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxEdit22 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.dateKT = new System.Windows.Forms.DateTimePicker();
+            this.dateBD = new System.Windows.Forms.DateTimePicker();
+            this.cbHocKy = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label27 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -168,36 +169,42 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.cbMonHoc = new DevExpress.XtraEditors.LookUpEdit();
+            this.xemTatCaMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbPhongHoc = new DevExpress.XtraEditors.LookUpEdit();
+            this.xemTatCaPhongHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timKhoaGVTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.timKhoaGVTableAdapter();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colmaLop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timKhoaLopHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.timKhoaLopHocTableAdapter();
+            this.xemTatCaMonHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaMonHocTableAdapter();
+            this.xemTatCaPhongHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit28.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit29.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit30.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit32.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit43.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit35.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit42.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit34.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit25.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit36.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit41.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit33.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit40.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit20.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit37.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit39.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit23.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit27.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit26.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbKhoaLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet1)).BeginInit();
@@ -206,38 +213,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbKhoaGV.Properties)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit31.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCKhoaGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVKhoaGV)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit38.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit24.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit22.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbHocKy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xemTatCaMonHocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPhongHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xemTatCaPhongHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -264,44 +273,44 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.laTKBLop);
-            this.panel7.Controls.Add(this.comboBoxEdit28);
+            this.panel7.Controls.Add(this.cb2T4Ca1);
             this.panel7.Controls.Add(this.cb2T2Ca4);
-            this.panel7.Controls.Add(this.comboBoxEdit29);
+            this.panel7.Controls.Add(this.cb2T5Ca1);
             this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.comboBoxEdit30);
-            this.panel7.Controls.Add(this.comboBoxEdit32);
-            this.panel7.Controls.Add(this.comboBoxEdit43);
+            this.panel7.Controls.Add(this.cb2T7Ca1);
+            this.panel7.Controls.Add(this.cb2T6Ca1);
+            this.panel7.Controls.Add(this.cb2T5Ca4);
             this.panel7.Controls.Add(this.cb2T2Ca2);
-            this.panel7.Controls.Add(this.comboBoxEdit35);
+            this.panel7.Controls.Add(this.cb2T7Ca3);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.comboBoxEdit42);
+            this.panel7.Controls.Add(this.cb2T6Ca4);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.comboBoxEdit34);
-            this.panel7.Controls.Add(this.comboBoxEdit25);
-            this.panel7.Controls.Add(this.comboBoxEdit36);
+            this.panel7.Controls.Add(this.cb2T4Ca3);
+            this.panel7.Controls.Add(this.cb2T7Ca2);
+            this.panel7.Controls.Add(this.cb2T6Ca3);
             this.panel7.Controls.Add(this.label18);
-            this.panel7.Controls.Add(this.comboBoxEdit41);
+            this.panel7.Controls.Add(this.cb2T7Ca4);
             this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.comboBoxEdit33);
-            this.panel7.Controls.Add(this.comboBoxEdit21);
-            this.panel7.Controls.Add(this.comboBoxEdit40);
-            this.panel7.Controls.Add(this.comboBoxEdit20);
-            this.panel7.Controls.Add(this.comboBoxEdit37);
+            this.panel7.Controls.Add(this.cb2T3Ca3);
+            this.panel7.Controls.Add(this.cb2T3Ca2);
+            this.panel7.Controls.Add(this.cb2T4Ca4);
+            this.panel7.Controls.Add(this.cb2T3Ca1);
+            this.panel7.Controls.Add(this.cb2T5Ca3);
             this.panel7.Controls.Add(this.label20);
             this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.comboBoxEdit39);
-            this.panel7.Controls.Add(this.comboBoxEdit23);
+            this.panel7.Controls.Add(this.cb2T3Ca4);
+            this.panel7.Controls.Add(this.cb2T4Ca2);
             this.panel7.Controls.Add(this.cb2T2Ca3);
-            this.panel7.Controls.Add(this.comboBoxEdit27);
+            this.panel7.Controls.Add(this.cb2T6Ca2);
             this.panel7.Controls.Add(this.label19);
             this.panel7.Controls.Add(this.cb2T2Ca1);
-            this.panel7.Controls.Add(this.comboBoxEdit26);
+            this.panel7.Controls.Add(this.cb2T5Ca2);
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label16);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(251, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(773, 238);
+            this.panel7.Size = new System.Drawing.Size(773, 265);
             this.panel7.TabIndex = 12;
             // 
             // laTKBLop
@@ -313,14 +322,14 @@
             this.laTKBLop.TabIndex = 12;
             this.laTKBLop.Text = "THỜI KHÓA BIỂU CỦA LỚP";
             // 
-            // comboBoxEdit28
+            // cb2T4Ca1
             // 
-            this.comboBoxEdit28.Location = new System.Drawing.Point(299, 88);
-            this.comboBoxEdit28.Name = "comboBoxEdit28";
-            this.comboBoxEdit28.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T4Ca1.Location = new System.Drawing.Point(299, 88);
+            this.cb2T4Ca1.Name = "cb2T4Ca1";
+            this.cb2T4Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit28.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit28.TabIndex = 11;
+            this.cb2T4Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cb2T4Ca1.TabIndex = 11;
             // 
             // cb2T2Ca4
             // 
@@ -331,14 +340,14 @@
             this.cb2T2Ca4.Size = new System.Drawing.Size(109, 20);
             this.cb2T2Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit29
+            // cb2T5Ca1
             // 
-            this.comboBoxEdit29.Location = new System.Drawing.Point(414, 88);
-            this.comboBoxEdit29.Name = "comboBoxEdit29";
-            this.comboBoxEdit29.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T5Ca1.Location = new System.Drawing.Point(414, 88);
+            this.cb2T5Ca1.Name = "cb2T5Ca1";
+            this.cb2T5Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit29.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit29.TabIndex = 11;
+            this.cb2T5Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cb2T5Ca1.TabIndex = 11;
             // 
             // label12
             // 
@@ -349,32 +358,32 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Thứ 3";
             // 
-            // comboBoxEdit30
+            // cb2T7Ca1
             // 
-            this.comboBoxEdit30.Location = new System.Drawing.Point(648, 88);
-            this.comboBoxEdit30.Name = "comboBoxEdit30";
-            this.comboBoxEdit30.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T7Ca1.Location = new System.Drawing.Point(648, 88);
+            this.cb2T7Ca1.Name = "cb2T7Ca1";
+            this.cb2T7Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit30.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit30.TabIndex = 11;
+            this.cb2T7Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cb2T7Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit32
+            // cb2T6Ca1
             // 
-            this.comboBoxEdit32.Location = new System.Drawing.Point(529, 88);
-            this.comboBoxEdit32.Name = "comboBoxEdit32";
-            this.comboBoxEdit32.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T6Ca1.Location = new System.Drawing.Point(529, 88);
+            this.cb2T6Ca1.Name = "cb2T6Ca1";
+            this.cb2T6Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit32.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit32.TabIndex = 11;
+            this.cb2T6Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cb2T6Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit43
+            // cb2T5Ca4
             // 
-            this.comboBoxEdit43.Location = new System.Drawing.Point(414, 190);
-            this.comboBoxEdit43.Name = "comboBoxEdit43";
-            this.comboBoxEdit43.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T5Ca4.Location = new System.Drawing.Point(414, 190);
+            this.cb2T5Ca4.Name = "cb2T5Ca4";
+            this.cb2T5Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit43.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit43.TabIndex = 11;
+            this.cb2T5Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cb2T5Ca4.TabIndex = 11;
             // 
             // cb2T2Ca2
             // 
@@ -385,14 +394,14 @@
             this.cb2T2Ca2.Size = new System.Drawing.Size(109, 20);
             this.cb2T2Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit35
+            // cb2T7Ca3
             // 
-            this.comboBoxEdit35.Location = new System.Drawing.Point(648, 159);
-            this.comboBoxEdit35.Name = "comboBoxEdit35";
-            this.comboBoxEdit35.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T7Ca3.Location = new System.Drawing.Point(648, 159);
+            this.cb2T7Ca3.Name = "cb2T7Ca3";
+            this.cb2T7Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit35.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit35.TabIndex = 11;
+            this.cb2T7Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cb2T7Ca3.TabIndex = 11;
             // 
             // label13
             // 
@@ -403,14 +412,14 @@
             this.label13.TabIndex = 2;
             this.label13.Text = "Thứ 4";
             // 
-            // comboBoxEdit42
+            // cb2T6Ca4
             // 
-            this.comboBoxEdit42.Location = new System.Drawing.Point(529, 190);
-            this.comboBoxEdit42.Name = "comboBoxEdit42";
-            this.comboBoxEdit42.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T6Ca4.Location = new System.Drawing.Point(529, 190);
+            this.cb2T6Ca4.Name = "cb2T6Ca4";
+            this.cb2T6Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit42.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit42.TabIndex = 11;
+            this.cb2T6Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cb2T6Ca4.TabIndex = 11;
             // 
             // label7
             // 
@@ -421,32 +430,32 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Thứ 2";
             // 
-            // comboBoxEdit34
+            // cb2T4Ca3
             // 
-            this.comboBoxEdit34.Location = new System.Drawing.Point(299, 159);
-            this.comboBoxEdit34.Name = "comboBoxEdit34";
-            this.comboBoxEdit34.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T4Ca3.Location = new System.Drawing.Point(299, 159);
+            this.cb2T4Ca3.Name = "cb2T4Ca3";
+            this.cb2T4Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit34.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit34.TabIndex = 11;
+            this.cb2T4Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cb2T4Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit25
+            // cb2T7Ca2
             // 
-            this.comboBoxEdit25.Location = new System.Drawing.Point(648, 122);
-            this.comboBoxEdit25.Name = "comboBoxEdit25";
-            this.comboBoxEdit25.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T7Ca2.Location = new System.Drawing.Point(648, 122);
+            this.cb2T7Ca2.Name = "cb2T7Ca2";
+            this.cb2T7Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit25.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit25.TabIndex = 11;
+            this.cb2T7Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cb2T7Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit36
+            // cb2T6Ca3
             // 
-            this.comboBoxEdit36.Location = new System.Drawing.Point(529, 159);
-            this.comboBoxEdit36.Name = "comboBoxEdit36";
-            this.comboBoxEdit36.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T6Ca3.Location = new System.Drawing.Point(529, 159);
+            this.cb2T6Ca3.Name = "cb2T6Ca3";
+            this.cb2T6Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit36.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit36.TabIndex = 11;
+            this.cb2T6Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cb2T6Ca3.TabIndex = 11;
             // 
             // label18
             // 
@@ -457,14 +466,14 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "Ca 2";
             // 
-            // comboBoxEdit41
+            // cb2T7Ca4
             // 
-            this.comboBoxEdit41.Location = new System.Drawing.Point(648, 190);
-            this.comboBoxEdit41.Name = "comboBoxEdit41";
-            this.comboBoxEdit41.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T7Ca4.Location = new System.Drawing.Point(648, 190);
+            this.cb2T7Ca4.Name = "cb2T7Ca4";
+            this.cb2T7Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit41.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit41.TabIndex = 11;
+            this.cb2T7Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cb2T7Ca4.TabIndex = 11;
             // 
             // label14
             // 
@@ -475,50 +484,50 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "Thứ 5";
             // 
-            // comboBoxEdit33
+            // cb2T3Ca3
             // 
-            this.comboBoxEdit33.Location = new System.Drawing.Point(184, 159);
-            this.comboBoxEdit33.Name = "comboBoxEdit33";
-            this.comboBoxEdit33.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T3Ca3.Location = new System.Drawing.Point(184, 159);
+            this.cb2T3Ca3.Name = "cb2T3Ca3";
+            this.cb2T3Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit33.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit33.TabIndex = 11;
+            this.cb2T3Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cb2T3Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit21
+            // cb2T3Ca2
             // 
-            this.comboBoxEdit21.Location = new System.Drawing.Point(184, 122);
-            this.comboBoxEdit21.Name = "comboBoxEdit21";
-            this.comboBoxEdit21.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T3Ca2.Location = new System.Drawing.Point(184, 122);
+            this.cb2T3Ca2.Name = "cb2T3Ca2";
+            this.cb2T3Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit21.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit21.TabIndex = 11;
+            this.cb2T3Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cb2T3Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit40
+            // cb2T4Ca4
             // 
-            this.comboBoxEdit40.Location = new System.Drawing.Point(299, 190);
-            this.comboBoxEdit40.Name = "comboBoxEdit40";
-            this.comboBoxEdit40.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T4Ca4.Location = new System.Drawing.Point(299, 190);
+            this.cb2T4Ca4.Name = "cb2T4Ca4";
+            this.cb2T4Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit40.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit40.TabIndex = 11;
+            this.cb2T4Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cb2T4Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit20
+            // cb2T3Ca1
             // 
-            this.comboBoxEdit20.Location = new System.Drawing.Point(184, 88);
-            this.comboBoxEdit20.Name = "comboBoxEdit20";
-            this.comboBoxEdit20.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T3Ca1.Location = new System.Drawing.Point(184, 88);
+            this.cb2T3Ca1.Name = "cb2T3Ca1";
+            this.cb2T3Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit20.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit20.TabIndex = 11;
+            this.cb2T3Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cb2T3Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit37
+            // cb2T5Ca3
             // 
-            this.comboBoxEdit37.Location = new System.Drawing.Point(414, 159);
-            this.comboBoxEdit37.Name = "comboBoxEdit37";
-            this.comboBoxEdit37.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T5Ca3.Location = new System.Drawing.Point(414, 159);
+            this.cb2T5Ca3.Name = "cb2T5Ca3";
+            this.cb2T5Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit37.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit37.TabIndex = 11;
+            this.cb2T5Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cb2T5Ca3.TabIndex = 11;
             // 
             // label20
             // 
@@ -538,23 +547,23 @@
             this.label17.TabIndex = 7;
             this.label17.Text = "Ca 1";
             // 
-            // comboBoxEdit39
+            // cb2T3Ca4
             // 
-            this.comboBoxEdit39.Location = new System.Drawing.Point(184, 190);
-            this.comboBoxEdit39.Name = "comboBoxEdit39";
-            this.comboBoxEdit39.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T3Ca4.Location = new System.Drawing.Point(184, 190);
+            this.cb2T3Ca4.Name = "cb2T3Ca4";
+            this.cb2T3Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit39.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit39.TabIndex = 11;
+            this.cb2T3Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cb2T3Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit23
+            // cb2T4Ca2
             // 
-            this.comboBoxEdit23.Location = new System.Drawing.Point(299, 122);
-            this.comboBoxEdit23.Name = "comboBoxEdit23";
-            this.comboBoxEdit23.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T4Ca2.Location = new System.Drawing.Point(299, 122);
+            this.cb2T4Ca2.Name = "cb2T4Ca2";
+            this.cb2T4Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit23.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit23.TabIndex = 11;
+            this.cb2T4Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cb2T4Ca2.TabIndex = 11;
             // 
             // cb2T2Ca3
             // 
@@ -565,14 +574,14 @@
             this.cb2T2Ca3.Size = new System.Drawing.Size(109, 20);
             this.cb2T2Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit27
+            // cb2T6Ca2
             // 
-            this.comboBoxEdit27.Location = new System.Drawing.Point(529, 122);
-            this.comboBoxEdit27.Name = "comboBoxEdit27";
-            this.comboBoxEdit27.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T6Ca2.Location = new System.Drawing.Point(529, 122);
+            this.cb2T6Ca2.Name = "cb2T6Ca2";
+            this.cb2T6Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit27.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit27.TabIndex = 11;
+            this.cb2T6Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cb2T6Ca2.TabIndex = 11;
             // 
             // label19
             // 
@@ -592,14 +601,14 @@
             this.cb2T2Ca1.Size = new System.Drawing.Size(109, 20);
             this.cb2T2Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit26
+            // cb2T5Ca2
             // 
-            this.comboBoxEdit26.Location = new System.Drawing.Point(414, 122);
-            this.comboBoxEdit26.Name = "comboBoxEdit26";
-            this.comboBoxEdit26.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb2T5Ca2.Location = new System.Drawing.Point(414, 122);
+            this.cb2T5Ca2.Name = "cb2T5Ca2";
+            this.cb2T5Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit26.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit26.TabIndex = 11;
+            this.cb2T5Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cb2T5Ca2.TabIndex = 11;
             // 
             // label15
             // 
@@ -621,6 +630,7 @@
             // 
             // cbKhoaLop
             // 
+            this.cbKhoaLop.EditValue = "Chọn Lớp";
             this.cbKhoaLop.Location = new System.Drawing.Point(0, 6);
             this.cbKhoaLop.Name = "cbKhoaLop";
             this.cbKhoaLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -637,7 +647,7 @@
             this.gridCLop.Location = new System.Drawing.Point(0, 0);
             this.gridCLop.MainView = this.gridVLop;
             this.gridCLop.Name = "gridCLop";
-            this.gridCLop.Size = new System.Drawing.Size(251, 238);
+            this.gridCLop.Size = new System.Drawing.Size(251, 265);
             this.gridCLop.TabIndex = 4;
             this.gridCLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridVLop});
@@ -668,9 +678,9 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 238);
+            this.panel6.Location = new System.Drawing.Point(0, 265);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1362, 72);
+            this.panel6.Size = new System.Drawing.Size(1362, 45);
             this.panel6.TabIndex = 0;
             // 
             // panel3
@@ -686,6 +696,7 @@
             // 
             // cbKhoaGV
             // 
+            this.cbKhoaGV.EditValue = "Chọn Giảng Viên";
             this.cbKhoaGV.Location = new System.Drawing.Point(0, 6);
             this.cbKhoaGV.Name = "cbKhoaGV";
             this.cbKhoaGV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -698,29 +709,29 @@
             // 
             this.panel5.Controls.Add(this.laTKBGiangVien);
             this.panel5.Controls.Add(this.cbT2Ca4);
-            this.panel5.Controls.Add(this.comboBoxEdit15);
-            this.panel5.Controls.Add(this.comboBoxEdit19);
-            this.panel5.Controls.Add(this.comboBoxEdit10);
-            this.panel5.Controls.Add(this.comboBoxEdit7);
-            this.panel5.Controls.Add(this.comboBoxEdit6);
+            this.panel5.Controls.Add(this.cbT5Ca4);
+            this.panel5.Controls.Add(this.cbT6Ca4);
+            this.panel5.Controls.Add(this.cbT7Ca4);
+            this.panel5.Controls.Add(this.cbT4Ca4);
+            this.panel5.Controls.Add(this.cbT3Ca4);
             this.panel5.Controls.Add(this.cbT2Ca3);
-            this.panel5.Controls.Add(this.comboBoxEdit14);
-            this.panel5.Controls.Add(this.comboBoxEdit18);
-            this.panel5.Controls.Add(this.comboBoxEdit9);
-            this.panel5.Controls.Add(this.comboBoxEdit2);
-            this.panel5.Controls.Add(this.comboBoxEdit5);
-            this.panel5.Controls.Add(this.comboBoxEdit17);
-            this.panel5.Controls.Add(this.comboBoxEdit31);
-            this.panel5.Controls.Add(this.comboBoxEdit12);
-            this.panel5.Controls.Add(this.comboBoxEdit11);
-            this.panel5.Controls.Add(this.comboBoxEdit16);
-            this.panel5.Controls.Add(this.comboBoxEdit13);
-            this.panel5.Controls.Add(this.comboBoxEdit8);
+            this.panel5.Controls.Add(this.cbT5Ca3);
+            this.panel5.Controls.Add(this.cbT6Ca3);
+            this.panel5.Controls.Add(this.cbT7Ca3);
+            this.panel5.Controls.Add(this.cbT4Ca3);
+            this.panel5.Controls.Add(this.cbT3Ca3);
+            this.panel5.Controls.Add(this.cbT6Ca1);
+            this.panel5.Controls.Add(this.cbT7Ca1);
+            this.panel5.Controls.Add(this.cbT5Ca1);
+            this.panel5.Controls.Add(this.cbT4Ca1);
+            this.panel5.Controls.Add(this.cbT6Ca2);
+            this.panel5.Controls.Add(this.cbT5Ca2);
+            this.panel5.Controls.Add(this.cbT7Ca2);
             this.panel5.Controls.Add(this.cbT2Ca2);
-            this.panel5.Controls.Add(this.comboBoxEdit1);
+            this.panel5.Controls.Add(this.cbT4Ca2);
             this.panel5.Controls.Add(this.cbT2Ca1);
-            this.panel5.Controls.Add(this.comboBoxEdit4);
-            this.panel5.Controls.Add(this.comboBoxEdit3);
+            this.panel5.Controls.Add(this.cbT3Ca2);
+            this.panel5.Controls.Add(this.cbT3Ca1);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label9);
@@ -755,50 +766,50 @@
             this.cbT2Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit15
+            // cbT5Ca4
             // 
-            this.comboBoxEdit15.Location = new System.Drawing.Point(404, 185);
-            this.comboBoxEdit15.Name = "comboBoxEdit15";
-            this.comboBoxEdit15.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT5Ca4.Location = new System.Drawing.Point(404, 185);
+            this.cbT5Ca4.Name = "cbT5Ca4";
+            this.cbT5Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit15.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit15.TabIndex = 11;
+            this.cbT5Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cbT5Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit19
+            // cbT6Ca4
             // 
-            this.comboBoxEdit19.Location = new System.Drawing.Point(519, 185);
-            this.comboBoxEdit19.Name = "comboBoxEdit19";
-            this.comboBoxEdit19.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT6Ca4.Location = new System.Drawing.Point(519, 185);
+            this.cbT6Ca4.Name = "cbT6Ca4";
+            this.cbT6Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit19.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit19.TabIndex = 11;
+            this.cbT6Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cbT6Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit10
+            // cbT7Ca4
             // 
-            this.comboBoxEdit10.Location = new System.Drawing.Point(638, 185);
-            this.comboBoxEdit10.Name = "comboBoxEdit10";
-            this.comboBoxEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT7Ca4.Location = new System.Drawing.Point(638, 185);
+            this.cbT7Ca4.Name = "cbT7Ca4";
+            this.cbT7Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit10.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit10.TabIndex = 11;
+            this.cbT7Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cbT7Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit7
+            // cbT4Ca4
             // 
-            this.comboBoxEdit7.Location = new System.Drawing.Point(289, 185);
-            this.comboBoxEdit7.Name = "comboBoxEdit7";
-            this.comboBoxEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT4Ca4.Location = new System.Drawing.Point(289, 185);
+            this.cbT4Ca4.Name = "cbT4Ca4";
+            this.cbT4Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit7.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit7.TabIndex = 11;
+            this.cbT4Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cbT4Ca4.TabIndex = 11;
             // 
-            // comboBoxEdit6
+            // cbT3Ca4
             // 
-            this.comboBoxEdit6.Location = new System.Drawing.Point(174, 185);
-            this.comboBoxEdit6.Name = "comboBoxEdit6";
-            this.comboBoxEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT3Ca4.Location = new System.Drawing.Point(174, 185);
+            this.cbT3Ca4.Name = "cbT3Ca4";
+            this.cbT3Ca4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit6.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit6.TabIndex = 11;
+            this.cbT3Ca4.Size = new System.Drawing.Size(109, 20);
+            this.cbT3Ca4.TabIndex = 11;
             // 
             // cbT2Ca3
             // 
@@ -809,113 +820,113 @@
             this.cbT2Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit14
+            // cbT5Ca3
             // 
-            this.comboBoxEdit14.Location = new System.Drawing.Point(404, 154);
-            this.comboBoxEdit14.Name = "comboBoxEdit14";
-            this.comboBoxEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT5Ca3.Location = new System.Drawing.Point(404, 154);
+            this.cbT5Ca3.Name = "cbT5Ca3";
+            this.cbT5Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit14.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit14.TabIndex = 11;
+            this.cbT5Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cbT5Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit18
+            // cbT6Ca3
             // 
-            this.comboBoxEdit18.Location = new System.Drawing.Point(519, 154);
-            this.comboBoxEdit18.Name = "comboBoxEdit18";
-            this.comboBoxEdit18.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT6Ca3.Location = new System.Drawing.Point(519, 154);
+            this.cbT6Ca3.Name = "cbT6Ca3";
+            this.cbT6Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit18.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit18.TabIndex = 11;
+            this.cbT6Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cbT6Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit9
+            // cbT7Ca3
             // 
-            this.comboBoxEdit9.Location = new System.Drawing.Point(638, 154);
-            this.comboBoxEdit9.Name = "comboBoxEdit9";
-            this.comboBoxEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT7Ca3.Location = new System.Drawing.Point(638, 154);
+            this.cbT7Ca3.Name = "cbT7Ca3";
+            this.cbT7Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit9.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit9.TabIndex = 11;
+            this.cbT7Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cbT7Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit2
+            // cbT4Ca3
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(289, 154);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT4Ca3.Location = new System.Drawing.Point(289, 154);
+            this.cbT4Ca3.Name = "cbT4Ca3";
+            this.cbT4Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit2.TabIndex = 11;
+            this.cbT4Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cbT4Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit5
+            // cbT3Ca3
             // 
-            this.comboBoxEdit5.Location = new System.Drawing.Point(174, 154);
-            this.comboBoxEdit5.Name = "comboBoxEdit5";
-            this.comboBoxEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT3Ca3.Location = new System.Drawing.Point(174, 154);
+            this.cbT3Ca3.Name = "cbT3Ca3";
+            this.cbT3Ca3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit5.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit5.TabIndex = 11;
+            this.cbT3Ca3.Size = new System.Drawing.Size(109, 20);
+            this.cbT3Ca3.TabIndex = 11;
             // 
-            // comboBoxEdit17
+            // cbT6Ca1
             // 
-            this.comboBoxEdit17.Location = new System.Drawing.Point(519, 89);
-            this.comboBoxEdit17.Name = "comboBoxEdit17";
-            this.comboBoxEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT6Ca1.Location = new System.Drawing.Point(519, 89);
+            this.cbT6Ca1.Name = "cbT6Ca1";
+            this.cbT6Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit17.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit17.TabIndex = 11;
+            this.cbT6Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cbT6Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit31
+            // cbT7Ca1
             // 
-            this.comboBoxEdit31.Location = new System.Drawing.Point(638, 89);
-            this.comboBoxEdit31.Name = "comboBoxEdit31";
-            this.comboBoxEdit31.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT7Ca1.Location = new System.Drawing.Point(638, 89);
+            this.cbT7Ca1.Name = "cbT7Ca1";
+            this.cbT7Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit31.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit31.TabIndex = 11;
+            this.cbT7Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cbT7Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit12
+            // cbT5Ca1
             // 
-            this.comboBoxEdit12.Location = new System.Drawing.Point(404, 89);
-            this.comboBoxEdit12.Name = "comboBoxEdit12";
-            this.comboBoxEdit12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT5Ca1.Location = new System.Drawing.Point(404, 89);
+            this.cbT5Ca1.Name = "cbT5Ca1";
+            this.cbT5Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit12.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit12.TabIndex = 11;
+            this.cbT5Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cbT5Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit11
+            // cbT4Ca1
             // 
-            this.comboBoxEdit11.Location = new System.Drawing.Point(289, 89);
-            this.comboBoxEdit11.Name = "comboBoxEdit11";
-            this.comboBoxEdit11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT4Ca1.Location = new System.Drawing.Point(289, 89);
+            this.cbT4Ca1.Name = "cbT4Ca1";
+            this.cbT4Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit11.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit11.TabIndex = 11;
+            this.cbT4Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cbT4Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit16
+            // cbT6Ca2
             // 
-            this.comboBoxEdit16.Location = new System.Drawing.Point(519, 123);
-            this.comboBoxEdit16.Name = "comboBoxEdit16";
-            this.comboBoxEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT6Ca2.Location = new System.Drawing.Point(519, 123);
+            this.cbT6Ca2.Name = "cbT6Ca2";
+            this.cbT6Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit16.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit16.TabIndex = 11;
+            this.cbT6Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cbT6Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit13
+            // cbT5Ca2
             // 
-            this.comboBoxEdit13.Location = new System.Drawing.Point(404, 123);
-            this.comboBoxEdit13.Name = "comboBoxEdit13";
-            this.comboBoxEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT5Ca2.Location = new System.Drawing.Point(404, 123);
+            this.cbT5Ca2.Name = "cbT5Ca2";
+            this.cbT5Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit13.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit13.TabIndex = 11;
+            this.cbT5Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cbT5Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit8
+            // cbT7Ca2
             // 
-            this.comboBoxEdit8.Location = new System.Drawing.Point(638, 123);
-            this.comboBoxEdit8.Name = "comboBoxEdit8";
-            this.comboBoxEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT7Ca2.Location = new System.Drawing.Point(638, 123);
+            this.cbT7Ca2.Name = "cbT7Ca2";
+            this.cbT7Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit8.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit8.TabIndex = 11;
+            this.cbT7Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cbT7Ca2.TabIndex = 11;
             // 
             // cbT2Ca2
             // 
@@ -926,14 +937,14 @@
             this.cbT2Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit1
+            // cbT4Ca2
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(289, 123);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT4Ca2.Location = new System.Drawing.Point(289, 123);
+            this.cbT4Ca2.Name = "cbT4Ca2";
+            this.cbT4Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit1.TabIndex = 11;
+            this.cbT4Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cbT4Ca2.TabIndex = 11;
             // 
             // cbT2Ca1
             // 
@@ -944,23 +955,23 @@
             this.cbT2Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca1.TabIndex = 11;
             // 
-            // comboBoxEdit4
+            // cbT3Ca2
             // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(174, 123);
-            this.comboBoxEdit4.Name = "comboBoxEdit4";
-            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT3Ca2.Location = new System.Drawing.Point(174, 123);
+            this.cbT3Ca2.Name = "cbT3Ca2";
+            this.cbT3Ca2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit4.TabIndex = 11;
+            this.cbT3Ca2.Size = new System.Drawing.Size(109, 20);
+            this.cbT3Ca2.TabIndex = 11;
             // 
-            // comboBoxEdit3
+            // cbT3Ca1
             // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(174, 89);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbT3Ca1.Location = new System.Drawing.Point(174, 89);
+            this.cbT3Ca1.Name = "cbT3Ca1";
+            this.cbT3Ca1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(109, 20);
-            this.comboBoxEdit3.TabIndex = 11;
+            this.cbT3Ca1.Size = new System.Drawing.Size(109, 20);
+            this.cbT3Ca1.TabIndex = 11;
             // 
             // label11
             // 
@@ -1101,16 +1112,16 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.comboBoxEdit44);
+            this.panel4.Controls.Add(this.laMaGV);
+            this.panel4.Controls.Add(this.btnLuuTKB);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.label26);
             this.panel4.Controls.Add(this.laGV);
             this.panel4.Controls.Add(this.laLop);
-            this.panel4.Controls.Add(this.comboBoxEdit38);
-            this.panel4.Controls.Add(this.comboBoxEdit24);
-            this.panel4.Controls.Add(this.dateTimePicker2);
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.comboBoxEdit22);
+            this.panel4.Controls.Add(this.cbTrangThai);
+            this.panel4.Controls.Add(this.dateKT);
+            this.panel4.Controls.Add(this.dateBD);
+            this.panel4.Controls.Add(this.cbHocKy);
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label24);
@@ -1118,20 +1129,31 @@
             this.panel4.Controls.Add(this.label28);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.cbMonHoc);
+            this.panel4.Controls.Add(this.cbPhongHoc);
             this.panel4.Location = new System.Drawing.Point(1027, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(323, 424);
+            this.panel4.Size = new System.Drawing.Size(323, 467);
             this.panel4.TabIndex = 3;
             // 
-            // comboBoxEdit44
+            // laMaGV
             // 
-            this.comboBoxEdit44.EditValue = "Chọn phòng học";
-            this.comboBoxEdit44.Location = new System.Drawing.Point(69, 215);
-            this.comboBoxEdit44.Name = "comboBoxEdit44";
-            this.comboBoxEdit44.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit44.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit44.TabIndex = 10;
+            this.laMaGV.AutoSize = true;
+            this.laMaGV.Location = new System.Drawing.Point(116, 13);
+            this.laMaGV.Name = "laMaGV";
+            this.laMaGV.Size = new System.Drawing.Size(34, 13);
+            this.laMaGV.TabIndex = 12;
+            this.laMaGV.Text = "maGV";
+            this.laMaGV.Visible = false;
+            // 
+            // btnLuuTKB
+            // 
+            this.btnLuuTKB.Location = new System.Drawing.Point(82, 441);
+            this.btnLuuTKB.Name = "btnLuuTKB";
+            this.btnLuuTKB.Size = new System.Drawing.Size(75, 23);
+            this.btnLuuTKB.TabIndex = 11;
+            this.btnLuuTKB.Text = "Lưu";
+            this.btnLuuTKB.Click += new System.EventHandler(this.btnLuuTKB_Click);
             // 
             // panel8
             // 
@@ -1183,6 +1205,7 @@
             this.cT7Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT7Ca4.TabIndex = 1;
             this.cT7Ca4.UseVisualStyleBackColor = true;
+            this.cT7Ca4.CheckedChanged += new System.EventHandler(this.cT7Ca4_CheckedChanged);
             // 
             // label29
             // 
@@ -1201,6 +1224,7 @@
             this.cT6Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT6Ca4.TabIndex = 1;
             this.cT6Ca4.UseVisualStyleBackColor = true;
+            this.cT6Ca4.CheckedChanged += new System.EventHandler(this.cT6Ca4_CheckedChanged);
             // 
             // cT4Ca4
             // 
@@ -1210,6 +1234,7 @@
             this.cT4Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT4Ca4.TabIndex = 1;
             this.cT4Ca4.UseVisualStyleBackColor = true;
+            this.cT4Ca4.CheckedChanged += new System.EventHandler(this.cT4Ca4_CheckedChanged);
             // 
             // cT5Ca4
             // 
@@ -1219,6 +1244,7 @@
             this.cT5Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT5Ca4.TabIndex = 1;
             this.cT5Ca4.UseVisualStyleBackColor = true;
+            this.cT5Ca4.CheckedChanged += new System.EventHandler(this.cT5Ca4_CheckedChanged);
             // 
             // cT3Ca4
             // 
@@ -1228,6 +1254,7 @@
             this.cT3Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT3Ca4.TabIndex = 1;
             this.cT3Ca4.UseVisualStyleBackColor = true;
+            this.cT3Ca4.CheckedChanged += new System.EventHandler(this.cT3Ca4_CheckedChanged);
             // 
             // cT2Ca4
             // 
@@ -1237,6 +1264,7 @@
             this.cT2Ca4.Size = new System.Drawing.Size(15, 14);
             this.cT2Ca4.TabIndex = 1;
             this.cT2Ca4.UseVisualStyleBackColor = true;
+            this.cT2Ca4.CheckedChanged += new System.EventHandler(this.cT2Ca4_CheckedChanged);
             // 
             // cT7Ca3
             // 
@@ -1246,6 +1274,7 @@
             this.cT7Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT7Ca3.TabIndex = 1;
             this.cT7Ca3.UseVisualStyleBackColor = true;
+            this.cT7Ca3.CheckedChanged += new System.EventHandler(this.cT7Ca3_CheckedChanged);
             // 
             // cT6Ca3
             // 
@@ -1255,6 +1284,7 @@
             this.cT6Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT6Ca3.TabIndex = 1;
             this.cT6Ca3.UseVisualStyleBackColor = true;
+            this.cT6Ca3.CheckedChanged += new System.EventHandler(this.cT6Ca3_CheckedChanged);
             // 
             // cT4Ca3
             // 
@@ -1264,6 +1294,7 @@
             this.cT4Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT4Ca3.TabIndex = 1;
             this.cT4Ca3.UseVisualStyleBackColor = true;
+            this.cT4Ca3.CheckedChanged += new System.EventHandler(this.cT4Ca3_CheckedChanged);
             // 
             // cT5Ca3
             // 
@@ -1273,6 +1304,7 @@
             this.cT5Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT5Ca3.TabIndex = 1;
             this.cT5Ca3.UseVisualStyleBackColor = true;
+            this.cT5Ca3.CheckedChanged += new System.EventHandler(this.cT5Ca3_CheckedChanged);
             // 
             // cT3Ca3
             // 
@@ -1282,6 +1314,7 @@
             this.cT3Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT3Ca3.TabIndex = 1;
             this.cT3Ca3.UseVisualStyleBackColor = true;
+            this.cT3Ca3.CheckedChanged += new System.EventHandler(this.cT3Ca3_CheckedChanged);
             // 
             // cT2Ca3
             // 
@@ -1291,6 +1324,7 @@
             this.cT2Ca3.Size = new System.Drawing.Size(15, 14);
             this.cT2Ca3.TabIndex = 1;
             this.cT2Ca3.UseVisualStyleBackColor = true;
+            this.cT2Ca3.CheckedChanged += new System.EventHandler(this.cT2Ca3_CheckedChanged);
             // 
             // cT7Ca2
             // 
@@ -1300,6 +1334,7 @@
             this.cT7Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT7Ca2.TabIndex = 1;
             this.cT7Ca2.UseVisualStyleBackColor = true;
+            this.cT7Ca2.CheckedChanged += new System.EventHandler(this.cT7Ca2_CheckedChanged);
             // 
             // cT7Ca1
             // 
@@ -1309,6 +1344,7 @@
             this.cT7Ca1.Size = new System.Drawing.Size(15, 14);
             this.cT7Ca1.TabIndex = 1;
             this.cT7Ca1.UseVisualStyleBackColor = true;
+            this.cT7Ca1.CheckedChanged += new System.EventHandler(this.cT7Ca1_CheckedChanged);
             // 
             // cT6Ca2
             // 
@@ -1318,6 +1354,7 @@
             this.cT6Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT6Ca2.TabIndex = 1;
             this.cT6Ca2.UseVisualStyleBackColor = true;
+            this.cT6Ca2.CheckedChanged += new System.EventHandler(this.cT6Ca2_CheckedChanged);
             // 
             // cT6Ca1
             // 
@@ -1327,6 +1364,7 @@
             this.cT6Ca1.Size = new System.Drawing.Size(15, 14);
             this.cT6Ca1.TabIndex = 1;
             this.cT6Ca1.UseVisualStyleBackColor = true;
+            this.cT6Ca1.CheckedChanged += new System.EventHandler(this.cT6Ca1_CheckedChanged);
             // 
             // cT4Ca2
             // 
@@ -1336,6 +1374,7 @@
             this.cT4Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT4Ca2.TabIndex = 1;
             this.cT4Ca2.UseVisualStyleBackColor = true;
+            this.cT4Ca2.CheckedChanged += new System.EventHandler(this.cT4Ca2_CheckedChanged);
             // 
             // cT4Ca1
             // 
@@ -1345,6 +1384,7 @@
             this.cT4Ca1.Size = new System.Drawing.Size(15, 14);
             this.cT4Ca1.TabIndex = 1;
             this.cT4Ca1.UseVisualStyleBackColor = true;
+            this.cT4Ca1.CheckedChanged += new System.EventHandler(this.cT4Ca1_CheckedChanged);
             // 
             // cT5Ca2
             // 
@@ -1354,6 +1394,7 @@
             this.cT5Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT5Ca2.TabIndex = 1;
             this.cT5Ca2.UseVisualStyleBackColor = true;
+            this.cT5Ca2.CheckedChanged += new System.EventHandler(this.cT5Ca2_CheckedChanged);
             // 
             // cT5Ca1
             // 
@@ -1363,6 +1404,7 @@
             this.cT5Ca1.Size = new System.Drawing.Size(15, 14);
             this.cT5Ca1.TabIndex = 1;
             this.cT5Ca1.UseVisualStyleBackColor = true;
+            this.cT5Ca1.CheckedChanged += new System.EventHandler(this.cT5Ca1_CheckedChanged);
             // 
             // cT3Ca2
             // 
@@ -1372,6 +1414,7 @@
             this.cT3Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT3Ca2.TabIndex = 1;
             this.cT3Ca2.UseVisualStyleBackColor = true;
+            this.cT3Ca2.CheckedChanged += new System.EventHandler(this.cT3Ca2_CheckedChanged);
             // 
             // cT3Ca1
             // 
@@ -1381,6 +1424,7 @@
             this.cT3Ca1.Size = new System.Drawing.Size(15, 14);
             this.cT3Ca1.TabIndex = 1;
             this.cT3Ca1.UseVisualStyleBackColor = true;
+            this.cT3Ca1.CheckedChanged += new System.EventHandler(this.cT3Ca1_CheckedChanged);
             // 
             // cT2Ca2
             // 
@@ -1390,6 +1434,7 @@
             this.cT2Ca2.Size = new System.Drawing.Size(15, 14);
             this.cT2Ca2.TabIndex = 1;
             this.cT2Ca2.UseVisualStyleBackColor = true;
+            this.cT2Ca2.CheckedChanged += new System.EventHandler(this.cT2Ca2_CheckedChanged);
             // 
             // cT2Ca1
             // 
@@ -1518,58 +1563,48 @@
             this.laLop.TabIndex = 6;
             this.laLop.Text = "Tên lớp";
             // 
-            // comboBoxEdit38
+            // cbTrangThai
             // 
-            this.comboBoxEdit38.EditValue = "Chọn môn học";
-            this.comboBoxEdit38.Location = new System.Drawing.Point(69, 61);
-            this.comboBoxEdit38.Name = "comboBoxEdit38";
-            this.comboBoxEdit38.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbTrangThai.EditValue = "Chọn trạng thái";
+            this.cbTrangThai.Location = new System.Drawing.Point(69, 185);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit38.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit38.TabIndex = 5;
-            // 
-            // comboBoxEdit24
-            // 
-            this.comboBoxEdit24.EditValue = "Chọn trạng thái";
-            this.comboBoxEdit24.Location = new System.Drawing.Point(69, 185);
-            this.comboBoxEdit24.Name = "comboBoxEdit24";
-            this.comboBoxEdit24.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit24.Properties.Items.AddRange(new object[] {
+            this.cbTrangThai.Properties.Items.AddRange(new object[] {
             "Đã xong",
             "Đang thực hiện"});
-            this.comboBoxEdit24.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit24.TabIndex = 4;
+            this.cbTrangThai.Size = new System.Drawing.Size(100, 20);
+            this.cbTrangThai.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // dateKT
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(69, 153);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dateKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateKT.Location = new System.Drawing.Point(69, 153);
+            this.dateKT.Name = "dateKT";
+            this.dateKT.Size = new System.Drawing.Size(100, 21);
+            this.dateKT.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateBD
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(69, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 4, 2, 0, 0, 0, 0);
+            this.dateBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBD.Location = new System.Drawing.Point(69, 118);
+            this.dateBD.Name = "dateBD";
+            this.dateBD.Size = new System.Drawing.Size(100, 21);
+            this.dateBD.TabIndex = 3;
+            this.dateBD.Value = new System.DateTime(2019, 4, 2, 0, 0, 0, 0);
             // 
-            // comboBoxEdit22
+            // cbHocKy
             // 
-            this.comboBoxEdit22.EditValue = "Chọn học kỳ";
-            this.comboBoxEdit22.Location = new System.Drawing.Point(69, 87);
-            this.comboBoxEdit22.Name = "comboBoxEdit22";
-            this.comboBoxEdit22.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbHocKy.EditValue = "Chọn học kỳ";
+            this.cbHocKy.Location = new System.Drawing.Point(69, 87);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit22.Properties.Items.AddRange(new object[] {
+            this.cbHocKy.Properties.Items.AddRange(new object[] {
             "Học kỳ 1",
             "Học kỳ 2"});
-            this.comboBoxEdit22.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit22.TabIndex = 2;
+            this.cbHocKy.Size = new System.Drawing.Size(100, 20);
+            this.cbHocKy.TabIndex = 2;
             // 
             // label27
             // 
@@ -1634,6 +1669,56 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Giảng Viên";
             // 
+            // cbMonHoc
+            // 
+            this.cbMonHoc.EditValue = "Chọn môn học";
+            this.cbMonHoc.Location = new System.Drawing.Point(66, 61);
+            this.cbMonHoc.Name = "cbMonHoc";
+            this.cbMonHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbMonHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("maMH", "Mã Môn", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenMH", "Tên Môn", 55, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("soTC", "Tín Chỉ", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cbMonHoc.Properties.DataSource = this.xemTatCaMonHocBindingSource;
+            this.cbMonHoc.Properties.DisplayMember = "tenMH";
+            this.cbMonHoc.Properties.NullText = "";
+            this.cbMonHoc.Properties.PopupSizeable = false;
+            this.cbMonHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbMonHoc.Properties.ValueMember = "maMH";
+            this.cbMonHoc.Size = new System.Drawing.Size(103, 20);
+            this.cbMonHoc.TabIndex = 10;
+            // 
+            // xemTatCaMonHocBindingSource
+            // 
+            this.xemTatCaMonHocBindingSource.DataMember = "XemTatCaMonHoc";
+            this.xemTatCaMonHocBindingSource.DataSource = this.qlDaoTaoDataSet1;
+            // 
+            // cbPhongHoc
+            // 
+            this.cbPhongHoc.EditValue = "Chọn phòng học";
+            this.cbPhongHoc.Location = new System.Drawing.Point(69, 215);
+            this.cbPhongHoc.Name = "cbPhongHoc";
+            this.cbPhongHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbPhongHoc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("maPhong", "Mã Phòng"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("loaiPhong", "Loại phòng")});
+            this.cbPhongHoc.Properties.DataSource = this.xemTatCaPhongHocBindingSource;
+            this.cbPhongHoc.Properties.DisplayMember = "maPhong";
+            this.cbPhongHoc.Properties.NullText = "";
+            this.cbPhongHoc.Properties.PopupSizeable = false;
+            this.cbPhongHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbPhongHoc.Properties.ValueMember = "maPhong";
+            this.cbPhongHoc.Size = new System.Drawing.Size(100, 20);
+            this.cbPhongHoc.TabIndex = 10;
+            this.cbPhongHoc.EditValueChanged += new System.EventHandler(this.cbPhongHoc_EditValueChanged);
+            // 
+            // xemTatCaPhongHocBindingSource
+            // 
+            this.xemTatCaPhongHocBindingSource.DataMember = "XemTatCaPhongHoc";
+            this.xemTatCaPhongHocBindingSource.DataSource = this.qlDaoTaoDataSet1;
+            // 
             // timKhoaGVTableAdapter
             // 
             this.timKhoaGVTableAdapter.ClearBeforeFill = true;
@@ -1653,6 +1738,14 @@
             // 
             this.timKhoaLopHocTableAdapter.ClearBeforeFill = true;
             // 
+            // xemTatCaMonHocTableAdapter
+            // 
+            this.xemTatCaMonHocTableAdapter.ClearBeforeFill = true;
+            // 
+            // xemTatCaPhongHocTableAdapter
+            // 
+            this.xemTatCaPhongHocTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1664,33 +1757,34 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmPhanCong";
             this.Text = "frmPhanCong";
+            this.Load += new System.EventHandler(this.frmPhanCong_Load);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit28.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit29.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit30.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit32.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit43.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit35.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit42.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit34.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit25.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit36.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit41.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit33.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit40.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit20.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit37.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit39.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit23.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T7Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T3Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit27.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T6Ca2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit26.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbKhoaLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet1)).EndInit();
@@ -1700,40 +1794,42 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit31.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT6Ca2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT5Ca2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT7Ca2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT4Ca2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbT2Ca1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbT3Ca1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCKhoaGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVKhoaGV)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit44.Properties)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit38.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit24.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit22.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbHocKy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xemTatCaMonHocBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPhongHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xemTatCaPhongHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -1751,16 +1847,16 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridVKhoaGV;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.ComboBoxEdit cbT2Ca4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit6;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT3Ca4;
         private DevExpress.XtraEditors.ComboBoxEdit cbT2Ca3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit5;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit31;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit12;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit11;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT3Ca3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT7Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT5Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT4Ca1;
         private DevExpress.XtraEditors.ComboBoxEdit cbT2Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cbT2Ca1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT3Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT3Ca1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -1782,64 +1878,63 @@
         private DevExpress.XtraGrid.Columns.GridColumn colmaLop1;
         private QLDaoTaoDataSet qlDaoTaoDataSet1;
         private QLDaoTaoDataSetTableAdapters.timKhoaLopHocTableAdapter timKhoaLopHocTableAdapter;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit15;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit19;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit10;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit7;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit14;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit18;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit9;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit17;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit16;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit13;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit8;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT5Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT6Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT7Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT4Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT5Ca3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT6Ca3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT7Ca3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT4Ca3;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT6Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT6Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT5Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT7Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cbT4Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T2Ca4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit43;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit42;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T5Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T6Ca4;
         private System.Windows.Forms.Panel panel6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit41;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit28;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit40;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T7Ca4;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T4Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T4Ca4;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit39;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T3Ca4;
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T2Ca3;
         private System.Windows.Forms.Label label13;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit37;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T5Ca3;
         private System.Windows.Forms.Label label14;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit36;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T6Ca3;
         private System.Windows.Forms.Label label15;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit35;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T7Ca3;
         private System.Windows.Forms.Label label16;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit34;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T4Ca3;
         private System.Windows.Forms.Label label17;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit33;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T3Ca3;
         private System.Windows.Forms.Label label18;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit32;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T6Ca1;
         private System.Windows.Forms.Label label19;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit30;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T7Ca1;
         private System.Windows.Forms.Label label20;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit29;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit20;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit21;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit27;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T5Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T3Ca1;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T3Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T6Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T2Ca1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit26;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit23;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit25;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T5Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T4Ca2;
+        private DevExpress.XtraEditors.ComboBoxEdit cb2T7Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T2Ca2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label laTKBLop;
         private System.Windows.Forms.Label laTKBGiangVien;
         private System.Windows.Forms.Label laGV;
         private System.Windows.Forms.Label laLop;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit38;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit22;
+        private DevExpress.XtraEditors.ComboBoxEdit cbTrangThai;
+        private System.Windows.Forms.DateTimePicker dateKT;
+        private System.Windows.Forms.DateTimePicker dateBD;
+        private DevExpress.XtraEditors.ComboBoxEdit cbHocKy;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
@@ -1884,6 +1979,13 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit44;
+        private DevExpress.XtraEditors.LookUpEdit cbPhongHoc;
+        private DevExpress.XtraEditors.LookUpEdit cbMonHoc;
+        private System.Windows.Forms.BindingSource xemTatCaMonHocBindingSource;
+        private QLDaoTaoDataSetTableAdapters.XemTatCaMonHocTableAdapter xemTatCaMonHocTableAdapter;
+        private System.Windows.Forms.BindingSource xemTatCaPhongHocBindingSource;
+        private QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter xemTatCaPhongHocTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnLuuTKB;
+        private System.Windows.Forms.Label laMaGV;
     }
 }

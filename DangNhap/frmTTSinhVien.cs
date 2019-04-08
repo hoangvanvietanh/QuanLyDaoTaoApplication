@@ -231,5 +231,58 @@ namespace DangNhap
                 picSinhVien.Image = new Bitmap(strFilePath);
             }
         }
+
+        private void txtMaSV_Leave(object sender, EventArgs e)
+        {
+            int flat = 0;
+            SqlCommand sqlCmd = new SqlCommand("findDNSinhVien", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maSV", txtMaSV.Text);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                flat = 1;
+            }
+            DR.Close();
+            if (flat == 1 && thaoTac.Equals("Them"))
+            {
+                laCheckMaSV.Text = "Mã giảng viên đã tồn tại !!!";
+            }
+            else if (txtMaSV.TextLength == 0)
+            {
+                laCheckMaSV.Text = "Bạn chưa điền mã giảng viên nhé";
+            }
+            else
+            {
+                laCheckMaSV.Text = "";
+            }
+        }
+
+        private void txtHoTen_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiaChi_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNoiSinh_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMSoDT_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }
