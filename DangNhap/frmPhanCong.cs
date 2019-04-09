@@ -15,7 +15,12 @@ namespace DangNhap
 {
     public partial class frmPhanCong : DevExpress.XtraEditors.XtraForm
     {
+        public String action = "";
+        public String maBuoiHoc = "";
+        public String maPhong = "";
         public String[] buoiHoc = new string[24];
+        public String[] suaBuoiHoc = new string[24];
+        public int kiemTraSua = 0;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmPhanCong()
         {
@@ -67,6 +72,7 @@ namespace DangNhap
                 //////////////////T2
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T2Ca1.Properties.Items.Clear();
                     check[1] = 1;
                     cb2T2Ca1.Text = DR[1].ToString();
                     cb2T2Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -86,6 +92,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T2Ca2.Properties.Items.Clear();
                     check[2] = 1;
                     cb2T2Ca2.Text = DR[1].ToString();
                     cb2T2Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -105,6 +112,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T2Ca3.Properties.Items.Clear();
                     check[3] = 1;
                     cb2T2Ca3.Text = DR[1].ToString();
                     cb2T2Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -124,6 +132,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T2Ca4.Properties.Items.Clear();
                     check[4] = 1;
                     cb2T2Ca4.Text = DR[1].ToString();
                     cb2T2Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -144,6 +153,7 @@ namespace DangNhap
                 //////////////////T3
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T3Ca1.Properties.Items.Clear();
                     check[5] = 1;
                     cb2T3Ca1.Text = DR[1].ToString();
                     cb2T3Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -163,6 +173,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T3Ca2.Properties.Items.Clear();
                     check[6] = 1;
                     cb2T3Ca2.Text = DR[1].ToString();
                     cb2T3Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -182,6 +193,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T3Ca3.Properties.Items.Clear();
                     check[7] = 1;
                     cb2T3Ca3.Text = DR[1].ToString();
                     cb2T3Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -201,6 +213,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T3Ca4.Properties.Items.Clear();
                     check[8] = 1;
                     cb2T3Ca4.Text = DR[1].ToString();
                     cb2T3Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -221,6 +234,7 @@ namespace DangNhap
                 //////////////////T4
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T4Ca1.Properties.Items.Clear();
                     check[9] = 1;
                     cb2T4Ca1.Text = DR[1].ToString();
                     cb2T4Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -240,6 +254,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T4Ca2.Properties.Items.Clear();
                     check[10] = 1;
                     cb2T4Ca2.Text = DR[1].ToString();
                     cb2T4Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -259,6 +274,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T4Ca3.Properties.Items.Clear();
                     check[11] = 1;
                     cb2T4Ca3.Text = DR[1].ToString();
                     cb2T4Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -278,6 +294,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T4Ca4.Properties.Items.Clear();
                     check[12] = 1;
                     cb2T4Ca4.Text = DR[1].ToString();
                     cb2T4Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -298,6 +315,7 @@ namespace DangNhap
                 //////////////////T5
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T5Ca1.Properties.Items.Clear();
                     check[13] = 1;
                     cb2T5Ca1.Text = DR[1].ToString();
                     cb2T5Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -317,6 +335,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T5Ca2.Properties.Items.Clear();
                     check[14] = 1;
                     cb2T5Ca2.Text = DR[1].ToString();
                     cb2T5Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -336,6 +355,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T5Ca3.Properties.Items.Clear();
                     check[15] = 1;
                     cb2T5Ca3.Text = DR[1].ToString();
                     cb2T5Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -355,6 +375,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T5Ca4.Properties.Items.Clear();
                     check[16] = 1;
                     cb2T5Ca4.Text = DR[1].ToString();
                     cb2T5Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -375,6 +396,7 @@ namespace DangNhap
                 //////////////////T6
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T6Ca1.Properties.Items.Clear();
                     check[17] = 1;
                     cb2T6Ca1.Text = DR[1].ToString();
                     cb2T6Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -394,6 +416,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T6Ca2.Properties.Items.Clear();
                     check[18] = 1;
                     cb2T6Ca2.Text = DR[1].ToString();
                     cb2T6Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -413,6 +436,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T6Ca3.Properties.Items.Clear();
                     check[19] = 1;
                     cb2T6Ca3.Text = DR[1].ToString();
                     cb2T6Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -432,6 +456,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T6Ca4.Properties.Items.Clear();
                     check[20] = 1;
                     cb2T6Ca4.Text = DR[1].ToString();
                     cb2T6Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -452,6 +477,7 @@ namespace DangNhap
                 //////////////////T7
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cb2T7Ca1.Properties.Items.Clear();
                     check[21] = 1;
                     cb2T7Ca1.Text = DR[1].ToString();
                     cb2T7Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -471,6 +497,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cb2T7Ca2.Properties.Items.Clear();
                     check[22] = 1;
                     cb2T7Ca2.Text = DR[1].ToString();
                     cb2T7Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -490,6 +517,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cb2T7Ca3.Properties.Items.Clear();
                     check[23] = 1;
                     cb2T7Ca3.Text = DR[1].ToString();
                     cb2T7Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -509,6 +537,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cb2T7Ca4.Properties.Items.Clear();
                     check[24] = 1;
                     cb2T7Ca4.Text = DR[1].ToString();
                     cb2T7Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -584,12 +613,13 @@ namespace DangNhap
                 cb2T7Ca4.Properties.Items.Clear();
 
             }
-
+            DR.Close();
             con.Close();
         }
 
         private void gridVKhoaGV_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
+
             int flag = 0;
             int[] check = new int[28];
             laGV.Text = gridVKhoaGV.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
@@ -607,6 +637,7 @@ namespace DangNhap
                 //////////////////T2
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT2Ca1.Properties.Items.Clear();
                     check[1] = 1;
                     cbT2Ca1.Text = DR[1].ToString();
                     cbT2Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -626,6 +657,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT2Ca2.Properties.Items.Clear();
                     check[2] = 1;
                     cbT2Ca2.Text = DR[1].ToString();
                     cbT2Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -645,6 +677,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT2Ca3.Properties.Items.Clear();
                     check[3] = 1;
                     cbT2Ca3.Text = DR[1].ToString();
                     cbT2Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -664,6 +697,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 2 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT2Ca4.Properties.Items.Clear();
                     check[4] = 1;
                     cbT2Ca4.Text = DR[1].ToString();
                     cbT2Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -684,6 +718,7 @@ namespace DangNhap
                 //////////////////T3
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT3Ca1.Properties.Items.Clear();
                     check[5] = 1;
                     cbT3Ca1.Text = DR[1].ToString();
                     cbT3Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -703,6 +738,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT3Ca2.Properties.Items.Clear();
                     check[6] = 1;
                     cbT3Ca2.Text = DR[1].ToString();
                     cbT3Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -722,6 +758,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT3Ca3.Properties.Items.Clear();
                     check[7] = 1;
                     cbT3Ca3.Text = DR[1].ToString();
                     cbT3Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -741,6 +778,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 3 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT3Ca4.Properties.Items.Clear();
                     check[8] = 1;
                     cbT3Ca4.Text = DR[1].ToString();
                     cbT3Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -761,6 +799,7 @@ namespace DangNhap
                 //////////////////T4
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT4Ca1.Properties.Items.Clear();
                     check[9] = 1;
                     cbT4Ca1.Text = DR[1].ToString();
                     cbT4Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -780,6 +819,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT4Ca2.Properties.Items.Clear();
                     check[10] = 1;
                     cbT4Ca2.Text = DR[1].ToString();
                     cbT4Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -799,6 +839,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT4Ca3.Properties.Items.Clear();
                     check[11] = 1;
                     cbT4Ca3.Text = DR[1].ToString();
                     cbT4Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -818,6 +859,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 4 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT4Ca4.Properties.Items.Clear();
                     check[12] = 1;
                     cbT4Ca4.Text = DR[1].ToString();
                     cbT4Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -838,6 +880,7 @@ namespace DangNhap
                 //////////////////T5
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT5Ca1.Properties.Items.Clear();
                     check[13] = 1;
                     cbT5Ca1.Text = DR[1].ToString();
                     cbT5Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -857,6 +900,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT5Ca2.Properties.Items.Clear();
                     check[14] = 1;
                     cbT5Ca2.Text = DR[1].ToString();
                     cbT5Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -876,6 +920,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT5Ca3.Properties.Items.Clear();
                     check[15] = 1;
                     cbT5Ca3.Text = DR[1].ToString();
                     cbT5Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -895,6 +940,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 5 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT5Ca4.Properties.Items.Clear();
                     check[16] = 1;
                     cbT5Ca4.Text = DR[1].ToString();
                     cbT5Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -915,6 +961,7 @@ namespace DangNhap
                 //////////////////T6
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT6Ca1.Properties.Items.Clear();
                     check[17] = 1;
                     cbT6Ca1.Text = DR[1].ToString();
                     cbT6Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -934,6 +981,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT6Ca2.Properties.Items.Clear();
                     check[18] = 1;
                     cbT6Ca2.Text = DR[1].ToString();
                     cbT6Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -953,6 +1001,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT6Ca3.Properties.Items.Clear();
                     check[19] = 1;
                     cbT6Ca3.Text = DR[1].ToString();
                     cbT6Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -972,6 +1021,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 6 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT6Ca4.Properties.Items.Clear();
                     check[20] = 1;
                     cbT6Ca4.Text = DR[1].ToString();
                     cbT6Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -992,6 +1042,7 @@ namespace DangNhap
                 //////////////////T7
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 1)
                 {
+                    cbT7Ca1.Properties.Items.Clear();
                     check[21] = 1;
                     cbT7Ca1.Text = DR[1].ToString();
                     cbT7Ca1.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -1011,6 +1062,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 2)
                 {
+                    cbT7Ca2.Properties.Items.Clear();
                     check[22] = 1;
                     cbT7Ca2.Text = DR[1].ToString();
                     cbT7Ca2.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -1030,6 +1082,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 3)
                 {
+                    cbT7Ca3.Properties.Items.Clear();
                     check[23] = 1;
                     cbT7Ca3.Text = DR[1].ToString();
                     cbT7Ca3.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -1049,6 +1102,7 @@ namespace DangNhap
 
                 if (Convert.ToInt16(DR[4].ToString()) == 7 && Convert.ToInt16(DR[5].ToString()) == 4)
                 {
+                    cbT7Ca4.Properties.Items.Clear();
                     check[24] = 1;
                     cbT7Ca4.Text = DR[1].ToString();
                     cbT7Ca4.Properties.Items.Add("Môn: " + DR[1].ToString());
@@ -1124,6 +1178,7 @@ namespace DangNhap
 
 
             }
+            DR.Close();
             con.Close();
         }
 
@@ -1147,52 +1202,99 @@ namespace DangNhap
         private void btnLuuTKB_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand sqlCmd = new SqlCommand("themPhanCong", con)
+            if (action.Equals("sua"))
             {
-                CommandType = CommandType.StoredProcedure
-            };
-            sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
-            sqlCmd.Parameters.AddWithValue("@maMH", cbMonHoc.EditValue.ToString());
-            sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
-            sqlCmd.Parameters.AddWithValue("@ngayBD",dateBD.Value.ToShortDateString());
-            sqlCmd.Parameters.AddWithValue("@ngayKT",dateKT.Value.ToShortDateString());
-            if (cbHocKy.SelectedText.Equals("Học kỳ 1"))
-            {
-                sqlCmd.Parameters.AddWithValue("@hocKy", 1);
-            }
-            else
-            {
-                sqlCmd.Parameters.AddWithValue("@hocKy", 2);
-            }
-           
-            sqlCmd.Parameters.AddWithValue("@namHoc",dateBD.Value.Year);
-            if (cbTrangThai.SelectedText.Equals("Đã xong"))
-            {
-                sqlCmd.Parameters.AddWithValue("@trangThai", 0);
-            }
-            else
-            {
-                sqlCmd.Parameters.AddWithValue("@trangThai", 1);
-            }
-            int modified = Convert.ToInt32(sqlCmd.ExecuteScalar());
-
-            for (int i = 1; i < buoiHoc.Length; i++)
-            {
-                if (buoiHoc[i]!=null)
+                SqlCommand sqlCmd = new SqlCommand("suaPhanCong", con)
                 {
-                    sqlCmd = new SqlCommand("themThoiKhoaBieu", con)
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maPC", maPC.Text);
+                sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
+                sqlCmd.Parameters.AddWithValue("@maMH", cbMonHoc.EditValue.ToString());
+                sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
+                sqlCmd.Parameters.AddWithValue("@ngayBD", dateBD.Value.ToShortDateString());
+                sqlCmd.Parameters.AddWithValue("@ngayKT", dateKT.Value.ToShortDateString());
+                if (cbHocKy.SelectedText.Equals("Học kỳ 1"))
+                {
+                    sqlCmd.Parameters.AddWithValue("@hocKy", 1);
+                }
+                else
+                {
+                    sqlCmd.Parameters.AddWithValue("@hocKy", 2);
+                }
+
+                sqlCmd.Parameters.AddWithValue("@namHoc", dateBD.Value.Year);
+                if (cbTrangThai.SelectedText.Equals("Đã xong"))
+                {
+                    sqlCmd.Parameters.AddWithValue("@trangThai", 0);
+                }
+                else
+                {
+                    sqlCmd.Parameters.AddWithValue("@trangThai", 1);
+                }
+                sqlCmd.ExecuteNonQuery();
+                for (int i = 1; i < buoiHoc.Length; i++)
+                {
+                    if (buoiHoc[i] != null)
                     {
-                        CommandType = CommandType.StoredProcedure
-                    };
-                    sqlCmd.Parameters.AddWithValue("@maPC", modified);
-                    sqlCmd.Parameters.AddWithValue("@maBH", buoiHoc[i].ToString());
-                    sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
-                    sqlCmd.ExecuteNonQuery();
+                        sqlCmd = new SqlCommand("xoaThoiKhoaBieu", con)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        sqlCmd.Parameters.AddWithValue("@maPC", maPC.Text);
+                        sqlCmd.Parameters.AddWithValue("@maBH", buoiHoc[i].ToString());
+                        sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
+                        sqlCmd.ExecuteNonQuery();
+                    }
                 }
             }
+            else
+            {
+                SqlCommand sqlCmd = new SqlCommand("themPhanCong", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
+                sqlCmd.Parameters.AddWithValue("@maMH", cbMonHoc.EditValue.ToString());
+                sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
+                sqlCmd.Parameters.AddWithValue("@ngayBD", dateBD.Value.ToShortDateString());
+                sqlCmd.Parameters.AddWithValue("@ngayKT", dateKT.Value.ToShortDateString());
+                if (cbHocKy.SelectedText.Equals("Học kỳ 1"))
+                {
+                    sqlCmd.Parameters.AddWithValue("@hocKy", 1);
+                }
+                else
+                {
+                    sqlCmd.Parameters.AddWithValue("@hocKy", 2);
+                }
 
+                sqlCmd.Parameters.AddWithValue("@namHoc", dateBD.Value.Year);
+                if (cbTrangThai.SelectedText.Equals("Đã xong"))
+                {
+                    sqlCmd.Parameters.AddWithValue("@trangThai", 0);
+                }
+                else
+                {
+                    sqlCmd.Parameters.AddWithValue("@trangThai", 1);
+                }
+                int modified = Convert.ToInt32(sqlCmd.ExecuteScalar());
 
-
+                for (int i = 1; i < buoiHoc.Length; i++)
+                {
+                    if (buoiHoc[i] != null)
+                    {
+                        sqlCmd = new SqlCommand("themThoiKhoaBieu", con)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        sqlCmd.Parameters.AddWithValue("@maPC", modified);
+                        sqlCmd.Parameters.AddWithValue("@maBH", buoiHoc[i].ToString());
+                        sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
+                        sqlCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            buoiHoc = new string[24];
             con.Close();
             MessageBox.Show("Lưu thành công ^^");
         }
@@ -1206,34 +1308,54 @@ namespace DangNhap
             {
                 CommandType = CommandType.StoredProcedure
             };
-            sqlCmd.Parameters.AddWithValue("maPhong", cbPhongHoc.EditValue.ToString());
+            String phong = cbPhongHoc.EditValue.ToString();
+            sqlCmd.Parameters.AddWithValue("@maPhong", phong);
             SqlDataReader DR = sqlCmd.ExecuteReader();
+            //con.Close();
             while (DR.Read())
             {
                 flag++;
                 if (DR[0].ToString().Equals("1T2"))
                 {
                     check[1] = 1;
-                    cT2Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca1.Visible = false;
+                        cT2Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[1] == 0)
                     {
                         cT2Ca1.Visible = true;
+                        cT2Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T2"))
                 {
                     check[2] = 1;
-                    cT2Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca2.Visible = false;
+                        cT2Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[2] == 0)
                     {
                         cT2Ca2.Visible = true;
+                        cT2Ca2.Checked = false;
                     }
                 }
 
@@ -1241,26 +1363,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T2"))
                 {
                     check[3] = 1;
-                    cT2Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca3.Visible = false;
+                        cT2Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[3] == 0)
                     {
                         cT2Ca3.Visible = true;
+                        cT2Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T2"))
                 {
                     check[4] = 1;
-                    cT2Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca4.Visible = false;
+                        cT2Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[4] == 0)
                     {
                         cT2Ca4.Visible = true;
+                        cT2Ca4.Checked = false;
                     }
                 }
 
@@ -1268,26 +1408,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("1T3"))
                 {
                     check[5] = 1;
-                    cT3Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca1.Visible = false;
+                        cT3Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[5] == 0)
                     {
                         cT3Ca1.Visible = true;
+                        cT3Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T3"))
                 {
                     check[6] = 1;
-                    cT3Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca2.Visible = false;
+                        cT3Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[6] == 0)
                     {
-                        cT2Ca2.Visible = true;
+                        cT3Ca2.Visible = true;
+                        cT3Ca2.Checked = false;
                     }
                 }
 
@@ -1295,26 +1453,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T3"))
                 {
                     check[7] = 1;
-                    cT3Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca3.Visible = false;
+                        cT3Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[7] == 0)
                     {
-                        cT2Ca3.Visible = true;
+                        cT3Ca3.Visible = true;
+                        cT3Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T3"))
                 {
                     check[8] = 1;
-                    cT3Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca4.Visible = false;
+                        cT3Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[8] == 0)
                     {
-                        cT2Ca4.Visible = true;
+                        cT3Ca4.Visible = true;
+                        cT3Ca4.Checked = false;
                     }
                 }
 
@@ -1322,26 +1498,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("1T4"))
                 {
                     check[9] = 1;
-                    cT4Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca1.Visible = false;
+                        cT4Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[9] == 0)
                     {
                         cT4Ca1.Visible = true;
+                        cT4Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T4"))
                 {
                     check[10] = 1;
-                    cT4Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca2.Visible = false;
+                        cT4Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[10] == 0)
                     {
                         cT4Ca2.Visible = true;
+                        cT4Ca2.Checked = false;
                     }
                 }
 
@@ -1349,26 +1543,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T4"))
                 {
                     check[11] = 1;
-                    cT4Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca3.Visible = false;
+                        cT4Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[11] == 0)
                     {
                         cT4Ca3.Visible = true;
+                        cT4Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T4"))
                 {
                     check[12] = 1;
-                    cT4Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca4.Visible = false;
+                        cT4Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[12] == 0)
                     {
                         cT4Ca4.Visible = true;
+                        cT4Ca4.Checked = false;
                     }
                 }
 
@@ -1376,26 +1588,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("1T5"))
                 {
                     check[13] = 1;
-                    cT5Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca1.Visible = false;
+                        cT5Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[13] == 0)
                     {
                         cT5Ca1.Visible = true;
+                        cT5Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T5"))
                 {
                     check[14] = 1;
-                    cT5Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca2.Visible = false;
+                        cT5Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[14] == 0)
                     {
                         cT5Ca2.Visible = true;
+                        cT5Ca2.Checked = false;
                     }
                 }
 
@@ -1403,26 +1633,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T5"))
                 {
                     check[15] = 1;
-                    cT5Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca3.Visible = false;
+                        cT5Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[15] == 0)
                     {
                         cT5Ca3.Visible = true;
+                        cT5Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T5"))
                 {
                     check[16] = 1;
-                    cT5Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca4.Visible = false;
+                        cT5Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[16] == 0)
                     {
                         cT5Ca4.Visible = true;
+                        cT5Ca4.Checked = false;
                     }
                 }
 
@@ -1431,26 +1679,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("1T6"))
                 {
                     check[17] = 1;
-                    cT6Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca1.Visible = false;
+                        cT6Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[17] == 0)
                     {
                         cT6Ca1.Visible = true;
+                        cT6Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T6"))
                 {
                     check[18] = 1;
-                    cT6Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca2.Visible = false;
+                        cT6Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[18] == 0)
                     {
                         cT6Ca2.Visible = true;
+                        cT6Ca2.Checked = false;
                     }
                 }
 
@@ -1458,26 +1724,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T6"))
                 {
                     check[19] = 1;
-                    cT6Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca3.Visible = false;
+                        cT6Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[19] == 0)
                     {
                         cT6Ca3.Visible = true;
+                        cT6Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T6"))
                 {
                     check[20] = 1;
-                    cT6Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca4.Visible = false;
+                        cT6Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[20] == 0)
                     {
                         cT6Ca4.Visible = true;
+                        cT6Ca4.Checked = false;
                     }
                 }
 
@@ -1485,26 +1769,44 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("1T7"))
                 {
                     check[21] = 1;
-                    cT7Ca1.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca1.Visible = false;
+                        cT7Ca1.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[21] == 0)
                     {
                         cT7Ca1.Visible = true;
+                        cT7Ca1.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("2T7"))
                 {
                     check[22] = 1;
-                    cT7Ca2.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca2.Visible = false;
+                        cT7Ca2.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[22] == 0)
                     {
                         cT7Ca2.Visible = true;
+                        cT7Ca2.Checked = false;
                     }
                 }
 
@@ -1512,29 +1814,49 @@ namespace DangNhap
                 if (DR[0].ToString().Equals("3T7"))
                 {
                     check[23] = 1;
-                    cT7Ca3.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca3.Visible = false;
+                        cT7Ca3.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[23] == 0)
                     {
                         cT7Ca3.Visible = true;
+                        cT7Ca3.Checked = false;
                     }
                 }
 
                 if (DR[0].ToString().Equals("4T7"))
                 {
                     check[24] = 1;
-                    cT7Ca4.Visible = false;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca4.Visible = false;
+                        cT7Ca4.Checked = false;
+                    }
                 }
                 else
                 {
                     if (check[24] == 0)
                     {
                         cT7Ca4.Visible = true;
+                        cT7Ca4.Checked = false;
                     }
                 }
             }
+            DR.Close();
+            con.Close();
             if (flag == 0)
             {
                 cT2Ca1.Visible = true;
@@ -1566,8 +1888,43 @@ namespace DangNhap
                 cT7Ca2.Visible = true;
                 cT7Ca3.Visible = true;
                 cT7Ca4.Visible = true;
+
+                cT2Ca1.Checked = false;
+                cT2Ca2.Checked = false;
+                cT2Ca3.Checked = false;
+                cT2Ca4.Checked = false;
+
+                cT2Ca1.Checked = false;
+                cT2Ca2.Checked = false;
+                cT2Ca3.Checked = false;
+                cT2Ca4.Checked = false;
+
+                cT3Ca1.Checked = false;
+                cT3Ca2.Checked = false;
+                cT3Ca3.Checked = false;
+                cT3Ca4.Checked = false;
+
+                cT4Ca1.Checked = false;
+                cT4Ca2.Checked = false;
+                cT4Ca3.Checked = false;
+                cT4Ca4.Checked = false;
+
+                cT5Ca1.Checked = false;
+                cT5Ca2.Checked = false;
+                cT5Ca3.Checked = false;
+                cT5Ca4.Checked = false;
+
+                cT6Ca1.Checked = false;
+                cT6Ca2.Checked = false;
+                cT6Ca3.Checked = false;
+                cT6Ca4.Checked = false;
+
+                cT7Ca1.Checked = false;
+                cT7Ca2.Checked = false;
+                cT7Ca3.Checked = false;
+                cT7Ca4.Checked = false;
             }
-            con.Close();
+            
         }
 
 
@@ -1576,7 +1933,13 @@ namespace DangNhap
         {
             if (cT2Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc[1] = "1T2";
+                    kiemTraSua++;
+                }
                 buoiHoc[1] = "1T2";
+                
             }
             else
             {
@@ -1588,7 +1951,14 @@ namespace DangNhap
         {
             if (cT2Ca2.Checked == true)
             {
-                buoiHoc[2] = "2T2";
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc[2] = "2T2";
+                    kiemTraSua++;
+                }
+                    buoiHoc[2] = "2T2";
+                
+                  
             }
             else
             {
@@ -1600,7 +1970,14 @@ namespace DangNhap
         {
             if (cT2Ca3.Checked == true)
             {
-                buoiHoc[3] = "3T2";
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc[3] = "3T2";
+                    kiemTraSua++;
+                }
+            
+                    buoiHoc[3] = "3T2";
+                
             }
             else
             {
@@ -1612,7 +1989,14 @@ namespace DangNhap
         {
             if (cT2Ca4.Checked == true)
             {
-                buoiHoc[4] = "4T2";
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc[4] = "4T2";
+                    kiemTraSua++;
+                }
+             
+                    buoiHoc[4] = "4T2";
+                
             }
             else
             {
@@ -1624,6 +2008,11 @@ namespace DangNhap
         {
             if (cT3Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc[5] = "1T3";
+                    kiemTraSua++;
+                }
                 buoiHoc[5] = "1T3";
             }
             else
@@ -1858,6 +2247,138 @@ namespace DangNhap
             {
                 buoiHoc[24] = null;
             }
+        }
+
+        private void cbT2Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT2Ca1.SelectedIndex = 1;
+            String phong = cbT2Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T2";
+            
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+                
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT2Ca1.SelectedIndex = 0;
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            action = "them";
+            maBuoiHoc = "";
+            maPhong = "";
+            laGV.Text = "Họ tên";
+            laLop.Text = "Lớp";
+            laMaGV.Text = "";
+            cbMonHoc.Text = "Chọn môn học";
+            dateBD.Text = "";
+            dateKT.Text = "";
+            cbTrangThai.Text = "Chọn trạng thái";
+            cbPhongHoc.Text = "Chọn phòng học";
+            cbHocKy.Text = "Chọn học kỳ";
+
+
+            cT2Ca1.Visible = true;
+            cT2Ca2.Visible = true;
+            cT2Ca3.Visible = true;
+            cT2Ca4.Visible = true;
+
+            cT3Ca1.Visible = true;
+            cT3Ca2.Visible = true;
+            cT3Ca3.Visible = true;
+            cT3Ca4.Visible = true;
+
+            cT4Ca1.Visible = true;
+            cT4Ca2.Visible = true;
+            cT4Ca3.Visible = true;
+            cT4Ca4.Visible = true;
+
+            cT5Ca1.Visible = true;
+            cT5Ca2.Visible = true;
+            cT5Ca3.Visible = true;
+            cT5Ca4.Visible = true;
+
+            cT6Ca1.Visible = true;
+            cT6Ca2.Visible = true;
+            cT6Ca3.Visible = true;
+            cT6Ca4.Visible = true;
+
+            cT7Ca1.Visible = true;
+            cT7Ca2.Visible = true;
+            cT7Ca3.Visible = true;
+            cT7Ca4.Visible = true;
+
+            cT2Ca1.Checked = false;
+            cT2Ca2.Checked = false;
+            cT2Ca3.Checked = false;
+            cT2Ca4.Checked = false;
+
+            cT2Ca1.Checked = false;
+            cT2Ca2.Checked = false;
+            cT2Ca3.Checked = false;
+            cT2Ca4.Checked = false;
+
+            cT3Ca1.Checked = false;
+            cT3Ca2.Checked = false;
+            cT3Ca3.Checked = false;
+            cT3Ca4.Checked = false;
+
+            cT4Ca1.Checked = false;
+            cT4Ca2.Checked = false;
+            cT4Ca3.Checked = false;
+            cT4Ca4.Checked = false;
+
+            cT5Ca1.Checked = false;
+            cT5Ca2.Checked = false;
+            cT5Ca3.Checked = false;
+            cT5Ca4.Checked = false;
+
+            cT6Ca1.Checked = false;
+            cT6Ca2.Checked = false;
+            cT6Ca3.Checked = false;
+            cT6Ca4.Checked = false;
+
+            cT7Ca1.Checked = false;
+            cT7Ca2.Checked = false;
+            cT7Ca3.Checked = false;
+            cT7Ca4.Checked = false;
         }
     }
 }

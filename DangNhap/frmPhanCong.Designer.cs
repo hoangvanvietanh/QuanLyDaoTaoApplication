@@ -179,6 +179,8 @@
             this.timKhoaLopHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.timKhoaLopHocTableAdapter();
             this.xemTatCaMonHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaMonHocTableAdapter();
             this.xemTatCaPhongHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter();
+            this.btnTaoMoi = new DevExpress.XtraEditors.SimpleButton();
+            this.maPC = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).BeginInit();
@@ -954,6 +956,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT2Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca1.TabIndex = 11;
+            this.cbT2Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT2Ca1_MouseDoubleClick);
             // 
             // cbT3Ca2
             // 
@@ -1112,6 +1115,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.maPC);
+            this.panel4.Controls.Add(this.btnTaoMoi);
             this.panel4.Controls.Add(this.laMaGV);
             this.panel4.Controls.Add(this.btnLuuTKB);
             this.panel4.Controls.Add(this.panel8);
@@ -1148,7 +1153,7 @@
             // 
             // btnLuuTKB
             // 
-            this.btnLuuTKB.Location = new System.Drawing.Point(82, 441);
+            this.btnLuuTKB.Location = new System.Drawing.Point(27, 432);
             this.btnLuuTKB.Name = "btnLuuTKB";
             this.btnLuuTKB.Size = new System.Drawing.Size(75, 23);
             this.btnLuuTKB.TabIndex = 11;
@@ -1746,6 +1751,24 @@
             // 
             this.xemTatCaPhongHocTableAdapter.ClearBeforeFill = true;
             // 
+            // btnTaoMoi
+            // 
+            this.btnTaoMoi.Location = new System.Drawing.Point(161, 433);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(75, 23);
+            this.btnTaoMoi.TabIndex = 13;
+            this.btnTaoMoi.Text = "Tạo Mới";
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
+            // 
+            // maPC
+            // 
+            this.maPC.AutoSize = true;
+            this.maPC.Location = new System.Drawing.Point(116, 36);
+            this.maPC.Name = "maPC";
+            this.maPC.Size = new System.Drawing.Size(34, 13);
+            this.maPC.TabIndex = 14;
+            this.maPC.Text = "maPC";
+            // 
             // frmPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1987,5 +2010,7 @@
         private QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter xemTatCaPhongHocTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnLuuTKB;
         private System.Windows.Forms.Label laMaGV;
+        private DevExpress.XtraEditors.SimpleButton btnTaoMoi;
+        private System.Windows.Forms.Label maPC;
     }
 }
