@@ -18,8 +18,8 @@ namespace DangNhap
         public String action = "";
         public String maBuoiHoc = "";
         public String maPhong = "";
-        public String[] buoiHoc = new string[24];
-        public String[] suaBuoiHoc = new string[24];
+        public String[] buoiHoc = new string[25];
+        public String suaBuoiHoc = "";
         public int kiemTraSua = 0;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
         public frmPhanCong()
@@ -1233,19 +1233,24 @@ namespace DangNhap
                     sqlCmd.Parameters.AddWithValue("@trangThai", 1);
                 }
                 sqlCmd.ExecuteNonQuery();
-                for (int i = 1; i < buoiHoc.Length; i++)
+                if (!maBuoiHoc.Equals(suaBuoiHoc))
                 {
-                    if (buoiHoc[i] != null)
+                    sqlCmd = new SqlCommand("xoaThoiKhoaBieu", con)
                     {
-                        sqlCmd = new SqlCommand("xoaThoiKhoaBieu", con)
-                        {
-                            CommandType = CommandType.StoredProcedure
-                        };
-                        sqlCmd.Parameters.AddWithValue("@maPC", maPC.Text);
-                        sqlCmd.Parameters.AddWithValue("@maBH", buoiHoc[i].ToString());
-                        sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
-                        sqlCmd.ExecuteNonQuery();
-                    }
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+                    sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
+                    sqlCmd.ExecuteNonQuery();
+
+                    sqlCmd = new SqlCommand("themThoiKhoaBieu", con)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    sqlCmd.Parameters.AddWithValue("@maPC", maPC.Text);
+                    sqlCmd.Parameters.AddWithValue("@maBH", suaBuoiHoc);
+                    sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
+                    sqlCmd.ExecuteNonQuery();
                 }
             }
             else
@@ -1310,6 +1315,7 @@ namespace DangNhap
             };
             String phong = cbPhongHoc.EditValue.ToString();
             sqlCmd.Parameters.AddWithValue("@maPhong", phong);
+            sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
             SqlDataReader DR = sqlCmd.ExecuteReader();
             //con.Close();
             while (DR.Read())
@@ -1927,7 +1933,7 @@ namespace DangNhap
             
         }
 
-
+        
 
         private void cT2Ca1_CheckedChanged(object sender, EventArgs e)
         {
@@ -1935,8 +1941,7 @@ namespace DangNhap
             {
                 if (action.Equals("sua"))
                 {
-                    suaBuoiHoc[1] = "1T2";
-                    kiemTraSua++;
+                    suaBuoiHoc = "1T2";
                 }
                 buoiHoc[1] = "1T2";
                 
@@ -1953,8 +1958,7 @@ namespace DangNhap
             {
                 if (action.Equals("sua"))
                 {
-                    suaBuoiHoc[2] = "2T2";
-                    kiemTraSua++;
+                    suaBuoiHoc = "2T2";
                 }
                     buoiHoc[2] = "2T2";
                 
@@ -1972,8 +1976,7 @@ namespace DangNhap
             {
                 if (action.Equals("sua"))
                 {
-                    suaBuoiHoc[3] = "3T2";
-                    kiemTraSua++;
+                    suaBuoiHoc = "3T2";
                 }
             
                     buoiHoc[3] = "3T2";
@@ -1991,8 +1994,7 @@ namespace DangNhap
             {
                 if (action.Equals("sua"))
                 {
-                    suaBuoiHoc[4] = "4T2";
-                    kiemTraSua++;
+                    suaBuoiHoc = "4T2";
                 }
              
                     buoiHoc[4] = "4T2";
@@ -2010,8 +2012,7 @@ namespace DangNhap
             {
                 if (action.Equals("sua"))
                 {
-                    suaBuoiHoc[5] = "1T3";
-                    kiemTraSua++;
+                    suaBuoiHoc = "1T3";
                 }
                 buoiHoc[5] = "1T3";
             }
@@ -2025,6 +2026,10 @@ namespace DangNhap
         {
             if (cT3Ca2.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "2T3";
+                }
                 buoiHoc[6] = "2T3";
             }
             else
@@ -2037,6 +2042,10 @@ namespace DangNhap
         {
             if (cT3Ca3.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "3T3";
+                }
                 buoiHoc[7] = "3T3";
             }
             else
@@ -2049,6 +2058,10 @@ namespace DangNhap
         {
             if (cT3Ca4.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "4T3";
+                }
                 buoiHoc[8] = "4T3";
             }
             else
@@ -2061,6 +2074,10 @@ namespace DangNhap
         {
             if (cT4Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "1T4";
+                }
                 buoiHoc[9] = "1T4";
             }
             else
@@ -2073,6 +2090,10 @@ namespace DangNhap
         {
             if (cT4Ca2.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "2T4";
+                }
                 buoiHoc[10] = "2T4";
             }
             else
@@ -2085,6 +2106,10 @@ namespace DangNhap
         {
             if (cT4Ca3.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "3T4";
+                }
                 buoiHoc[11] = "3T4";
             }
             else
@@ -2097,6 +2122,10 @@ namespace DangNhap
         {
             if (cT4Ca4.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "4T4";
+                }
                 buoiHoc[12] = "4T4";
             }
             else
@@ -2109,6 +2138,10 @@ namespace DangNhap
         {
             if (cT5Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "1T5";
+                }
                 buoiHoc[13] = "1T5";
             }
             else
@@ -2121,6 +2154,10 @@ namespace DangNhap
         {
             if (cT5Ca2.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "2T5";
+                }
                 buoiHoc[14] = "2T5";
             }
             else
@@ -2133,6 +2170,10 @@ namespace DangNhap
         {
             if (cT5Ca3.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "3T5";
+                }
                 buoiHoc[15] = "3T5";
             }
             else
@@ -2145,6 +2186,10 @@ namespace DangNhap
         {
             if (cT5Ca4.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "4T5";
+                }
                 buoiHoc[16] = "4T5";
             }
             else
@@ -2157,6 +2202,10 @@ namespace DangNhap
         {
             if (cT6Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "1T6";
+                }
                 buoiHoc[17] = "1T6";
             }
             else
@@ -2169,6 +2218,10 @@ namespace DangNhap
         {
             if (cT6Ca2.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "2T6";
+                }
                 buoiHoc[18] = "2T6";
             }
             else
@@ -2181,6 +2234,10 @@ namespace DangNhap
         {
             if (cT6Ca3.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "3T6";
+                }
                 buoiHoc[19] = "3T6";
             }
             else
@@ -2193,6 +2250,10 @@ namespace DangNhap
         {
             if (cT6Ca4.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "4T6";
+                }
                 buoiHoc[20] = "4T6";
             }
             else
@@ -2205,6 +2266,10 @@ namespace DangNhap
         {
             if (cT7Ca1.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "1T7";
+                }
                 buoiHoc[21] = "1T7";
             }
             else
@@ -2217,6 +2282,10 @@ namespace DangNhap
         {
             if (cT7Ca2.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "2T7";
+                }
                 buoiHoc[22] = "2T7";
             }
             else
@@ -2229,6 +2298,10 @@ namespace DangNhap
         {
             if (cT7Ca3.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "3T7";
+                }
                 buoiHoc[23] = "3T7";
             }
             else
@@ -2241,6 +2314,10 @@ namespace DangNhap
         {
             if (cT7Ca4.Checked == true)
             {
+                if (action.Equals("sua"))
+                {
+                    suaBuoiHoc = "4T7";
+                }
                 buoiHoc[24] = "4T7";
             }
             else
@@ -2249,72 +2326,8 @@ namespace DangNhap
             }
         }
 
-        private void cbT2Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        public void loadBuoiHoc()
         {
-            cbT2Ca1.SelectedIndex = 1;
-            String phong = cbT2Ca1.SelectedItem.ToString();
-            int vtLay = phong.Length - 7;
-            maPhong = phong.Substring(7, vtLay);
-            action = "sua";
-            con.Open();
-            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
-            maBuoiHoc = "1T2";
-            
-            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
-            SqlDataReader DR = sqlCmd.ExecuteReader();
-            while (DR.Read())
-            {
-                laMaGV.Text = DR[1].ToString();
-                laGV.Text = DR[2].ToString();
-                laLop.Text = DR[3].ToString();
-                cbMonHoc.EditValue = DR[4].ToString();
-                if (Convert.ToInt16(DR[5].ToString()) == 1)
-                {
-                    cbHocKy.SelectedIndex = 0;
-                }
-                else
-                {
-                    cbHocKy.SelectedIndex = 1;
-                }
-                maPC.Text = DR[0].ToString();
-                dateBD.Text = DR[6].ToString();
-                dateKT.Text = DR[7].ToString();
-                if (Convert.ToInt16(DR[8].ToString()) == 1)
-                {
-                    cbTrangThai.SelectedIndex = 1;
-                }
-                else
-                {
-                    cbTrangThai.SelectedIndex = 0;
-                }
-                
-            }
-            DR.Close();
-            con.Close();
-            cbPhongHoc.EditValue = maPhong;
-            cbT2Ca1.SelectedIndex = 0;
-        }
-
-        private void btnTaoMoi_Click(object sender, EventArgs e)
-        {
-            action = "them";
-            maBuoiHoc = "";
-            maPhong = "";
-            laGV.Text = "Họ tên";
-            laLop.Text = "Lớp";
-            laMaGV.Text = "";
-            cbMonHoc.Text = "Chọn môn học";
-            dateBD.Text = "";
-            dateKT.Text = "";
-            cbTrangThai.Text = "Chọn trạng thái";
-            cbPhongHoc.Text = "Chọn phòng học";
-            cbHocKy.Text = "Chọn học kỳ";
-
-
             cT2Ca1.Visible = true;
             cT2Ca2.Visible = true;
             cT2Ca3.Visible = true;
@@ -2380,5 +2393,1902 @@ namespace DangNhap
             cT7Ca3.Checked = false;
             cT7Ca4.Checked = false;
         }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            action = "them";
+            maBuoiHoc = "";
+            maPhong = "";
+            laGV.Text = "Họ tên";
+            laLop.Text = "Lớp";
+            laMaGV.Text = "";
+            cbMonHoc.Text = "Chọn môn học";
+            dateBD.Text = "";
+            dateKT.Text = "";
+            cbTrangThai.Text = "Chọn trạng thái";
+            cbPhongHoc.Text = "Chọn phòng học";
+            cbHocKy.Text = "Chọn học kỳ";
+
+
+            loadBuoiHoc();
+        }
+
+        private void cbT2Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT2Ca1.SelectedIndex = 1;
+            String phong = cbT2Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T2";
+            
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT2Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT2Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT2Ca2.SelectedIndex = 1;
+            String phong = cbT2Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T2";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT2Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT2Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT2Ca3.SelectedIndex = 1;
+            String phong = cbT2Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T2";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT2Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT2Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT2Ca4.SelectedIndex = 1;
+            String phong = cbT2Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T2";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT2Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT3Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT3Ca1.SelectedIndex = 1;
+            String phong = cbT3Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T3";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT3Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT3Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT3Ca2.SelectedIndex = 1;
+            String phong = cbT3Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T3";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT3Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT3Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT3Ca3.SelectedIndex = 1;
+            String phong = cbT3Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T3";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT3Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT3Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT3Ca4.SelectedIndex = 1;
+            String phong = cbT3Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T3";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT3Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT4Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT4Ca1.SelectedIndex = 1;
+            String phong = cbT4Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T4";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT4Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT4Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT4Ca2.SelectedIndex = 1;
+            String phong = cbT4Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T4";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT4Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT4Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT4Ca3.SelectedIndex = 1;
+            String phong = cbT4Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T4";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT4Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT4Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT4Ca4.SelectedIndex = 1;
+            String phong = cbT4Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T4";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT4Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT5Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT5Ca1.SelectedIndex = 1;
+            String phong = cbT5Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T5";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT5Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT5Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT5Ca2.SelectedIndex = 1;
+            String phong = cbT5Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T5";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT5Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT5Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT5Ca3.SelectedIndex = 1;
+            String phong = cbT5Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T5";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT5Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT5Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT5Ca4.SelectedIndex = 1;
+            String phong = cbT5Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T5";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT5Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT6Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT6Ca1.SelectedIndex = 1;
+            String phong = cbT6Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T6";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT6Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT6Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT6Ca2.SelectedIndex = 1;
+            String phong = cbT6Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T6";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT6Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT6Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT6Ca3.SelectedIndex = 1;
+            String phong = cbT6Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T6";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT6Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT6Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT6Ca4.SelectedIndex = 1;
+            String phong = cbT6Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T6";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT6Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT7Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT7Ca1.SelectedIndex = 1;
+            String phong = cbT7Ca1.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "1T7";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT7Ca1.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT7Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT7Ca2.SelectedIndex = 1;
+            String phong = cbT7Ca2.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "2T7";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT7Ca2.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT7Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT7Ca3.SelectedIndex = 1;
+            String phong = cbT7Ca3.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "3T7";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT7Ca3.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        private void cbT7Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbT7Ca4.SelectedIndex = 1;
+            String phong = cbT7Ca4.SelectedItem.ToString();
+            int vtLay = phong.Length - 7;
+            maPhong = phong.Substring(7, vtLay);
+            action = "sua";
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("xemChiTietPhanCong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
+            maBuoiHoc = "4T7";
+
+            sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            while (DR.Read())
+            {
+                laMaGV.Text = DR[1].ToString();
+                laGV.Text = DR[2].ToString();
+                laLop.Text = DR[3].ToString();
+                cbMonHoc.EditValue = DR[4].ToString();
+                if (Convert.ToInt16(DR[5].ToString()) == 1)
+                {
+                    cbHocKy.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbHocKy.SelectedIndex = 1;
+                }
+                maPC.Text = DR[0].ToString();
+                dateBD.Text = DR[6].ToString();
+                dateKT.Text = DR[7].ToString();
+                if (Convert.ToInt16(DR[8].ToString()) == 1)
+                {
+                    cbTrangThai.SelectedIndex = 1;
+                }
+                else
+                {
+                    cbTrangThai.SelectedIndex = 0;
+                }
+
+            }
+            DR.Close();
+            con.Close();
+            cbPhongHoc.EditValue = maPhong;
+            cbT7Ca4.SelectedIndex = 0;
+            loadPhong();
+        }
+
+        public void loadPhong()
+        {
+            int flag = 0;
+            int[] check = new int[28];
+            con.Open();
+            SqlCommand sqlCmd = new SqlCommand("kiemTraTheoPhong", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            String phong = cbPhongHoc.EditValue.ToString();
+            sqlCmd.Parameters.AddWithValue("@maPhong", phong);
+            sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
+            SqlDataReader DR = sqlCmd.ExecuteReader();
+            //con.Close();
+            while (DR.Read())
+            {
+                flag++;
+                if (DR[0].ToString().Equals("1T2"))
+                {
+                    check[1] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca1.Visible = true;
+                        cT2Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca1.Visible = false;
+                        cT2Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[1] == 0)
+                    {
+                        cT2Ca1.Visible = true;
+                        cT2Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T2"))
+                {
+                    check[2] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca2.Visible = true;
+                        cT2Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca2.Visible = false;
+                        cT2Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[2] == 0)
+                    {
+                        cT2Ca2.Visible = true;
+                        cT2Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T2"))
+                {
+                    check[3] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca3.Visible = true;
+                        cT2Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca3.Visible = false;
+                        cT2Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[3] == 0)
+                    {
+                        cT2Ca3.Visible = true;
+                        cT2Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T2"))
+                {
+                    check[4] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T2") && phong.Equals(maPhong))
+                    {
+                        cT2Ca4.Visible = true;
+                        cT2Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT2Ca4.Visible = false;
+                        cT2Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[4] == 0)
+                    {
+                        cT2Ca4.Visible = true;
+                        cT2Ca4.Checked = false;
+                    }
+                }
+
+                ////////////////////////T3
+                if (DR[0].ToString().Equals("1T3"))
+                {
+                    check[5] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca1.Visible = true;
+                        cT3Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca1.Visible = false;
+                        cT3Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[5] == 0)
+                    {
+                        cT3Ca1.Visible = true;
+                        cT3Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T3"))
+                {
+                    check[6] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca2.Visible = true;
+                        cT3Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca2.Visible = false;
+                        cT3Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[6] == 0)
+                    {
+                        cT3Ca2.Visible = true;
+                        cT3Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T3"))
+                {
+                    check[7] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca3.Visible = true;
+                        cT3Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca3.Visible = false;
+                        cT3Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[7] == 0)
+                    {
+                        cT3Ca3.Visible = true;
+                        cT3Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T3"))
+                {
+                    check[8] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T3") && phong.Equals(maPhong))
+                    {
+                        cT3Ca4.Visible = true;
+                        cT3Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT3Ca4.Visible = false;
+                        cT3Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[8] == 0)
+                    {
+                        cT3Ca4.Visible = true;
+                        cT3Ca4.Checked = false;
+                    }
+                }
+
+                ////////////////////////T4
+                if (DR[0].ToString().Equals("1T4"))
+                {
+                    check[9] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca1.Visible = true;
+                        cT4Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca1.Visible = false;
+                        cT4Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[9] == 0)
+                    {
+                        cT4Ca1.Visible = true;
+                        cT4Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T4"))
+                {
+                    check[10] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca2.Visible = true;
+                        cT4Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca2.Visible = false;
+                        cT4Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[10] == 0)
+                    {
+                        cT4Ca2.Visible = true;
+                        cT4Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T4"))
+                {
+                    check[11] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca3.Visible = true;
+                        cT4Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca3.Visible = false;
+                        cT4Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[11] == 0)
+                    {
+                        cT4Ca3.Visible = true;
+                        cT4Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T4"))
+                {
+                    check[12] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T4") && phong.Equals(maPhong))
+                    {
+                        cT4Ca4.Visible = true;
+                        cT4Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT4Ca4.Visible = false;
+                        cT4Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[12] == 0)
+                    {
+                        cT4Ca4.Visible = true;
+                        cT4Ca4.Checked = false;
+                    }
+                }
+
+                ////////////////////////T5
+                if (DR[0].ToString().Equals("1T5"))
+                {
+                    check[13] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca1.Visible = true;
+                        cT5Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca1.Visible = false;
+                        cT5Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[13] == 0)
+                    {
+                        cT5Ca1.Visible = true;
+                        cT5Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T5"))
+                {
+                    check[14] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca2.Visible = true;
+                        cT5Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca2.Visible = false;
+                        cT5Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[14] == 0)
+                    {
+                        cT5Ca2.Visible = true;
+                        cT5Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T5"))
+                {
+                    check[15] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca3.Visible = true;
+                        cT5Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca3.Visible = false;
+                        cT5Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[15] == 0)
+                    {
+                        cT5Ca3.Visible = true;
+                        cT5Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T5"))
+                {
+                    check[16] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T5") && phong.Equals(maPhong))
+                    {
+                        cT5Ca4.Visible = true;
+                        cT5Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT5Ca4.Visible = false;
+                        cT5Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[16] == 0)
+                    {
+                        cT5Ca4.Visible = true;
+                        cT5Ca4.Checked = false;
+                    }
+                }
+
+
+                ////////////////////////T6
+                if (DR[0].ToString().Equals("1T6"))
+                {
+                    check[17] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca1.Visible = true;
+                        cT6Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca1.Visible = false;
+                        cT6Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[17] == 0)
+                    {
+                        cT6Ca1.Visible = true;
+                        cT6Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T6"))
+                {
+                    check[18] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca2.Visible = true;
+                        cT6Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca2.Visible = false;
+                        cT6Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[18] == 0)
+                    {
+                        cT6Ca2.Visible = true;
+                        cT6Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T6"))
+                {
+                    check[19] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca3.Visible = true;
+                        cT6Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca3.Visible = false;
+                        cT6Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[19] == 0)
+                    {
+                        cT6Ca3.Visible = true;
+                        cT6Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T6"))
+                {
+                    check[20] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T6") && phong.Equals(maPhong))
+                    {
+                        cT6Ca4.Visible = true;
+                        cT6Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT6Ca4.Visible = false;
+                        cT6Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[20] == 0)
+                    {
+                        cT6Ca4.Visible = true;
+                        cT6Ca4.Checked = false;
+                    }
+                }
+
+                ////////////////////////T7
+                if (DR[0].ToString().Equals("1T7"))
+                {
+                    check[21] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("1T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca1.Visible = true;
+                        cT7Ca1.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca1.Visible = false;
+                        cT7Ca1.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[21] == 0)
+                    {
+                        cT7Ca1.Visible = true;
+                        cT7Ca1.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("2T7"))
+                {
+                    check[22] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("2T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca2.Visible = true;
+                        cT7Ca2.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca2.Visible = false;
+                        cT7Ca2.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[22] == 0)
+                    {
+                        cT7Ca2.Visible = true;
+                        cT7Ca2.Checked = false;
+                    }
+                }
+
+
+                if (DR[0].ToString().Equals("3T7"))
+                {
+                    check[23] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("3T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca3.Visible = true;
+                        cT7Ca3.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca3.Visible = false;
+                        cT7Ca3.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[23] == 0)
+                    {
+                        cT7Ca3.Visible = true;
+                        cT7Ca3.Checked = false;
+                    }
+                }
+
+                if (DR[0].ToString().Equals("4T7"))
+                {
+                    check[24] = 1;
+                    if (action.Equals("sua") && maBuoiHoc.Equals("4T7") && phong.Equals(maPhong))
+                    {
+                        cT7Ca4.Visible = true;
+                        cT7Ca4.Checked = true;
+                    }
+                    else
+                    {
+                        cT7Ca4.Visible = false;
+                        cT7Ca4.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (check[24] == 0)
+                    {
+                        cT7Ca4.Visible = true;
+                        cT7Ca4.Checked = false;
+                    }
+                }
+            }
+            DR.Close();
+            con.Close();
+            if (flag == 0)
+            {
+                cT2Ca1.Visible = true;
+                cT2Ca2.Visible = true;
+                cT2Ca3.Visible = true;
+                cT2Ca4.Visible = true;
+
+                cT3Ca1.Visible = true;
+                cT3Ca2.Visible = true;
+                cT3Ca3.Visible = true;
+                cT3Ca4.Visible = true;
+
+                cT4Ca1.Visible = true;
+                cT4Ca2.Visible = true;
+                cT4Ca3.Visible = true;
+                cT4Ca4.Visible = true;
+
+                cT5Ca1.Visible = true;
+                cT5Ca2.Visible = true;
+                cT5Ca3.Visible = true;
+                cT5Ca4.Visible = true;
+
+                cT6Ca1.Visible = true;
+                cT6Ca2.Visible = true;
+                cT6Ca3.Visible = true;
+                cT6Ca4.Visible = true;
+
+                cT7Ca1.Visible = true;
+                cT7Ca2.Visible = true;
+                cT7Ca3.Visible = true;
+                cT7Ca4.Visible = true;
+
+                cT2Ca1.Checked = false;
+                cT2Ca2.Checked = false;
+                cT2Ca3.Checked = false;
+                cT2Ca4.Checked = false;
+
+                cT2Ca1.Checked = false;
+                cT2Ca2.Checked = false;
+                cT2Ca3.Checked = false;
+                cT2Ca4.Checked = false;
+
+                cT3Ca1.Checked = false;
+                cT3Ca2.Checked = false;
+                cT3Ca3.Checked = false;
+                cT3Ca4.Checked = false;
+
+                cT4Ca1.Checked = false;
+                cT4Ca2.Checked = false;
+                cT4Ca3.Checked = false;
+                cT4Ca4.Checked = false;
+
+                cT5Ca1.Checked = false;
+                cT5Ca2.Checked = false;
+                cT5Ca3.Checked = false;
+                cT5Ca4.Checked = false;
+
+                cT6Ca1.Checked = false;
+                cT6Ca2.Checked = false;
+                cT6Ca3.Checked = false;
+                cT6Ca4.Checked = false;
+
+                cT7Ca1.Checked = false;
+                cT7Ca2.Checked = false;
+                cT7Ca3.Checked = false;
+                cT7Ca4.Checked = false;
+            }
+        }
+
     }
+
 }

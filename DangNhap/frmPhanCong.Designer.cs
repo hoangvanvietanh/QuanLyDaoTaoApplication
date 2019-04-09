@@ -117,6 +117,8 @@
             this.colmaGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.maPC = new System.Windows.Forms.Label();
+            this.btnTaoMoi = new DevExpress.XtraEditors.SimpleButton();
             this.laMaGV = new System.Windows.Forms.Label();
             this.btnLuuTKB = new DevExpress.XtraEditors.SimpleButton();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -179,8 +181,6 @@
             this.timKhoaLopHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.timKhoaLopHocTableAdapter();
             this.xemTatCaMonHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaMonHocTableAdapter();
             this.xemTatCaPhongHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter();
-            this.btnTaoMoi = new DevExpress.XtraEditors.SimpleButton();
-            this.maPC = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).BeginInit();
@@ -767,6 +767,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT2Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca4.TabIndex = 11;
+            this.cbT2Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT2Ca4_MouseDoubleClick);
             // 
             // cbT5Ca4
             // 
@@ -776,6 +777,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT5Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT5Ca4.TabIndex = 11;
+            this.cbT5Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT5Ca4_MouseDoubleClick);
             // 
             // cbT6Ca4
             // 
@@ -785,6 +787,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT6Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT6Ca4.TabIndex = 11;
+            this.cbT6Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT6Ca4_MouseDoubleClick);
             // 
             // cbT7Ca4
             // 
@@ -794,6 +797,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT7Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT7Ca4.TabIndex = 11;
+            this.cbT7Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT7Ca4_MouseDoubleClick);
             // 
             // cbT4Ca4
             // 
@@ -803,6 +807,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT4Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT4Ca4.TabIndex = 11;
+            this.cbT4Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT4Ca4_MouseDoubleClick);
             // 
             // cbT3Ca4
             // 
@@ -812,6 +817,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT3Ca4.Size = new System.Drawing.Size(109, 20);
             this.cbT3Ca4.TabIndex = 11;
+            this.cbT3Ca4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT3Ca4_MouseDoubleClick);
             // 
             // cbT2Ca3
             // 
@@ -821,6 +827,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT2Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca3.TabIndex = 11;
+            this.cbT2Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT2Ca3_MouseDoubleClick);
             // 
             // cbT5Ca3
             // 
@@ -830,6 +837,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT5Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT5Ca3.TabIndex = 11;
+            this.cbT5Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT5Ca3_MouseDoubleClick);
             // 
             // cbT6Ca3
             // 
@@ -839,6 +847,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT6Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT6Ca3.TabIndex = 11;
+            this.cbT6Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT6Ca3_MouseDoubleClick);
             // 
             // cbT7Ca3
             // 
@@ -848,6 +857,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT7Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT7Ca3.TabIndex = 11;
+            this.cbT7Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT7Ca3_MouseDoubleClick);
             // 
             // cbT4Ca3
             // 
@@ -857,6 +867,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT4Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT4Ca3.TabIndex = 11;
+            this.cbT4Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT4Ca3_MouseDoubleClick);
             // 
             // cbT3Ca3
             // 
@@ -866,6 +877,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT3Ca3.Size = new System.Drawing.Size(109, 20);
             this.cbT3Ca3.TabIndex = 11;
+            this.cbT3Ca3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT3Ca3_MouseDoubleClick);
             // 
             // cbT6Ca1
             // 
@@ -875,6 +887,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT6Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT6Ca1.TabIndex = 11;
+            this.cbT6Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT6Ca1_MouseDoubleClick);
             // 
             // cbT7Ca1
             // 
@@ -884,6 +897,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT7Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT7Ca1.TabIndex = 11;
+            this.cbT7Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT7Ca1_MouseDoubleClick);
             // 
             // cbT5Ca1
             // 
@@ -893,6 +907,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT5Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT5Ca1.TabIndex = 11;
+            this.cbT5Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT5Ca1_MouseDoubleClick);
             // 
             // cbT4Ca1
             // 
@@ -902,6 +917,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT4Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT4Ca1.TabIndex = 11;
+            this.cbT4Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT4Ca1_MouseDoubleClick);
             // 
             // cbT6Ca2
             // 
@@ -911,6 +927,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT6Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT6Ca2.TabIndex = 11;
+            this.cbT6Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT6Ca2_MouseDoubleClick);
             // 
             // cbT5Ca2
             // 
@@ -920,6 +937,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT5Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT5Ca2.TabIndex = 11;
+            this.cbT5Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT5Ca2_MouseDoubleClick);
             // 
             // cbT7Ca2
             // 
@@ -929,6 +947,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT7Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT7Ca2.TabIndex = 11;
+            this.cbT7Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT7Ca2_MouseDoubleClick);
             // 
             // cbT2Ca2
             // 
@@ -938,6 +957,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT2Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT2Ca2.TabIndex = 11;
+            this.cbT2Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT2Ca2_MouseDoubleClick);
             // 
             // cbT4Ca2
             // 
@@ -947,6 +967,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT4Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT4Ca2.TabIndex = 11;
+            this.cbT4Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT4Ca2_MouseDoubleClick);
             // 
             // cbT2Ca1
             // 
@@ -966,6 +987,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT3Ca2.Size = new System.Drawing.Size(109, 20);
             this.cbT3Ca2.TabIndex = 11;
+            this.cbT3Ca2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT3Ca2_MouseDoubleClick);
             // 
             // cbT3Ca1
             // 
@@ -975,6 +997,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbT3Ca1.Size = new System.Drawing.Size(109, 20);
             this.cbT3Ca1.TabIndex = 11;
+            this.cbT3Ca1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbT3Ca1_MouseDoubleClick);
             // 
             // label11
             // 
@@ -1140,6 +1163,24 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(323, 467);
             this.panel4.TabIndex = 3;
+            // 
+            // maPC
+            // 
+            this.maPC.AutoSize = true;
+            this.maPC.Location = new System.Drawing.Point(116, 36);
+            this.maPC.Name = "maPC";
+            this.maPC.Size = new System.Drawing.Size(34, 13);
+            this.maPC.TabIndex = 14;
+            this.maPC.Text = "maPC";
+            // 
+            // btnTaoMoi
+            // 
+            this.btnTaoMoi.Location = new System.Drawing.Point(161, 433);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(75, 23);
+            this.btnTaoMoi.TabIndex = 13;
+            this.btnTaoMoi.Text = "Tạo Mới";
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // laMaGV
             // 
@@ -1750,24 +1791,6 @@
             // xemTatCaPhongHocTableAdapter
             // 
             this.xemTatCaPhongHocTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTaoMoi
-            // 
-            this.btnTaoMoi.Location = new System.Drawing.Point(161, 433);
-            this.btnTaoMoi.Name = "btnTaoMoi";
-            this.btnTaoMoi.Size = new System.Drawing.Size(75, 23);
-            this.btnTaoMoi.TabIndex = 13;
-            this.btnTaoMoi.Text = "Tạo Mới";
-            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
-            // 
-            // maPC
-            // 
-            this.maPC.AutoSize = true;
-            this.maPC.Location = new System.Drawing.Point(116, 36);
-            this.maPC.Name = "maPC";
-            this.maPC.Size = new System.Drawing.Size(34, 13);
-            this.maPC.TabIndex = 14;
-            this.maPC.Text = "maPC";
             // 
             // frmPhanCong
             // 
