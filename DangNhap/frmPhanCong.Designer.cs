@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.paTKBLop = new System.Windows.Forms.Panel();
             this.laTKBLop = new System.Windows.Forms.Label();
             this.cb2T4Ca1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cb2T2Ca4 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -182,7 +182,7 @@
             this.xemTatCaMonHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaMonHocTableAdapter();
             this.xemTatCaPhongHocTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.XemTatCaPhongHocTableAdapter();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.paTKBLop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca1.Properties)).BeginInit();
@@ -262,7 +262,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.paTKBLop);
             this.panel2.Controls.Add(this.cbKhoaLop);
             this.panel2.Controls.Add(this.gridCLop);
             this.panel2.Controls.Add(this.panel6);
@@ -272,48 +272,48 @@
             this.panel2.Size = new System.Drawing.Size(1362, 310);
             this.panel2.TabIndex = 1;
             // 
-            // panel7
+            // paTKBLop
             // 
-            this.panel7.Controls.Add(this.laTKBLop);
-            this.panel7.Controls.Add(this.cb2T4Ca1);
-            this.panel7.Controls.Add(this.cb2T2Ca4);
-            this.panel7.Controls.Add(this.cb2T5Ca1);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.cb2T7Ca1);
-            this.panel7.Controls.Add(this.cb2T6Ca1);
-            this.panel7.Controls.Add(this.cb2T5Ca4);
-            this.panel7.Controls.Add(this.cb2T2Ca2);
-            this.panel7.Controls.Add(this.cb2T7Ca3);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.cb2T6Ca4);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.cb2T4Ca3);
-            this.panel7.Controls.Add(this.cb2T7Ca2);
-            this.panel7.Controls.Add(this.cb2T6Ca3);
-            this.panel7.Controls.Add(this.label18);
-            this.panel7.Controls.Add(this.cb2T7Ca4);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.cb2T3Ca3);
-            this.panel7.Controls.Add(this.cb2T3Ca2);
-            this.panel7.Controls.Add(this.cb2T4Ca4);
-            this.panel7.Controls.Add(this.cb2T3Ca1);
-            this.panel7.Controls.Add(this.cb2T5Ca3);
-            this.panel7.Controls.Add(this.label20);
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.cb2T3Ca4);
-            this.panel7.Controls.Add(this.cb2T4Ca2);
-            this.panel7.Controls.Add(this.cb2T2Ca3);
-            this.panel7.Controls.Add(this.cb2T6Ca2);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.cb2T2Ca1);
-            this.panel7.Controls.Add(this.cb2T5Ca2);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(251, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(773, 265);
-            this.panel7.TabIndex = 12;
+            this.paTKBLop.Controls.Add(this.laTKBLop);
+            this.paTKBLop.Controls.Add(this.cb2T4Ca1);
+            this.paTKBLop.Controls.Add(this.cb2T2Ca4);
+            this.paTKBLop.Controls.Add(this.cb2T5Ca1);
+            this.paTKBLop.Controls.Add(this.label12);
+            this.paTKBLop.Controls.Add(this.cb2T7Ca1);
+            this.paTKBLop.Controls.Add(this.cb2T6Ca1);
+            this.paTKBLop.Controls.Add(this.cb2T5Ca4);
+            this.paTKBLop.Controls.Add(this.cb2T2Ca2);
+            this.paTKBLop.Controls.Add(this.cb2T7Ca3);
+            this.paTKBLop.Controls.Add(this.label13);
+            this.paTKBLop.Controls.Add(this.cb2T6Ca4);
+            this.paTKBLop.Controls.Add(this.label7);
+            this.paTKBLop.Controls.Add(this.cb2T4Ca3);
+            this.paTKBLop.Controls.Add(this.cb2T7Ca2);
+            this.paTKBLop.Controls.Add(this.cb2T6Ca3);
+            this.paTKBLop.Controls.Add(this.label18);
+            this.paTKBLop.Controls.Add(this.cb2T7Ca4);
+            this.paTKBLop.Controls.Add(this.label14);
+            this.paTKBLop.Controls.Add(this.cb2T3Ca3);
+            this.paTKBLop.Controls.Add(this.cb2T3Ca2);
+            this.paTKBLop.Controls.Add(this.cb2T4Ca4);
+            this.paTKBLop.Controls.Add(this.cb2T3Ca1);
+            this.paTKBLop.Controls.Add(this.cb2T5Ca3);
+            this.paTKBLop.Controls.Add(this.label20);
+            this.paTKBLop.Controls.Add(this.label17);
+            this.paTKBLop.Controls.Add(this.cb2T3Ca4);
+            this.paTKBLop.Controls.Add(this.cb2T4Ca2);
+            this.paTKBLop.Controls.Add(this.cb2T2Ca3);
+            this.paTKBLop.Controls.Add(this.cb2T6Ca2);
+            this.paTKBLop.Controls.Add(this.label19);
+            this.paTKBLop.Controls.Add(this.cb2T2Ca1);
+            this.paTKBLop.Controls.Add(this.cb2T5Ca2);
+            this.paTKBLop.Controls.Add(this.label15);
+            this.paTKBLop.Controls.Add(this.label16);
+            this.paTKBLop.Dock = System.Windows.Forms.DockStyle.Left;
+            this.paTKBLop.Location = new System.Drawing.Point(251, 0);
+            this.paTKBLop.Name = "paTKBLop";
+            this.paTKBLop.Size = new System.Drawing.Size(773, 265);
+            this.paTKBLop.TabIndex = 12;
             // 
             // laTKBLop
             // 
@@ -1172,6 +1172,7 @@
             this.maPC.Size = new System.Drawing.Size(34, 13);
             this.maPC.TabIndex = 14;
             this.maPC.Text = "maPC";
+            this.maPC.Visible = false;
             // 
             // btnTaoMoi
             // 
@@ -1194,6 +1195,7 @@
             // 
             // btnLuuTKB
             // 
+            this.btnLuuTKB.Enabled = false;
             this.btnLuuTKB.Location = new System.Drawing.Point(27, 432);
             this.btnLuuTKB.Name = "btnLuuTKB";
             this.btnLuuTKB.Size = new System.Drawing.Size(75, 23);
@@ -1734,6 +1736,7 @@
             this.cbMonHoc.Properties.ValueMember = "maMH";
             this.cbMonHoc.Size = new System.Drawing.Size(103, 20);
             this.cbMonHoc.TabIndex = 10;
+            this.cbMonHoc.EditValueChanged += new System.EventHandler(this.cbMonHoc_EditValueChanged);
             // 
             // xemTatCaMonHocBindingSource
             // 
@@ -1805,8 +1808,8 @@
             this.Text = "frmPhanCong";
             this.Load += new System.EventHandler(this.frmPhanCong_Load);
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.paTKBLop.ResumeLayout(false);
+            this.paTKBLop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T4Ca1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T2Ca4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb2T5Ca1.Properties)).EndInit();
@@ -1972,7 +1975,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit cb2T4Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T7Ca2;
         private DevExpress.XtraEditors.ComboBoxEdit cb2T2Ca2;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel paTKBLop;
         private System.Windows.Forms.Label laTKBLop;
         private System.Windows.Forms.Label laTKBGiangVien;
         private System.Windows.Forms.Label laGV;

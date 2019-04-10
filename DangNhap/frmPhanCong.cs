@@ -15,6 +15,8 @@ namespace DangNhap
 {
     public partial class frmPhanCong : DevExpress.XtraEditors.XtraForm
     {
+        public String phongHoc = "";
+        public String suaPhongHoc = "";
         public String action = "";
         public String maBuoiHoc = "";
         public String maPhong = "";
@@ -26,7 +28,7 @@ namespace DangNhap
         {
             InitializeComponent();
             con.Open();
-            
+            action = "them";
             SqlCommand sqlCmd = new SqlCommand("selectAllKhoa", con)
             {
                 CommandType = CommandType.StoredProcedure
@@ -615,11 +617,16 @@ namespace DangNhap
             }
             DR.Close();
             con.Close();
+            loadPhong();
         }
 
         private void gridVKhoaGV_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-
+            if (action.Equals("sua"))
+            {
+                taoMoi();
+            }
+            
             int flag = 0;
             int[] check = new int[28];
             laGV.Text = gridVKhoaGV.Columns.View.GetFocusedRowCellValue("hoTen").ToString();
@@ -1180,6 +1187,7 @@ namespace DangNhap
             }
             DR.Close();
             con.Close();
+            loadPhong();
         }
 
         private void listThu_SelectedIndexChanged(object sender, EventArgs e)
@@ -1240,7 +1248,7 @@ namespace DangNhap
                         CommandType = CommandType.StoredProcedure
                     };
                     sqlCmd.Parameters.AddWithValue("@maBH", maBuoiHoc);
-                    sqlCmd.Parameters.AddWithValue("@maPhong", cbPhongHoc.EditValue.ToString());
+                    sqlCmd.Parameters.AddWithValue("@maPhong", maPhong);
                     sqlCmd.ExecuteNonQuery();
 
                     sqlCmd = new SqlCommand("themThoiKhoaBieu", con)
@@ -1309,11 +1317,20 @@ namespace DangNhap
             int flag = 0;
             int[] check = new int[28];
             con.Open();
+
+            String phong = cbPhongHoc.EditValue.ToString();
             SqlCommand sqlCmd = new SqlCommand("kiemTraTheoPhong", con)
             {
                 CommandType = CommandType.StoredProcedure
             };
-            String phong = cbPhongHoc.EditValue.ToString();
+            if (action.Equals("them"))
+            {
+                sqlCmd = new SqlCommand("kiemTraTheoPhongLop", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
+            }
             sqlCmd.Parameters.AddWithValue("@maPhong", phong);
             sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
             SqlDataReader DR = sqlCmd.ExecuteReader();
@@ -1326,6 +1343,7 @@ namespace DangNhap
                     check[1] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T2") && phong.Equals(maPhong))
                     {
+                        cT2Ca1.Visible = true;
                         cT2Ca1.Checked = true;
                     }
                     else
@@ -1348,6 +1366,7 @@ namespace DangNhap
                     check[2] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T2") && phong.Equals(maPhong))
                     {
+                        cT2Ca2.Visible = true;
                         cT2Ca2.Checked = true;
                     }
                     else
@@ -1371,6 +1390,7 @@ namespace DangNhap
                     check[3] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T2") && phong.Equals(maPhong))
                     {
+                        cT2Ca2.Visible = true;
                         cT2Ca3.Checked = true;
                     }
                     else
@@ -1383,7 +1403,7 @@ namespace DangNhap
                 {
                     if (check[3] == 0)
                     {
-                        cT2Ca3.Visible = true;
+                        cT2Ca2.Visible = true;
                         cT2Ca3.Checked = false;
                     }
                 }
@@ -1393,6 +1413,7 @@ namespace DangNhap
                     check[4] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T2") && phong.Equals(maPhong))
                     {
+                        cT2Ca4.Visible = true;
                         cT2Ca4.Checked = true;
                     }
                     else
@@ -1416,6 +1437,7 @@ namespace DangNhap
                     check[5] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T3") && phong.Equals(maPhong))
                     {
+                        cT3Ca1.Visible = true;
                         cT3Ca1.Checked = true;
                     }
                     else
@@ -1438,6 +1460,7 @@ namespace DangNhap
                     check[6] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T3") && phong.Equals(maPhong))
                     {
+                        cT3Ca2.Visible = true;
                         cT3Ca2.Checked = true;
                     }
                     else
@@ -1461,6 +1484,7 @@ namespace DangNhap
                     check[7] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T3") && phong.Equals(maPhong))
                     {
+                        cT3Ca3.Visible = true;
                         cT3Ca3.Checked = true;
                     }
                     else
@@ -1483,6 +1507,7 @@ namespace DangNhap
                     check[8] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T3") && phong.Equals(maPhong))
                     {
+                        cT3Ca4.Visible = true;
                         cT3Ca4.Checked = true;
                     }
                     else
@@ -1506,6 +1531,7 @@ namespace DangNhap
                     check[9] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T4") && phong.Equals(maPhong))
                     {
+                        cT4Ca1.Visible = true;
                         cT4Ca1.Checked = true;
                     }
                     else
@@ -1528,6 +1554,7 @@ namespace DangNhap
                     check[10] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T4") && phong.Equals(maPhong))
                     {
+                        cT4Ca2.Visible = true;
                         cT4Ca2.Checked = true;
                     }
                     else
@@ -1551,6 +1578,7 @@ namespace DangNhap
                     check[11] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T4") && phong.Equals(maPhong))
                     {
+                        cT4Ca3.Visible = true;
                         cT4Ca3.Checked = true;
                     }
                     else
@@ -1573,6 +1601,7 @@ namespace DangNhap
                     check[12] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T4") && phong.Equals(maPhong))
                     {
+                        cT4Ca4.Visible = true;
                         cT4Ca4.Checked = true;
                     }
                     else
@@ -1596,6 +1625,7 @@ namespace DangNhap
                     check[13] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T5") && phong.Equals(maPhong))
                     {
+                        cT5Ca1.Visible = true;
                         cT5Ca1.Checked = true;
                     }
                     else
@@ -1618,6 +1648,7 @@ namespace DangNhap
                     check[14] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T5") && phong.Equals(maPhong))
                     {
+                        cT5Ca2.Visible = true;
                         cT5Ca2.Checked = true;
                     }
                     else
@@ -1641,6 +1672,7 @@ namespace DangNhap
                     check[15] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T5") && phong.Equals(maPhong))
                     {
+                        cT5Ca3.Visible = true;
                         cT5Ca3.Checked = true;
                     }
                     else
@@ -1663,6 +1695,7 @@ namespace DangNhap
                     check[16] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T5") && phong.Equals(maPhong))
                     {
+                        cT5Ca4.Visible = true;
                         cT5Ca4.Checked = true;
                     }
                     else
@@ -1687,6 +1720,7 @@ namespace DangNhap
                     check[17] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T6") && phong.Equals(maPhong))
                     {
+                        cT6Ca1.Visible = true;
                         cT6Ca1.Checked = true;
                     }
                     else
@@ -1709,6 +1743,7 @@ namespace DangNhap
                     check[18] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T6") && phong.Equals(maPhong))
                     {
+                        cT6Ca2.Visible = true;
                         cT6Ca2.Checked = true;
                     }
                     else
@@ -1732,6 +1767,7 @@ namespace DangNhap
                     check[19] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T6") && phong.Equals(maPhong))
                     {
+                        cT6Ca3.Visible = true;
                         cT6Ca3.Checked = true;
                     }
                     else
@@ -1754,6 +1790,7 @@ namespace DangNhap
                     check[20] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T6") && phong.Equals(maPhong))
                     {
+                        cT6Ca4.Visible = true;
                         cT6Ca4.Checked = true;
                     }
                     else
@@ -1777,6 +1814,7 @@ namespace DangNhap
                     check[21] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("1T7") && phong.Equals(maPhong))
                     {
+                        cT7Ca1.Visible = true;
                         cT7Ca1.Checked = true;
                     }
                     else
@@ -1799,6 +1837,7 @@ namespace DangNhap
                     check[22] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("2T7") && phong.Equals(maPhong))
                     {
+                        cT7Ca2.Visible = true;
                         cT7Ca2.Checked = true;
                     }
                     else
@@ -1822,6 +1861,7 @@ namespace DangNhap
                     check[23] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T7") && phong.Equals(maPhong))
                     {
+                        cT7Ca3.Visible = true;
                         cT7Ca3.Checked = true;
                     }
                     else
@@ -1844,6 +1884,7 @@ namespace DangNhap
                     check[24] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("4T7") && phong.Equals(maPhong))
                     {
+                        cT7Ca4.Visible = true;
                         cT7Ca4.Checked = true;
                     }
                     else
@@ -1950,6 +1991,7 @@ namespace DangNhap
             {
                 buoiHoc[1] = null;
             }
+            checkChonNgay();
         }
 
         private void cT2Ca2_CheckedChanged(object sender, EventArgs e)
@@ -1968,6 +2010,7 @@ namespace DangNhap
             {
                 buoiHoc[2] = null;
             }
+            checkChonNgay();
         }
 
         private void cT2Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2004,6 +2047,7 @@ namespace DangNhap
             {
                 buoiHoc[4] = null;
             }
+            checkChonNgay();
         }
 
         private void cT3Ca1_CheckedChanged(object sender, EventArgs e)
@@ -2020,6 +2064,7 @@ namespace DangNhap
             {
                 buoiHoc[5] = null;
             }
+            checkChonNgay();
         }
 
         private void cT3Ca2_CheckedChanged(object sender, EventArgs e)
@@ -2036,6 +2081,7 @@ namespace DangNhap
             {
                 buoiHoc[6] = null;
             }
+            checkChonNgay();
         }
 
         private void cT3Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2052,6 +2098,7 @@ namespace DangNhap
             {
                 buoiHoc[7] = null;
             }
+            checkChonNgay();
         }
 
         private void cT3Ca4_CheckedChanged(object sender, EventArgs e)
@@ -2068,6 +2115,7 @@ namespace DangNhap
             {
                 buoiHoc[8] = null;
             }
+            checkChonNgay();
         }
 
         private void cT4Ca1_CheckedChanged(object sender, EventArgs e)
@@ -2084,6 +2132,7 @@ namespace DangNhap
             {
                 buoiHoc[9] = null;
             }
+            checkChonNgay();
         }
 
         private void cT4Ca2_CheckedChanged(object sender, EventArgs e)
@@ -2100,6 +2149,7 @@ namespace DangNhap
             {
                 buoiHoc[10] = null;
             }
+            checkChonNgay();
         }
 
         private void cT4Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2116,6 +2166,7 @@ namespace DangNhap
             {
                 buoiHoc[11] = null;
             }
+            checkChonNgay();
         }
 
         private void cT4Ca4_CheckedChanged(object sender, EventArgs e)
@@ -2132,6 +2183,7 @@ namespace DangNhap
             {
                 buoiHoc[12] = null;
             }
+            checkChonNgay();
         }
 
         private void cT5Ca1_CheckedChanged(object sender, EventArgs e)
@@ -2148,6 +2200,7 @@ namespace DangNhap
             {
                 buoiHoc[13] = null;
             }
+            checkChonNgay();
         }
 
         private void cT5Ca2_CheckedChanged(object sender, EventArgs e)
@@ -2164,6 +2217,7 @@ namespace DangNhap
             {
                 buoiHoc[14] = null;
             }
+            checkChonNgay();
         }
 
         private void cT5Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2180,6 +2234,7 @@ namespace DangNhap
             {
                 buoiHoc[15] = null;
             }
+            checkChonNgay();
         }
 
         private void cT5Ca4_CheckedChanged(object sender, EventArgs e)
@@ -2196,6 +2251,7 @@ namespace DangNhap
             {
                 buoiHoc[16] = null;
             }
+            checkChonNgay();
         }
 
         private void cT6Ca1_CheckedChanged(object sender, EventArgs e)
@@ -2212,6 +2268,7 @@ namespace DangNhap
             {
                 buoiHoc[17] = null;
             }
+            checkChonNgay();
         }
 
         private void cT6Ca2_CheckedChanged(object sender, EventArgs e)
@@ -2228,6 +2285,7 @@ namespace DangNhap
             {
                 buoiHoc[18] = null;
             }
+            checkChonNgay();
         }
 
         private void cT6Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2244,6 +2302,7 @@ namespace DangNhap
             {
                 buoiHoc[19] = null;
             }
+            checkChonNgay();
         }
 
         private void cT6Ca4_CheckedChanged(object sender, EventArgs e)
@@ -2260,6 +2319,7 @@ namespace DangNhap
             {
                 buoiHoc[20] = null;
             }
+            checkChonNgay();
         }
 
         private void cT7Ca1_CheckedChanged(object sender, EventArgs e)
@@ -2276,6 +2336,7 @@ namespace DangNhap
             {
                 buoiHoc[21] = null;
             }
+            checkChonNgay();
         }
 
         private void cT7Ca2_CheckedChanged(object sender, EventArgs e)
@@ -2292,6 +2353,7 @@ namespace DangNhap
             {
                 buoiHoc[22] = null;
             }
+            checkChonNgay();
         }
 
         private void cT7Ca3_CheckedChanged(object sender, EventArgs e)
@@ -2308,6 +2370,7 @@ namespace DangNhap
             {
                 buoiHoc[23] = null;
             }
+            checkChonNgay();
         }
 
         private void cT7Ca4_CheckedChanged(object sender, EventArgs e)
@@ -2324,6 +2387,7 @@ namespace DangNhap
             {
                 buoiHoc[24] = null;
             }
+            checkChonNgay();
         }
 
         public void loadBuoiHoc()
@@ -2394,27 +2458,36 @@ namespace DangNhap
             cT7Ca4.Checked = false;
         }
 
-        private void btnTaoMoi_Click(object sender, EventArgs e)
+        public void taoMoi()
         {
+            gridCLop.Visible = true;
+            paTKBLop.Visible = true;
+            cbKhoaLop.Visible = true;
             action = "them";
             maBuoiHoc = "";
             maPhong = "";
             laGV.Text = "Họ tên";
             laLop.Text = "Lớp";
             laMaGV.Text = "";
+            maPC.Text = "0";
             cbMonHoc.Text = "Chọn môn học";
             dateBD.Text = "";
             dateKT.Text = "";
             cbTrangThai.Text = "Chọn trạng thái";
             cbPhongHoc.Text = "Chọn phòng học";
             cbHocKy.Text = "Chọn học kỳ";
-
-
             loadBuoiHoc();
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            taoMoi();
         }
 
         private void cbT2Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;
+            paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT2Ca1.SelectedIndex = 1;
             String phong = cbT2Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2466,6 +2539,8 @@ namespace DangNhap
 
         private void cbT2Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;
+            paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT2Ca2.SelectedIndex = 1;
             String phong = cbT2Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2517,6 +2592,8 @@ namespace DangNhap
 
         private void cbT2Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;
+            paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT2Ca3.SelectedIndex = 1;
             String phong = cbT2Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2568,6 +2645,7 @@ namespace DangNhap
 
         private void cbT2Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT2Ca4.SelectedIndex = 1;
             String phong = cbT2Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2619,6 +2697,7 @@ namespace DangNhap
 
         private void cbT3Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT3Ca1.SelectedIndex = 1;
             String phong = cbT3Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2670,6 +2749,7 @@ namespace DangNhap
 
         private void cbT3Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT3Ca2.SelectedIndex = 1;
             String phong = cbT3Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2721,6 +2801,7 @@ namespace DangNhap
 
         private void cbT3Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT3Ca3.SelectedIndex = 1;
             String phong = cbT3Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2772,6 +2853,7 @@ namespace DangNhap
 
         private void cbT3Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT3Ca4.SelectedIndex = 1;
             String phong = cbT3Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2823,6 +2905,7 @@ namespace DangNhap
 
         private void cbT4Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT4Ca1.SelectedIndex = 1;
             String phong = cbT4Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2874,6 +2957,7 @@ namespace DangNhap
 
         private void cbT4Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT4Ca2.SelectedIndex = 1;
             String phong = cbT4Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2925,6 +3009,7 @@ namespace DangNhap
 
         private void cbT4Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT4Ca3.SelectedIndex = 1;
             String phong = cbT4Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -2976,6 +3061,7 @@ namespace DangNhap
 
         private void cbT4Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT4Ca4.SelectedIndex = 1;
             String phong = cbT4Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3027,6 +3113,7 @@ namespace DangNhap
 
         private void cbT5Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT5Ca1.SelectedIndex = 1;
             String phong = cbT5Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3078,6 +3165,7 @@ namespace DangNhap
 
         private void cbT5Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT5Ca2.SelectedIndex = 1;
             String phong = cbT5Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3129,6 +3217,7 @@ namespace DangNhap
 
         private void cbT5Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT5Ca3.SelectedIndex = 1;
             String phong = cbT5Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3180,6 +3269,7 @@ namespace DangNhap
 
         private void cbT5Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT5Ca4.SelectedIndex = 1;
             String phong = cbT5Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3231,6 +3321,7 @@ namespace DangNhap
 
         private void cbT6Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT6Ca1.SelectedIndex = 1;
             String phong = cbT6Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3282,6 +3373,7 @@ namespace DangNhap
 
         private void cbT6Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT6Ca2.SelectedIndex = 1;
             String phong = cbT6Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3333,6 +3425,7 @@ namespace DangNhap
 
         private void cbT6Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT6Ca3.SelectedIndex = 1;
             String phong = cbT6Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3384,6 +3477,7 @@ namespace DangNhap
 
         private void cbT6Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT6Ca4.SelectedIndex = 1;
             String phong = cbT6Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3435,6 +3529,7 @@ namespace DangNhap
 
         private void cbT7Ca1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT7Ca1.SelectedIndex = 1;
             String phong = cbT7Ca1.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3486,6 +3581,7 @@ namespace DangNhap
 
         private void cbT7Ca2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT7Ca2.SelectedIndex = 1;
             String phong = cbT7Ca2.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3537,6 +3633,7 @@ namespace DangNhap
 
         private void cbT7Ca3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT7Ca3.SelectedIndex = 1;
             String phong = cbT7Ca3.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3588,6 +3685,7 @@ namespace DangNhap
 
         private void cbT7Ca4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            gridCLop.Visible = false;paTKBLop.Visible = false;cbKhoaLop.Visible = false;
             cbT7Ca4.SelectedIndex = 1;
             String phong = cbT7Ca4.SelectedItem.ToString();
             int vtLay = phong.Length - 7;
@@ -3647,6 +3745,14 @@ namespace DangNhap
                 CommandType = CommandType.StoredProcedure
             };
             String phong = cbPhongHoc.EditValue.ToString();
+            if (action.Equals("them"))
+            {
+                sqlCmd = new SqlCommand("kiemTraTheoPhongLop", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
+            }
             sqlCmd.Parameters.AddWithValue("@maPhong", phong);
             sqlCmd.Parameters.AddWithValue("@maGV", laMaGV.Text);
             SqlDataReader DR = sqlCmd.ExecuteReader();
@@ -4289,6 +4395,58 @@ namespace DangNhap
             }
         }
 
+        public void checkChonNgay()
+        {
+            int flag = 0;
+            for (int i = 0; i < 25; i++)
+            {
+                if (buoiHoc[i] != null)
+                {
+                    flag++;
+                }
+            }
+            if (flag == 1)
+            {
+                btnLuuTKB.Enabled = true;
+            }
+            else if (flag == 2 && action.Equals("them"))
+            {
+                btnLuuTKB.Enabled = true;
+            }
+            else
+            {
+                btnLuuTKB.Enabled = false;
+            }
+        }
+
+        private void cbMonHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            int flag = 0;
+            
+            if (action.Equals("them"))
+            {
+                con.Open();
+                SqlCommand sqlCmd = new SqlCommand("kiemTraMonHoc", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@maLop", laLop.Text);
+                sqlCmd.Parameters.AddWithValue("@maMH", cbMonHoc.EditValue.ToString());
+                SqlDataReader DR = sqlCmd.ExecuteReader();
+                while (DR.Read())
+                {
+                    flag++;
+                }
+                con.Close();
+            }
+            
+                
+            if (flag != 0)
+            {
+                MessageBox.Show("Lớp đã học môn này rồi");
+            }
+            
+        }
     }
 
 }
