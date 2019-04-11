@@ -32,6 +32,32 @@ namespace DangNhap
             giangVienReport.CreateDocument();
         }
 
+        public void inGiangVienTKB(String maGV)
+        {
+            thoiKhoaBieuGVReport thoiKhoaBieu = new thoiKhoaBieuGVReport();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in thoiKhoaBieu.Parameters)
+            {
+                p.Visible = false;
+            }
+            thoiKhoaBieu.paramTKBGiangVien(maGV);
+            thoiKhoaBieu.CreateDocument();
+            documentViewer1.DocumentSource = thoiKhoaBieu;
+            thoiKhoaBieu.CreateDocument();
+        }
+
+        public void inDSLop(String maLop)
+        {
+            dsSinhVienTheoLopReport dsSinhVien = new dsSinhVienTheoLopReport();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in dsSinhVien.Parameters)
+            {
+                p.Visible = false;
+            }
+            dsSinhVien.paramLop(maLop);
+            dsSinhVien.CreateDocument();
+            documentViewer1.DocumentSource = dsSinhVien;
+            dsSinhVien.CreateDocument();
+        }
+
         public void inListGiangVien()
         {
             listGiangVienReport giangVienReport = new listGiangVienReport();

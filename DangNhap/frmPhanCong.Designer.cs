@@ -1161,7 +1161,7 @@
             this.panel4.Controls.Add(this.cbPhongHoc);
             this.panel4.Location = new System.Drawing.Point(1027, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(323, 467);
+            this.panel4.Size = new System.Drawing.Size(323, 477);
             this.panel4.TabIndex = 3;
             // 
             // maPC
@@ -1176,7 +1176,7 @@
             // 
             // btnTaoMoi
             // 
-            this.btnTaoMoi.Location = new System.Drawing.Point(161, 433);
+            this.btnTaoMoi.Location = new System.Drawing.Point(141, 432);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(75, 23);
             this.btnTaoMoi.TabIndex = 13;
@@ -1196,7 +1196,7 @@
             // btnLuuTKB
             // 
             this.btnLuuTKB.Enabled = false;
-            this.btnLuuTKB.Location = new System.Drawing.Point(27, 432);
+            this.btnLuuTKB.Location = new System.Drawing.Point(43, 432);
             this.btnLuuTKB.Name = "btnLuuTKB";
             this.btnLuuTKB.Size = new System.Drawing.Size(75, 23);
             this.btnLuuTKB.TabIndex = 11;
@@ -1805,7 +1805,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmPhanCong";
-            this.Text = "frmPhanCong";
+            this.Text = "Phân Công";
             this.Load += new System.EventHandler(this.frmPhanCong_Load);
             this.panel2.ResumeLayout(false);
             this.paTKBLop.ResumeLayout(false);

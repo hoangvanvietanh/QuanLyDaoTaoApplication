@@ -72,8 +72,7 @@ namespace DangNhap
 
         private void laMonHoc_Click(object sender, EventArgs e)
         {
-            frmPhanCong frmPhanCong = new frmPhanCong();
-            frmPhanCong.Show();
+
             //MessageBox.Show("Chức năng đang trong quá trình làm,\n bạn chờ nhé ^^", "Thông báo");
         }
 
@@ -215,8 +214,8 @@ namespace DangNhap
 
         private void laThoiKhoaBieu_Click(object sender, EventArgs e)
         {
-            frmXemThoiKhoaBieu frmXemThoiKhoa = new frmXemThoiKhoaBieu();
-            frmXemThoiKhoa.Show();
+            frmPhanCong frmPhanCong = new frmPhanCong();
+            frmPhanCong.Show();
             //MessageBox.Show("Chức năng đang trong quá trình làm,\n bạn chờ nhé ^^", "Thông báo");
         }
 

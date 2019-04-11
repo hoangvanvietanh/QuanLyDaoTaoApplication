@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnThemSV = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoaSV = new DevExpress.XtraBars.BarButtonItem();
@@ -35,6 +36,7 @@
             this.rpTrangChu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpEdit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
@@ -76,6 +78,8 @@
             this.colmaKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.selectAllSVTableAdapter = new DangNhap.QLDaoTaoDataSetTableAdapters.selectAllSVTableAdapter();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnIn = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -94,9 +99,10 @@
             this.ribbon.ExpandCollapseItem,
             this.btnThemSV,
             this.btnXoaSV,
-            this.btnSuaSV});
+            this.btnSuaSV,
+            this.btnIn});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 4;
+            this.ribbon.MaxItemId = 2;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpTrangChu});
@@ -135,7 +141,8 @@
             // 
             this.rpTrangChu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.rpEdit});
+            this.rpEdit,
+            this.ribbonPageGroup2});
             this.rpTrangChu.Name = "rpTrangChu";
             this.rpTrangChu.Text = "Trang chủ";
             // 
@@ -151,6 +158,12 @@
             this.rpEdit.ItemLinks.Add(this.btnSuaSV);
             this.rpEdit.Name = "rpEdit";
             this.rpEdit.Text = "Edit";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnIn);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Tool";
             // 
             // ribbonStatusBar
             // 
@@ -595,6 +608,19 @@
             // 
             this.selectAllSVTableAdapter.ClearBeforeFill = true;
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Caption = "In";
+            this.btnIn.Id = 1;
+            this.btnIn.ImageOptions.SvgImage = global::DangNhap.Properties.Resources.iconfinder_print_172530;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIn_ItemClick);
+            // 
             // frmDTSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +649,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlDaoTaoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,5 +705,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colmaKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn coltenKhoa;
         private QLDaoTaoDataSetTableAdapters.selectAllSVTableAdapter selectAllSVTableAdapter;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnIn;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

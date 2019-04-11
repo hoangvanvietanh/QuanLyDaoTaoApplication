@@ -62,7 +62,9 @@ namespace DangNhap
 
         private void laLichDay_Click(object sender, EventArgs e)
         {
-            
+            frmXemThoiKhoaBieu frmXemThoiKhoaBieu = new frmXemThoiKhoaBieu();
+            frmXemThoiKhoaBieu.xemTKB(laMaGV.Text);
+            frmXemThoiKhoaBieu.Show();
         }
 
         private void laIn_Click(object sender, EventArgs e)

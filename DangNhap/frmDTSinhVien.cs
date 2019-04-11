@@ -172,5 +172,11 @@ namespace DangNhap
                 picSinhVien.Image = Image.FromStream(new MemoryStream(ImageArray));
             }
         }
+
+        private void btnIn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmIn frmIn = new frmIn();
+            frmIn.Show();
+        }
     }
 }
