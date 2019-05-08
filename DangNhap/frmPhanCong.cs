@@ -20,7 +20,7 @@ namespace DangNhap
         public String action = "";
         public String maBuoiHoc = "";
         public String maPhong = "";
-        public String[] buoiHoc = new string[25];
+        public String[] buoiHoc = new string[24];
         public String suaBuoiHoc = "";
         public int kiemTraSua = 0;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString);
@@ -1390,7 +1390,7 @@ namespace DangNhap
                     check[3] = 1;
                     if (action.Equals("sua") && maBuoiHoc.Equals("3T2") && phong.Equals(maPhong))
                     {
-                        cT2Ca2.Visible = true;
+                        cT2Ca3.Visible = true;
                         cT2Ca3.Checked = true;
                     }
                     else
@@ -1403,7 +1403,7 @@ namespace DangNhap
                 {
                     if (check[3] == 0)
                     {
-                        cT2Ca2.Visible = true;
+                        cT2Ca3.Visible = true;
                         cT2Ca3.Checked = false;
                     }
                 }
@@ -2003,8 +2003,6 @@ namespace DangNhap
                     suaBuoiHoc = "2T2";
                 }
                     buoiHoc[2] = "2T2";
-                
-                  
             }
             else
             {
@@ -4398,7 +4396,7 @@ namespace DangNhap
         public void checkChonNgay()
         {
             int flag = 0;
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < 24; i++)
             {
                 if (buoiHoc[i] != null)
                 {
